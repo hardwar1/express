@@ -1,0 +1,24 @@
+.actions {
+    &__list {
+        margin-bottom: 40px;
+    }
+
+    &__item:not(:last-child) {
+        margin-bottom: 50px;
+    }
+
+    &__link-wrap {
+        padding-top: 30px;
+    }
+
+    &__link {
+        color: $color-red;
+        display: inline-block;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        transition: transform 0.3s;
+    }
+}

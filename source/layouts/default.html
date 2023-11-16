@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    {{> head title=title }}
+</head>
+
+<body>
+    <div class="page">
+        {{> header header-parent-mod="page__header" }}
+
+        <div class="page__btns-wrap container">
+            <div class="page__btns">
+                {{#each btns.header-form-top}}
+                    {{> btn btn-mod2="btn--page"}}
+                {{/each}}
+            </div>
+        </div>
+
+        {{> header-form header-form-parent-mod="page__header-form"}}
+
+        <main class="page__main main">
+            <div class="main__top main-top">
+                <div class="main__breadcrumbs-wrap container">
+                    {{> breadcrumbs }}
+                </div>
+            </div>
+
+            <div class="main__content-wrap container">
+                <aside class="main__aside">
+                    {{#ifequal aside-list 1}}
+                    {{> aside-list }}
+
+                    {{else ifequal aside-list 2}}
+                    {{> aside-list2 }}
+
+                    {{else ifequal aside-list 3}}
+                    {{> aside-list3 }}
+
+                    {{else ifequal aside-list 4}}
+                    {{> aside-list4 }}
+
+                    {{else ifequal aside-list 5}}
+                    {{> aside-list5 }}
+
+                    {{/ifequal}}
+
+                    {{#if weather-block}}
+                    {{> weather }}
+                    {{/if}}
+
+                    {{#if news-block}}
+                    {{> aside-news }}
+                    {{/if}}
+
+                    {{#if links-block}}
+                    {{> aside-links aside-list=aside-list}}
+                    {{/if}}
+                </aside>
+
+                <div class="main__content">
+                    {{> body }}
+                </div>
+            </div>
+        </main>
+
+        {{> footer footer-parent-mod="page__footer" }}
+    </div>
+
+    {{> tours-popup tours-popup-parent-mod="main-content__tours-popup" tours-popup-mod=""}}
+
+    <!-- svg sprite start -->
+    {{> icons }}
+    <!-- svg sprite end -->
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/plugins.min.js"></script>
+    <script src="./js/scripts.js"></script>
+</body>
+
+</html>

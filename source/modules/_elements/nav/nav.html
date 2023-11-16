@@ -1,0 +1,38 @@
+<nav class="{{nav-parent-mod}} nav">
+    <div class="nav__inner">
+        <ul class="nav__list">
+            {{> nav-item nav-item-parent-mod="nav__item"
+            nav-item-mod=""
+            nav-item-title="Страны"
+            nav-item-submenu=nav-item.tourist-agency
+            country="country"
+            nav-item-link="#"
+            nav-item-btn-more=true
+            }}
+
+            {{> nav-item nav-item-parent-mod="nav__item"
+            nav-item-mod=""
+            nav-item-title="Турагентствам"
+            agency="true"
+            nav-item-btn-more=true
+            nav-item-submenu=nav-item.tourist-agency
+            nav-item-link="#"
+            }}
+
+            {{> nav-item nav-item-parent-mod="nav__item"
+            nav-item-mod="nav-item--relative"
+            nav-item-title="Туристам"
+            nav-item-submenu=nav-item.tourist-agency
+            tourist="tourist"
+            nav-item-link="#"
+            nav-item-btn-more=true
+            }}
+
+            {{> nav-item nav-item-parent-mod="nav__item"
+            nav-item-mod="nav-item--list-3-col"
+            nav-item-title="О компании"
+            nav-item-link="#"
+            }}
+        </ul>
+    </div>
+</nav>

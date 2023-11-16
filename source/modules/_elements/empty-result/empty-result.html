@@ -1,0 +1,51 @@
+<div class="{{empty-result-parent-mod}} empty-result {{empty-result-mod}}">
+    <div class="empty-result__top">
+        <div class="empty-result__title">
+            <h3>
+                Тур по заданным параметрам не найден
+            </h3>
+        </div>
+
+        <div class="empty-result__text">
+            <p>
+                К сожалению мы не смогли найти подходящие туры, попробуйте использовать другие параметры
+            </p>
+        </div>
+
+        <button class="empty-result__btn btn " type="button">
+            Очистить фильтр
+        </button>
+    </div>
+
+    <address class="empty-result__address">
+        <div class="empty-result__row">
+            <div class="empty-result__text">
+                <p>
+                    Позвоните нам и мы поможем подобрать тур
+                </p>
+            </div>
+
+            <div class="empty-result__links">
+                <a class="empty-result__link" href="tel:+74950096699">
+                    <span class="link-toleft link-toleft--red">+7 (495) 009-66-99</span>
+                    <span class="empty-result__link-text">Для турагентств</span>
+                </a>
+
+                <a class="empty-result__link" href="tel:+74956629940">
+                    <span class="link-toleft link-toleft--red">+7 (495) 662-99-40</span>
+                    <span class="empty-result__link-text">Для частных лиц</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="empty-result__bottom">
+            <div class="empty-result__text">
+                <p>
+                    Свяжитесь с нами в социальных сетях
+                </p>
+            </div>
+
+            {{> social social-parent-mod="empty-result__social" social-mod="social--color"}}
+        </div>
+    </address>
+</div>

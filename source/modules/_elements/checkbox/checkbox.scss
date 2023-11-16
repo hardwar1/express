@@ -1,0 +1,101 @@
+.checkbox {
+    position: relative;
+    display: inline-flex;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 28px;
+
+    &__input {
+        @include visually-hidden();
+    }
+
+    &__input:not(:disabled) ~ * {
+        cursor: pointer;
+    }
+
+    &__pseudoinput {
+        position: absolute;
+        left: 0;
+        top: 4px;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-color: $color-white;
+        border: 1px solid #d1d1e3;
+        border-radius: 4px;
+        box-shadow: 0 0 0 2px rgba(100, 161, 235, 0);
+        background-position: center;
+        background-size: 11px 8px;
+        background-repeat: no-repeat;
+        transition: background-color 0.3s, background-image 0.3s, border-color 0.3s, box-shadow 0.3s;
+    }
+
+    &__input:indeterminate ~ &__pseudoinput::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 10px;
+        height: 10px;
+        background-color: $color-gray-dark;
+        border-radius: 1px;
+        transform: translate(-50%, -50%);
+    }
+
+    &__input:checked ~ &__pseudoinput {
+        background-color: $color-gray-dark;
+        background-image: url("data:image/svg+xml,%3Csvg width='11' height='8' viewBox='0 0 11 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.7 0.3C11.1 0.7 11.1 1.3 10.7 1.7L4.7 7.7C4.3 8.1 3.7 8.1 3.3 7.7L0.3 4.7C-0.1 4.3 -0.1 3.7 0.3 3.3C0.7 2.9 1.3 2.9 1.7 3.3L4 5.6L9.3 0.3C9.7 -0.1 10.3 -0.1 10.7 0.3Z' fill='white'/%3E%3C/svg%3E");
+        border-color: $color-gray-dark;
+    }
+
+    &__input:focus-visible:not(:disabled) ~ &__pseudoinput,
+    &__input:hover:not(:disabled) ~ &__pseudoinput {
+        @media (min-width: $desktops-sm) {
+            border-color: $color-gray-dark;
+            box-shadow: 0 0 0 2px rgba($color-gray-dark, 0.4);
+        }
+    }
+
+    &__input:checked:focus-visible:not(:disabled) ~ &__pseudoinput,
+    &__input:checked:hover:not(:disabled) ~ &__pseudoinput {
+            background-color: $color-gray-dark;
+            border-color: $color-gray-dark;
+    }
+
+    &__input:disabled ~ &__pseudoinput,
+    &__input:checked:disabled ~ &__pseudoinput {
+        background-color: #ececec;
+        border: 1px solid #d1d1e3;
+    }
+
+    &__input:checked:disabled ~ &__pseudoinput {
+        background-image: url("data:image/svg+xml,%3Csvg width='11' height='8' viewBox='0 0 11 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.7 0.3C11.1 0.7 11.1 1.3 10.7 1.7L4.7 7.7C4.3 8.1 3.7 8.1 3.3 7.7L0.3 4.7C-0.1 4.3 -0.1 3.7 0.3 3.3C0.7 2.9 1.3 2.9 1.7 3.3L4 5.6L9.3 0.3C9.7 -0.1 10.3 -0.1 10.7 0.3Z' fill='%23C7C9DA'/%3E%3C/svg%3E");
+    }
+
+    &__input:indeterminate:disabled ~ &__pseudoinput::before {
+        background-color: #ccccd3;
+    }
+
+    &__text {
+        display: inline-block;
+        min-height: 28px;
+        padding-left: 36px;
+    }
+
+    &--text-sm &__text {
+        padding-top: 4px;
+        padding-left: 32px;
+        font-size: 13px;
+        line-height: 18px;
+        color: $color-gray;
+    }
+
+    &--required &__text::after {
+        content: " * ";
+        color: $color-red;
+    }
+
+    &__input:disabled ~ &__text {
+        opacity: 0.4;
+    }
+}

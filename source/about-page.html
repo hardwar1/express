@@ -1,0 +1,156 @@
+---
+layout: default
+title: Страница без контента
+h1: Страница без контента
+aside-list: 3
+news-block: true
+links-block: true
+---
+<div class="main-content">
+    <div class="main-content__headline">
+        {{> menu-btn-big menu-btn-big-parent-mod="main-content__menu-btn" text="Меню"}}
+
+        <h1>
+            О компании
+        </h1>
+    </div>
+
+    <div class="main-content__block">
+        {{> about about-parent-mod="main-content__about" about-mod=""}}
+    </div>
+
+    <section class="main-content__block">
+        <div class="main-content__block-header">
+            <h2>
+                Структура
+            </h2>
+        </div>
+        {{> structure structure-parent-mod="main-content__structure" structure-mod=""}}
+    </section>
+
+    <section class="main-content__block">
+        <div class="main-content__block-header">
+            <h2>
+                Продукты
+            </h2>
+        </div>
+
+        {{> products products-parent-mod="main-content__products" products-mod=""}}
+    </section>
+
+    <div class="main-content__block">
+        <div class="main-content__block-header">
+            <h2>
+                География холдинга
+            </h2>
+        </div>
+
+        {{> map-wrap }}
+    </div>
+
+    <section class="main-content__block">
+        <div class="main-content__block-header">
+            <h2>
+                Русский Экспресс в цифрах
+            </h2>
+        </div>
+
+        {{> stats stats-parent-mod="main-content__stats" stats-mod=""}}
+
+    </section>
+
+    <section class="main-content__block">
+        <div class="main-content__block-header">
+            <h2>
+                Почему мы
+            </h2>
+        </div>
+
+        {{> why-we why-we-parent-mod="main-content__why-we" why-we-mod=""}}
+
+    </section>
+
+    <section class="main-content__block">
+        <div class="main-content__block-header">
+            <h2>
+                Финансовые гарантии
+            </h2>
+        </div>
+
+        {{> security security-parent-mod="main-content__security" security-mod=""}}
+
+    </section>
+
+    <div class="main-content__block">
+        {{> stages-link stages-link-parent-mod="main-content__stages-link" stages-link-mod=""}}
+    </div>
+
+    <section class="main-content__block">
+        <div class="main-content__block-header">
+            <h2>
+                Стратегия развития и ценности
+            </h2>
+        </div>
+
+        <div class="content-block">
+            <p class="text-l">
+                Миссия холдинга – развитие цивилизованного клиентоориентированного туристического бизнеса в России,
+                соответствующего международным стандартам, и предоставление качественного отдыха по доступным ценам.
+            </p>
+
+            <div class="double-block">
+                <div class="first">
+                    <h3 class="h4">
+                        Цели развития:
+                    </h3>
+                    <ul>
+                        <li>
+                            Построение крупного международного туристического холдинга с оборотом более 0,5 млн.
+                            туристов
+                        </li>
+                        <li>
+                            Предоставление лучшего туристического сервиса на рынке России и стран СНГ
+                        </li>
+                        <li>
+                            Создание и внедрение на рынок туристических технологий, превосходящих мировые аналоги.
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="second">
+                    <h3 class="h4">
+                        Ценности компании:
+                    </h3>
+
+                    <ul>
+                        <li>
+                            Клиентоориентированность
+                        </li>
+                        <li>
+                            Профессионализм
+                        </li>
+                        <li>
+                            Технологичность
+                        </li>
+                        <li>
+                            Эффективность
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="main-content__block">
+        <div class="main-content__block-header">
+            <h2>
+                <a href="#ekb">
+                    Контакты
+                </a>
+            </h2>
+        </div>
+
+        {{> contacts }}
+    </section>
+</div>

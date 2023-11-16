@@ -1,0 +1,50 @@
+.drop-country {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    @media (min-width: $desktops-sm) {
+        padding: 40px 0 56px;
+    }
+
+    &__item {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 24px;
+        flex-shrink: 0;
+        color: $color-gray;
+        padding: 0 8px;
+        margin-bottom: 8px;
+        min-width: fit-content;
+        display: flex;
+        align-items: center;
+    }
+
+    &__item--middle {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+        color: $color-text;
+    }
+
+    &__item--big {
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 34px;
+
+        color: $color-text;
+    }
+
+    &__new-string {
+        @media (min-width: $desktops-lg) {
+            width: 100%;
+        }
+    }
+
+    &__link {
+        display: block;
+        padding: 8px 0;
+        color: inherit;
+    }
+}

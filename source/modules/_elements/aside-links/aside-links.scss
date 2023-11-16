@@ -1,0 +1,90 @@
+.aside-links {
+    &__item {
+        margin-bottom: 4px;
+
+        @media (min-width: $tablets) {
+            margin-bottom: 0;
+        }
+
+        @media (min-width: $desktops-sm) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__item:last-child {
+        @media (min-width: $desktops-sm) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__link {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 0 30px 0 68px;
+        min-height: 48px;
+        overflow: hidden;
+        transition: color 0.3s, padding 0.3s, box-shadow 0.3s;
+
+        @media (min-width: $tablets) {
+            padding: 12px 30px 12px 68px;
+            border: 1px solid $color-gray-light-3;
+            box-shadow: 0 2px 12px rgba(165, 165, 197, 0.1);
+            border-radius: 12px;
+            color: inherit;
+            min-height: 72px;
+        }
+
+        @media (min-width: $desktops-md) {
+            padding-left: 96px;
+        }
+    }
+
+    &__link:hover {
+        @media (min-width: $desktops-sm) {
+            color: $color-red;
+            box-shadow: 0 8px 24px rgba(165, 165, 197, 0.15);
+        }
+    }
+
+    &__link svg {
+        position: absolute;
+        left: 1px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 5;
+
+        @media (min-width: $tablets) {
+            left: 12px;
+        }
+
+        @media (min-width: $desktops-md) {
+            left: 24px;
+        }
+    }
+
+    &--center {
+        .aside-links__item {
+            @media (min-width: $tablets) {
+                width: calc(33% - 7px);
+            }
+        }
+
+        .aside-links__link {
+            padding: 0;
+            margin-bottom: 4px;
+
+            width: 100%;
+            @media (min-width: $tablets) {
+                justify-content: center;
+                padding: 8px 24px;
+            }
+        }
+
+        .aside-links__link svg:first-child {
+            position: static;
+            transform: unset;
+            margin-right: 14px;
+        }
+    }
+}

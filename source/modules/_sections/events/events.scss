@@ -1,0 +1,19 @@
+.events {
+    &__btns {
+        margin-bottom: 40px;
+    }
+
+    &__body {
+        margin-bottom: 20px;
+    }
+
+    &__link {
+        display: inline-block;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: $color-red;
+    }
+}

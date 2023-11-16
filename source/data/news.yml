@@ -1,0 +1,66 @@
+index:
+    -
+        card-news-parent-mod: news__card
+        card-news-mod: card-news--only-img
+        card-news-href:
+        bgi: news1
+        card-news-date: "16.06.2022"
+        card-news-date-attr: "2022-06-16"
+        card-news-title: Новость отелей ROBINSON на Мальдивах
+        card-news-text: С 01.09.2022 отели ROBINSON отменили требования об обязательной вакцинации и ПЦР тестирования для своих гостей.
+    -
+        card-news-parent-mod: news__card
+        card-news-mod: card-news--img
+        bgi:  news2
+        card-news-href:
+        card-news-date: "16.06.2022"
+        card-news-date-attr: "2022-06-16"
+        card-news-title: «Русский Экспресс» открыл офис в Беларуси
+    -
+        card-news-parent-mod: news__card
+        card-news-mod:
+        card-news-href:
+        card-news-date: "16.06.2022"
+        card-news-date-attr: "2022-06-16"
+        card-news-title: ТрЭволюция возвращается!
+        card-news-text: Приглашаем на конференцию профессионалов турбизнеса. Пять городов, три ярких спикера, воркшоп по популярному направлению нового сезона – эмират Абу-Даби.
+    -
+        card-news-parent-mod: news__card
+        card-news-mod:
+        card-news-date: "16.06.2022"
+        card-news-href:
+        card-news-date-attr: "2022-06-16"
+        card-news-title: Открытие региональных офисов
+        card-news-text: «Русский Экспресс» вновь открыл собственные представительства в РФ. Теперь холдинг представлен в 12 городах-миллионниках.
+    -
+        card-news-parent-mod: news__card
+        card-news-mod:
+        card-news-date: "16.06.2022"
+        card-news-href:
+        card-news-date-attr: "2022-06-16"
+        card-news-title: Кешбэк за туры по России с 25 августа по 10 сентября
+        card-news-text: Информируем, что холдинг «Русский Экспресс» вновь участвует в государственной программе по субсидированию туров по России
+    -
+        card-news-parent-mod: news__card
+        card-news-mod:
+        card-news-date: "16.06.2022"
+        card-news-href:
+        card-news-date-attr: "2022-06-16"
+        card-news-title: Страна лунных пейзажей и природных чудес
+        card-news-text: Туры в Каппадокию (Турция)
+    -
+        card-news-parent-mod: news__card
+        card-news-mod:
+        card-news-date: "16.06.2022"
+        card-news-href:
+        card-news-date-attr: "2022-06-16"
+        card-news-title: Страна лунных пейзажей и природных чудес
+        card-news-text: Туры в Каппадокию (Турция)
+    -
+        card-news-parent-mod: news__card
+        card-news-mod:
+        card-news-date: "16.06.2022"
+        card-news-href:
+        card-news-date-attr: "2022-06-16"
+        card-news-title: Страна лунных пейзажей и природных чудес
+        card-news-text: Туры в Каппадокию (Турция)

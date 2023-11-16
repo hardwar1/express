@@ -1,0 +1,27 @@
+.structure {
+    &__list {
+        @media (min-width: $tablets) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        @media (min-width: $desktops-lg) {
+            flex-wrap: nowrap;
+        }
+    }
+
+    &__item {
+        margin-bottom: 10px;
+
+        @media (min-width: $tablets) {
+            max-width: calc(50% - 5px);
+            width: 100%;
+        }
+
+        @media (min-width: $desktops-lg) {
+            max-width: calc(25% - 7px);
+            margin-bottom: 0;
+        }
+    }
+}

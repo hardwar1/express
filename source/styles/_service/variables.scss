@@ -1,0 +1,64 @@
+$phones-min: 320px;
+$phones-sm: 360px;
+$phones-md: 420px;
+
+$phones-lg: 575px;
+$tablets: 720px;
+$desktops-sm: 980px;
+$desktops-md: 1200px;
+
+$desktops-lg: 1400px;
+$desktops-xl: 1600px;
+
+$phones-sm-max: $phones-md - 1px;
+$phones-max: $tablets - 1px;
+$tablets-max: $desktops-sm - 1px;
+$desktops-sm-max: $desktops-md - 1px;
+$desktops-md-max: $desktops-lg - 1px;
+$desktops-lg-max: $desktops-xl - 1px;
+
+$color-white: #ffffff;
+$color-white-1: #f3f5fd;
+$color-white-2: #eef1fd;
+$color-white-3: #f5f5fa;
+$color-white-4: #F2F4FC;
+$color-white-5: #FDF2EE;
+
+$color-black: #000000;
+$color-black-1: #242429;
+$color-black-2: #232323;
+
+$color-gray-dark: #4b4b61;
+$color-gray-dark-5: #6E6E8A;
+$color-gray-dark-2: #808080;
+$color-gray-dark-3: #808088;
+$color-gray-dark-4: #686868;
+$color-gray-dark-6: #98989E;
+$color-gray-dark-7: #9292AA;
+$color-gray: #8d8d9f;
+$color-gray-icon: #a5a5c5;
+
+$color-gray-light: #e2e2ee;
+$color-gray-light-1: #c4c4c4;
+$color-gray-light-2: #eff1fa;
+$color-gray-light-3: #e4e4ee;
+$color-gray-light-5: #e1e3eb;
+$color-gray-light-6: #eef1fc;
+$color-gray-light-7: #E3E3ED;
+$color-gray-light-8: #eae9f2;
+$color-gray-light-9: #E2E2EC;
+$color-gray-light-10: #FAFBFE;
+
+$color-red: #e92b37;
+$color-red-1: #ff4141;
+$color-blue: #186fe6;
+$color-pink: #EEF1FC;
+$color-purple: #4F25AA;
+$color-brown: #997308;
+$color-green: #28B43E;
+
+$color-text: $color-black-1;
+
+$color-link-hover: $color-red;
+$color-link-bg-hover: $color-white-1;
+

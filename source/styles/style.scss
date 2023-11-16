@@ -1,0 +1,150 @@
+@import "_service/variables";
+@import "_service/mixins";
+@import "_service/fonts";
+@import "_service/reset";
+
+/* plugins */
+@import "../plugins/daterangepicker/daterangepicker";
+@import "../plugins/fancybox/fancybox";
+@import "../plugins/swiper/swiper";
+@import "../plugins/swiper/pagination";
+@import "../plugins/swiper/scrollbar";
+
+@import "_service/basic";
+@import "_GLOBAL/content";
+
+/* modules */
+
+@import "../modules/_ELEMENTS/social/social";
+@import "../modules/_ELEMENTS/btn/btn";
+@import "../modules/_ELEMENTS/btns/btns";
+@import "../modules/_ELEMENTS/nav/nav";
+@import "../modules/_ELEMENTS/currency/currency";
+@import "../modules/_ELEMENTS/btn-row/btn-row";
+@import "../modules/_ELEMENTS/link-lk/link-lk";
+@import "../modules/_ELEMENTS/tel-block/tel-block";
+@import "../modules/_ELEMENTS/menu-btn-big/menu-btn-big";
+@import "../modules/_ELEMENTS/slider-btn/slider-btn";
+@import "../modules/_ELEMENTS/slider-btns/slider-btns";
+@import "../modules/_ELEMENTS/slider-nav/slider-nav";
+@import "../modules/_ELEMENTS/video/video";
+@import "../modules/_ELEMENTS/checkbox/checkbox";
+@import "../modules/_ELEMENTS/file/file";
+@import "../modules/_ELEMENTS/radio/radio";
+@import "../modules/_ELEMENTS/form-select/form-select";
+@import "../modules/_ELEMENTS/label/label";
+@import "../modules/_ELEMENTS/labels/labels";
+@import "../modules/_ELEMENTS/search-input/search-input";
+@import "../modules/_ELEMENTS/hard-input/hard-input";
+@import "../modules/_ELEMENTS/form-drop-list/form-drop-list";
+@import "../modules/_ELEMENTS/done/done";
+@import "../modules/_ELEMENTS/alert/alert";
+@import "../modules/_ELEMENTS/sent/sent";
+
+
+
+// модули на удаление
+
+// tests
+// @import "../modules/_SECTIONS/hotel-one/hotel-one";
+// @import "../modules/_SECTIONS/event-one/event-one";
+
+// /модули /на /удаление
+
+@import "../modules/_GLOBAL/header-form/header-form";
+@import "../modules/_GLOBAL/header-form/form-item";
+@import "../modules/_ELEMENTS/members/members";
+@import "../modules/_ELEMENTS/input-number/input-number";
+@import "../modules/_ELEMENTS/select-wrap/select-wrap";
+@import "../modules/_ELEMENTS/select-wrap/select-input/select-input";
+@import "../modules/_ELEMENTS/nights/nights";
+@import "../modules/_ELEMENTS/cities/cities";
+
+@import "../modules/_GLOBAL/footer/footer";
+
+@import "../modules/_GLOBAL/header/header";
+@import "../modules/_GLOBAL/breadcrumbs/breadcrumbs";
+@import "../modules/_GLOBAL/menu-btn/menu-btn";
+
+@import "../modules/_GLOBAL/site-notice/site-notice";
+@import "../modules/_ELEMENTS/aside-list/aside-list";
+
+@import "../modules/_ELEMENTS/slider-pagination/slider-pagination";
+@import "../modules/_ELEMENTS/slider/slider";
+@import "../modules/_ELEMENTS/slider-simple/slider-simple";
+
+@import "../modules/_ELEMENTS/balloon/balloon";
+@import "../modules/_ELEMENTS/link-arrow/link-arrow";
+
+@import "../modules/_ELEMENTS/weather/weather";
+@import "../modules/_ELEMENTS/aside-news/aside-news";
+@import "../modules/_ELEMENTS/aside-links/aside-links";
+
+@import "../modules/_ELEMENTS/links-bar/links-bar";
+@import "../modules/_ELEMENTS/stars/stars";
+
+@import "../modules/_ELEMENTS/card-review/card-review";
+@import "../modules/_ELEMENTS/card-news/card-news";
+@import "../modules/_ELEMENTS/card-hotel/card-hotel";
+@import "../modules/_ELEMENTS/card-tour/card-tour";
+@import "../modules/_ELEMENTS/card-actions/card-actions";
+@import "../modules/_ELEMENTS/card-structure/card-structure";
+@import "../modules/_ELEMENTS/card-products/card-products";
+@import "../modules/_ELEMENTS/card-event/card-event";
+
+@import "../modules/_ELEMENTS/empty-result/empty-result";
+@import "../modules/_ELEMENTS/deposit-links/deposit-links";
+@import "../modules/_ELEMENTS/half-img/half-img";
+@import "../modules/_ELEMENTS/tour-detail-card/tour-detail-card";
+@import "../modules/_ELEMENTS/price-row/price-row";
+@import "../modules/_ELEMENTS/news-list/news-list";
+
+
+@import "../modules/_ELEMENTS/filter-bar/filter-bar";
+@import "../modules/_ELEMENTS/filter-bar/drop-list";
+
+
+@import "../modules/_ELEMENTS/stages-link/stages-link";
+
+
+@import "../modules/_SECTIONS/hero/hero";
+@import "../modules/_SECTIONS/news/news";
+@import "../modules/_SECTIONS/news-list-section/news-list-section";
+@import "../modules/_SECTIONS/sale/sale";
+
+@import "../modules/_SECTIONS/hotels/hotels";
+@import "../modules/_SECTIONS/map-wrap/map-wrap";
+@import "../modules/_SECTIONS/tours-in/tours-in";
+@import "../modules/_SECTIONS/tour-detail/tour-detail";
+
+@import "../modules/_SECTIONS/city-list/city-list";
+@import "../modules/_SECTIONS/actions/actions";
+
+@import "../modules/_SECTIONS/about/about";
+@import "../modules/_SECTIONS/structure/structure";
+@import "../modules/_SECTIONS/products/products";
+@import "../modules/_SECTIONS/stats/stats";
+@import "../modules/_SECTIONS/why-we/why-we";
+@import "../modules/_SECTIONS/security/security";
+@import "../modules/_SECTIONS/contacts/contacts";
+
+@import "../modules/_SECTIONS/event-hero/event-hero";
+@import "../modules/_SECTIONS/events/events";
+@import "../modules/_SECTIONS/hotels-list/hotels-list";
+@import "../modules/_SECTIONS/page-404/page-404";
+@import "../modules/_SECTIONS/reviews-list/reviews-list";
+@import "../modules/_SECTIONS/forms/forms";
+@import "../modules/_SECTIONS/menu-images/menu-images";
+
+// popups
+@import "../modules/_POPUPS/drop-country/drop-country";
+@import "../modules/_POPUPS/drop-menu-column/drop-menu-column";
+@import "../modules/_POPUPS/drop-menu/drop-menu";
+@import "../modules/_POPUPS/tours-popup/tours-popup";
+
+@import "_GLOBAL/main-content";
+@import "_GLOBAL/main-top";
+@import "_GLOBAL/main";
+@import "_GLOBAL/page";
+@import "_service/scaffolding";
+

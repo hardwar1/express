@@ -1,0 +1,86 @@
+.menu-images {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+
+    @media (min-width: $phones-md) {
+        font-size: 15px;
+        line-height: 24px;
+    }
+
+    & &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -10px -5px;
+
+        @media (min-width: $phones-md) {
+            margin: -20px -10px;
+        }
+    }
+
+    & &__item {
+        width: calc(50% - 10px);
+        margin: 10px 5px;
+
+        @media (min-width: $phones-md) {
+            width: calc(50% - 20px);
+            margin: 20px 10px;
+        }
+
+        @media (min-width: $tablets) {
+            width: calc(100% / 3 - 20px);
+        }
+    }
+
+    &__item-inner {
+        display: block;
+    }
+
+    &__img-wrap {
+        position: relative;
+        display: block;
+        margin-bottom: 6px;
+        padding-top: 67.1%;
+        border-radius: 12px;
+        overflow: hidden;
+        background-image: url(../images/nophoto_1.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        @media (min-width: $phones-md) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__img-wrap img {
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: auto;
+        min-height: 100%;
+        object-fit: cover;
+        object-position: center center;
+        border-radius: inherit;
+        // text-indent: -10000px; // скрывает альтернативный текст, а при его отсутствии - рамку у изображения
+
+        @media (min-width: $desktops-sm) {
+            transition-property: transform;
+            transition-duration: 0.3s;
+        }
+    }
+
+    &__item-inner:focus &__img-wrap img,
+    &__item-inner:hover &__img-wrap img {
+        @media (min-width: $desktops-sm) {
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+    }
+
+    &__text {
+        display: block;
+    }
+}

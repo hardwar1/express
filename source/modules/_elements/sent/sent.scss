@@ -1,0 +1,38 @@
+.sent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px 15px;
+    text-align: center;
+
+    background-color: $color-white;
+    border: 1px solid $color-gray-light-3;
+    border-radius: 12px;
+
+    @media (min-width: $tablets) {
+        padding: 40px;
+    }
+
+    & > *:not(:last-child) {
+        margin-bottom: 16px;
+    }
+
+    &__title {
+        padding: 0 15px;
+        position: relative;
+        padding-left: 40px;
+    }
+
+    svg {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        flex-shrink: 0;
+        margin-right: 16px;
+    }
+
+    &__btn {
+        padding: 6px 30px;
+    }
+}

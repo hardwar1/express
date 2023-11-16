@@ -1,0 +1,153 @@
+.contacts {
+    &__menu {
+        margin-bottom: 16px;
+    }
+
+    &__address {
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__body {
+        border: 1px solid $color-gray-light-3;
+        border-radius: 12px;
+    }
+
+    &__body-item {
+        padding: 24px 20px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+
+        @media (min-width: $tablets) {
+            padding: 40px;
+        }
+
+        @media (min-width: $desktops-md) {
+            font-size: 15px;
+            line-height: 28px;
+        }
+    }
+
+
+    &__top {
+        padding-bottom: 24px;
+        border-bottom: 1px solid $color-gray-light-3;
+    }
+
+    &__caption {
+        margin-bottom: 16px;
+    }
+
+    &__text {
+        margin-bottom: 8px;
+
+        @media (min-width: $tablets) {
+            margin-bottom: 11px;
+        }
+
+        @media (min-width: $tablets) {
+            margin-bottom: 9px;
+        }
+    }
+
+    &__link {
+        color: inherit;
+        margin-bottom: 8px;
+
+        @media (min-width: $tablets) {
+            margin-bottom: 10px;
+        }
+
+        @media (min-width: $tablets) {
+            margin-bottom: 8px;
+        }
+    }
+
+    &__link--icon {
+        display: block;
+        position: relative;
+        padding-left: 40px;
+    }
+
+    svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        flex-shrink: 0;
+        margin-right: 12px;
+        stroke: $color-gray-icon;
+        fill: $color-white;
+
+    }
+
+    &__link--fill svg {
+        fill: $color-gray-icon;
+        stroke: unset;
+    }
+
+    &__link-text {
+        display: block;
+
+        @media (min-width: $tablets) {
+            display: inline;
+        }
+    }
+
+    &__sub-text {
+        font-weight: 500;
+        color: $color-gray;
+    }
+
+    &__bottom {
+        padding-top: 24px;
+    }
+
+    &__bottom > *:last-child {
+        margin-bottom: 0;
+    }
+
+    &__sub-caption {
+        margin-bottom: 16px;
+    }
+
+    &__links {
+        margin-bottom: 16px;
+        line-height: 25px;
+
+        @media (min-width: $tablets) {
+            line-height: inherit;
+        }
+    }
+
+    &__tel {
+        color: inherit;
+        font-weight: 500;
+        display: block;
+        margin-right: 6px;
+
+        @media (min-width: $tablets) {
+            display: inline;
+        }
+    }
+
+    &__row span {
+        display: block;
+        font-size: 13px;
+        line-height: 15px;
+
+        @media (min-width: $tablets) {
+            margin-top: 8px;
+            margin-bottom: 4px;
+        }
+
+        @media (min-width: $desktops-md) {
+            display: inline;
+            margin-top: 0;
+        }
+    }
+
+    &__row a {
+        display: inline;
+    }
+}

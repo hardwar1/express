@@ -1,0 +1,18 @@
+<form class="{{search-input-parent-mod}} search-input  {{search-input-mod}}">
+    <label class="search-input__label-search">
+        <span class="visually-hidden">
+            поиск отеля
+        </span>
+        <input class="search-input__search input" type="search" name="search" placeholder="Поиск по названию" required>
+    </label>
+
+    <button class="search-input__btn" type="submit">
+        <span class="visually-hidden">
+            искать
+        </span>
+        <svg width="24" height="24">
+            <use xlink:href="#search"></use>
+        </svg>
+    </button>
+    {{> form-drop-list form-drop-list-parent-mod="search-input__form-drop-list" form-drop-list-mod=""}}
+</form>

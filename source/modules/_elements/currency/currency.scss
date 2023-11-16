@@ -1,0 +1,112 @@
+.currency {
+    font-weight: 500;
+
+    @media (min-width: $desktops-sm) {
+        position: relative;
+        left: -5px;
+    }
+
+    @media (min-width: $desktops-md) {
+        left: 0;
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        row-gap: 10px;
+    }
+
+    &__choice {
+        position: relative;
+        margin-right: 24px;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 16px;
+    }
+
+    &__choice-btn {
+        @include no-btn;
+        color: inherit;
+        display: flex;
+        align-items: center;
+        padding: 4px 4px 4px 8px;
+        background-color: $color-white-4;
+        border-radius: 3px;
+        text-transform: uppercase;
+    }
+
+    &__choice-btn.active svg {
+        transform: rotate(180deg);
+    }
+
+    &__choice-btn svg {
+        margin-left: 8px;
+        transition: transform 0.3s;
+    }
+
+    &__hide-box {
+        position: absolute;
+        top: 100%;
+        transition: height 0.3s;
+        left: 0;
+        z-index: 10;
+        overflow: hidden;
+        height: 0;
+        box-shadow: 0 14px 40px rgba(165, 165, 197, 0.4);
+        background-color: $color-white;
+        border-radius: 0 0 4px 4px;
+    }
+
+    &__choice-item:first-child &__choice-link {
+        border-top: 0;
+    }
+
+    &__choice-link {
+        border-top: 1px solid $color-white-4;
+        color: $color-text;
+        display: block;
+        padding: 5px 10px;
+        text-transform: uppercase;
+
+        @media (min-width: $desktops-sm) {
+            transition: background-color 0.3s;
+        }
+    }
+
+    &__choice-link[href]:hover {
+        @media (min-width: $desktops-sm) {
+            background-color: $color-white-1;
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 24px;
+        max-width: 290px;
+        margin: 0;
+        padding-left: 0;
+        font-weight: 600;
+        list-style-type: none;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    &__item {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px 4px;
+    }
+
+    &__name {
+        display: inline-block;
+        color: $color-gray;
+    }
+
+    &__value {
+        font-weight: 500;
+        position: relative;
+        display: inline-block;
+    }
+}

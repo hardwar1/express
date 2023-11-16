@@ -1,0 +1,23 @@
+<article class="card-products {{card-products-parent-mod}} {{card-products-mod}} {{card-products-mod2}}">
+    <div class="card-products__info">
+        <div class="card-products__title">
+            <h3>
+                {{title}}
+            </h3>
+        </div>
+
+        <div class="card-products__text">
+            <p>
+                {{text}}
+            </p>
+        </div>
+        {{> link-arrow link-arrow-parent-mod="card-products__link" link-arrow-mod="" link-arrow-text="Подробнее"}}
+
+    </div>
+
+    <div class="card-products__img-box">
+        <div class="card-products__img-wrapper">
+            <img class="card-products__img" src="images/icons/product-{{img}}.svg" width="70" alt="{{title}}">
+        </div>
+    </div>
+</article>

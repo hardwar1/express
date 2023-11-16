@@ -1,0 +1,20 @@
+{{#if link}}
+    <a class="half-img-link" href="images/half-img/main.jpg" data-fancybox="gallery4">
+{{/if}}
+{{#if video}}
+<a class="half-img-link video-btn" href="https://youtu.be/FtU7gPXOy3M" data-fancybox="gallery4">
+{{/if}}
+<picture>
+    <source srcset="images/half-img/main.webp" type="image/webp">
+    <source srcset="images/half-img/main.jpg" type="image/jpg">
+    <img class="half-img" src="images/half-img/main.jpg" alt="прекрасный город у берега">
+</picture>
+{{#if link}}
+</a>
+{{/if}}
+{{#if video}}
+<svg width="20" height="24">
+    <use xlink:href="#triangle"></use>
+</svg>
+</a>
+{{/if}}

@@ -1,0 +1,15 @@
+<div class="{{why-we-parent-mod}} why-we {{why-we-mod}}">
+    <ul class="why-we__list">
+        {{#each why-we}}
+        <li class="why-we__item">
+            <svg width="48" height="48">
+                <use xlink:href="images/sprite.svg#why-{{id}}"></use>
+            </svg>
+
+            <span class="why-we__text text-l">
+                {{text}}
+            </span>
+        </li>
+        {{/each}}
+    </ul>
+</div>

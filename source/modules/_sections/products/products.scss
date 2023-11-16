@@ -1,0 +1,22 @@
+.products {
+    &__list {
+        @media (min-width: $tablets) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+
+    &__item {
+        margin-bottom: 10px;
+
+        @media (min-width: $tablets) {
+            max-width: calc(50% - 10px);
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__card {
+    }
+}

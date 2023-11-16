@@ -1,0 +1,22 @@
+<div class="{{select-parent-mod}} select {{select-mod}}">
+    <div class="select__header">
+        <input class="select__input" type="text" value="Example" aria-label="Поле выбранного варианта" readonly tabindex="-1">
+
+        <button class="select__btn" type="button">
+            <svg class="select__icon" width="16" height="16" fill="currentColor">
+                <use xlink:href="#icon-arrow-simple"></use>
+            </svg>
+            <span class="visually-hidden">Открыть/закрыть варианты</span>
+        </button>
+    </div>
+
+    <div class="select__body">
+        <ul class="select__list">
+            {{#each select-list}}
+            <li class="select__item">
+                <a class="select__link{{#if active}} active{{/if}}" href="">{{text}}</a>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>

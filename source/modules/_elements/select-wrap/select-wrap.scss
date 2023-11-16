@@ -1,0 +1,31 @@
+.select-wrap {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 0.04em;
+
+    @media (min-width: $tablets) {
+        font-size: 15px;
+        line-height: 24px;
+        letter-spacing: normal;
+    }
+
+    &__caption {
+        margin-right: 20px;
+        white-space: nowrap;
+        color: $color-gray;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+
+        @media (min-width: $tablets) {
+            margin-right: 14px;
+        }
+    }
+
+    @import "select-wrap--members";
+    @import "select-wrap--sm";
+    @import "select-wrap--vert";
+}

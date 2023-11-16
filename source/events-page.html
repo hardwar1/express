@@ -1,0 +1,21 @@
+---
+layout: default
+title: Страница без контента
+h1: Страница без контента
+aside-list: 2
+news-block: true
+links-block: true
+---
+<div class="main-content">
+    <div class="main-content__headline">
+        {{> menu-btn-big menu-btn-big-parent-mod="main-content__menu-btn" text="Меню"}}
+
+        <h1>
+            Мероприятия
+        </h1>
+    </div>
+
+    <div class="main-content__block">
+        {{> events events-parent-mod="" events-mod=""}}
+    </div>
+</div>

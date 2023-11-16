@@ -1,0 +1,15 @@
+.slider-pagination {
+    .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        background-color: $color-white;
+        opacity: 0.5;
+        border-radius: 4px;
+        transition: opacity 0.3s, width 0.3s;
+    }
+
+    .swiper-pagination-bullet-active {
+        width: 16px;
+        opacity: 1;
+    }
+}

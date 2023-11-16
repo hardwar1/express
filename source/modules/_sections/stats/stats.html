@@ -1,0 +1,23 @@
+<div class="{{stats-parent-mod}} stats  {{stats-mod}}">
+    <ul class="stats-list stats-list--red">
+        {{#each stats.red}}
+        <li class="stats-list__item">
+            {{num}}
+            <span class="stats-list__text ">
+                {{text}}
+            </span>
+        </li>
+        {{/each}}
+    </ul>
+
+    <ul class="stats-list">
+        {{#each stats.black}}
+        <li class="stats-list__item">
+            {{num}}
+            <span class="stats-list__text ">
+                {{text}}
+            </span>
+        </li>
+        {{/each}}
+    </ul>
+</div>

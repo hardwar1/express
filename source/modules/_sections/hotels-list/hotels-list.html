@@ -1,0 +1,128 @@
+<section class="hotels-list">
+    <h2 class="visually-hidden">Доступные отели</h2>
+    <div class="hotels-list__top">
+        {{> btns btns-mod="hotels-list__btns" btns-list=btns.hotels-list}}
+
+        {{> search-input search-input-parent-mod="hotels-list__search-input" }}
+
+    </div>
+
+    <div class="hotels-list__body">
+        <ul class="hotels-list__lists">
+            <li class="hotels-list__lists-item">
+                <div class="hotels-list__title">
+                    <h3>
+                        Анкара
+                    </h3>
+                    <!-- сортировка по категории -->
+                    <h3 style="display: none;">
+                        Категория 5*
+                    </h3>
+                    <!-- сортировка по алфавиту -->
+                    <h3 style="display: none;">
+                        A
+                    </h3>
+                </div>
+
+                <ul class="hotels-list__list">
+                    {{#each hotels-list}}
+                    <li class="hotels-list__item">
+                        <a class="hotels-list__link link" href="">
+                            {{text}}
+                            {{#if svg}}
+                            <svg width="16" height="16">
+                                <use xlink:href="images/sprite.svg#heart"></use>
+                            </svg>
+
+                            <svg width="34" height="16">
+                                <use xlink:href="images/sprite.svg#icon-360-2"></use>
+                            </svg>
+
+                            <svg width="24" height="16">
+                                <use xlink:href="images/sprite.svg#play"></use>
+                            </svg>
+                            {{/if}}
+                        </a>
+                    </li>
+                    {{/each}}
+                </ul>
+            </li>
+            <li class="hotels-list__lists-item">
+                <div class="hotels-list__title">
+                    <h3>
+                        Анталья
+                    </h3>
+                    <!-- сортировка по категории -->
+                    <h3 style="display: none;">
+                        Категория 4*
+                    </h3>
+                    <!-- сортировка по алфавиту -->
+                    <h3 style="display: none;">
+                        B
+                    </h3>
+                </div>
+
+                <ul class="hotels-list__list">
+                    {{#each hotels-list}}
+                    <li class="hotels-list__item">
+                        <a class="hotels-list__link link" href="">
+                            {{text}}
+                            {{#if svg}}
+                            <svg width="16" height="16">
+                                <use xlink:href="images/sprite.svg#heart"></use>
+                            </svg>
+
+                            <svg width="34" height="16">
+                                <use xlink:href="images/sprite.svg#icon-360-2"></use>
+                            </svg>
+
+                            <svg width="24" height="16">
+                                <use xlink:href="images/sprite.svg#play"></use>
+                            </svg>
+                            {{/if}}
+                        </a>
+                    </li>
+                    {{/each}}
+                </ul>
+            </li>
+            <li class="hotels-list__lists-item">
+                <div class="hotels-list__title">
+                    <h3>
+                        Белек
+                    </h3>
+                    <!-- сортировка по категории -->
+                    <h3 style="display: none;">
+                        Категория 3*
+                    </h3>
+                    <!-- сортировка по алфавиту -->
+                    <h3 style="display: none;">
+                        C
+                    </h3>
+                </div>
+
+                <ul class="hotels-list__list">
+                    {{#each hotels-list}}
+                    <li class="hotels-list__item">
+                        <a class="hotels-list__link link" href="">
+                            {{text}}
+                            {{#if svg}}
+                            <svg width="16" height="16">
+                                <use xlink:href="images/sprite.svg#heart"></use>
+                            </svg>
+
+                            <svg width="34" height="16">
+                                <use xlink:href="images/sprite.svg#icon-360-2"></use>
+                            </svg>
+
+                            <svg width="24" height="16">
+                                <use xlink:href="images/sprite.svg#play"></use>
+                            </svg>
+                            {{/if}}
+                        </a>
+                    </li>
+                    {{/each}}
+                </ul>
+            </li>
+        </ul>
+    </div>
+</section>

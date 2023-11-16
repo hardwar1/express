@@ -1,0 +1,29 @@
+.half-img {
+    display: block;
+    object-fit: contain;
+    border-radius: 12px;
+
+    @media (min-width: $tablets) {
+        width: 57.3%;
+    }
+
+    @media (min-width: $desktops-sm) {
+        width: 65.3%;
+    }
+}
+
+.half-img-link {
+    display: flex;
+    margin: 40px 0;
+    @media (min-width: $tablets) {
+        width: 57.3%;
+    }
+
+    @media (min-width: $desktops-sm) {
+        width: 65.3%;
+    }
+
+    .half-img {
+        width: 100%;
+    }
+}

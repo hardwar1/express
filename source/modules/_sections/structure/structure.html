@@ -1,0 +1,9 @@
+<div class="structure {{structure-parent-mod}} {{structure-mod}}">
+    <ul class="structure__list">
+        {{#each card-structure}}
+        <li class="structure__item">
+            {{> card-structure card-structure-parent-mod="structure__card" card-structure-mod=""}}
+        </li>
+        {{/each}}
+    </ul>
+</div>

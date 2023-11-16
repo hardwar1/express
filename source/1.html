@@ -1,0 +1,64 @@
+---
+layout: 1
+title: Список страниц
+list-1:
+    -   href: index
+        text: Главная
+    -   href: summary
+        text: Сводная
+    -   href: countries
+        text: Cтраны
+    -   href: country
+        text: Страна
+    -   href: tour-list
+        text: Туры
+    -   href: tour
+        text: Тур
+    -   href: news-page
+        text: Новости
+    -   href: news-one
+        text: Новость/Акция
+    -   href: news-two
+        text: Новость/Акция (два фото)
+    -   href: news-three
+        text: Новость/Акция (галерея)
+    -   href: hotels-page
+        text: Отели
+    -   href: hotel-one-page
+        text: Отель
+    -   href: resorts
+        text: Курорты
+    -   href: resort
+        text: Курорт
+    -   href: actions-page
+        text: Акции
+    -   href: 404
+        text: 404
+    -   href: events-page
+        text: Мероприятия
+    -   href: event-detail
+        text: Мероприятие
+    -   href: forms-page
+        text: формы
+    -   href: about-page
+        text: О компании
+    -   href: reviews-page
+        text: Отзывы
+    -   href: history
+        text: История холдинга
+    -   href: no-photo-page
+        text: без картинок
+---
+<ol>
+    {{#each list-1}}
+    <li>
+        <a href="{{href}}.html">{{text}}</a>
+    </li>
+    {{/each}}
+</ol>
+
+<p class="text-s">
+    Для удобства перехода на эту страницу можно нажимать на логотип в шапке страниц проекта.
+</p>
+
+<a href="dev.html" class="text-s">технические страницы</a>

@@ -1,0 +1,17 @@
+&--members {
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @media (min-width: $desktops-sm) {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+}
+
+&--members &__caption {
+    min-width: 160px;
+    margin-right: 0;
+    padding-right: 16px;
+    letter-spacing: normal;
+    color: inherit;
+}

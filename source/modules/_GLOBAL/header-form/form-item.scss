@@ -1,0 +1,428 @@
+.form-item {
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    border-radius: 4px;
+
+    &:nth-child(1),
+    &:nth-child(2) {
+        @media (min-width: $desktops-sm) {
+            position: static;
+
+            .form-item__body {
+                top: calc(100% - 8px);
+            }
+        }
+    }
+
+    @media (min-width: $tablets) {
+        margin-bottom: 0;
+    }
+
+    @media (min-width: $desktops-sm) and (max-width: $desktops-md-max) {
+        font-size: 14px;
+    }
+
+    &#{&}--active {
+        z-index: 4;
+
+        @media (max-width: $tablets-max) {
+            position: fixed;
+            top: 0;
+            left: 0;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            background-color: $color-white;
+        }
+    }
+
+    &__header {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border-radius: inherit;
+
+        color: $color-text;
+        background-color: $color-white;
+    }
+
+    &#{&}--active &__header {
+        @media (max-width: $tablets-max) {
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            flex-shrink: 0;
+            border-radius: 0;
+        }
+
+        @media (min-width: $desktops-sm) {
+            background-color: $color-white-3;
+        }
+    }
+
+    &#{&}--active &__wrap {
+        @media (max-width: $tablets-max) {
+            background-color: $color-gray-dark-5;
+        }
+    }
+
+    &__wrap {
+        display: block;
+        border-radius: inherit;
+
+        @media (max-width: $tablets-max) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__input {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        width: 100%;
+        margin: 0;
+        padding-top: 16px;
+        padding-right: 44px;
+        padding-bottom: 4px;
+        padding-left: 16px;
+        background-color: transparent;
+        border-color: transparent;
+        outline-color: rgba(100, 161, 235, 0);
+        outline-width: 2px;
+        outline-style: solid;
+        border-radius: inherit;
+        text-overflow: ellipsis;
+        vertical-align: top;
+        transition-property: box-shadow, outline-color, border-color, background-color;
+        transition-duration: 0.3s;
+        cursor: pointer;
+        font-weight: 500;
+        line-height: 24px;
+        height: 56px;
+        @media (min-width: $desktops-sm) {
+            font-size: 15px;
+        }
+
+        @media (min-width: $desktops-sm) and (max-width: $desktops-sm-max) {
+            padding-top: 20px;
+            padding-bottom: 6px;
+            padding-right: 16px;
+        }
+    }
+
+    &__input.error {
+        background-color: $color-white-5;
+        border-color: $color-red;
+    }
+
+    &:hover &__input:not(:disabled),
+    &__input:focus {
+        @media (min-width: $desktops-sm) {
+            background-color: $color-white-3;
+        }
+    }
+
+    &__input:disabled {
+        background-color: $color-white-3;
+        border: 1px solid $color-gray-light-3;
+        opacity: 0.5;
+    }
+
+    &__input:disabled + &__text,
+    &__input:disabled.empty + &__text {
+        opacity: 0.5;
+    }
+
+    &--readonly &__input {
+        cursor: pointer;
+    }
+
+    &#{&}--active &__input {
+        @media (min-width: $desktops-sm) {
+        }
+
+        @media (max-width: $tablets-max) {
+            margin: 10px 18px;
+            padding: 13px 20px;
+            width: calc(100% - 18px * 2);
+            background-color: $color-white;
+            border-radius: 8px;
+        }
+    }
+
+    &#{&}--calendar#{&}--active &__input,
+    &#{&}--nights#{&}--active &__input,
+    &#{&}--members#{&}--active &__input {
+        @media (max-width: $tablets-max) {
+            display: none;
+        }
+    }
+
+    &__label {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        padding-left: 16px;
+        font-weight: 500;
+        font-size: 11px;
+        line-height: 16px;
+        letter-spacing: 0.02em;
+        display: flex;
+        align-items: flex-end;
+        max-width: 100%;
+        line-height: 20px;
+        white-space: nowrap;
+        height: 20px;
+        color: $color-gray;
+        transition-property: top, font-size, line-height, letter-spacing, opacity;
+        transition-duration: 0.2s;
+        cursor: pointer;
+        opacity: 0.8;
+
+        @media (min-width: $tablets) {
+            top: 2px;
+            font-size: 12px;
+            line-height: 16px;
+        }
+    }
+
+    &--empty:not(&--active) &__label {
+        top: calc(50% - 10px);
+        font-size: inherit;
+        line-height: inherit;
+        letter-spacing: inherit;
+        opacity: 1;
+
+        @media (min-width: $desktops-sm) and (max-width: $desktops-sm-max) {
+            max-width: calc(100% - 16px - 16px);
+        }
+    }
+
+    &#{&}--active &__label {
+        @media (max-width: $tablets-max) {
+            position: relative;
+            top: 0;
+            left: 0;
+            order: -1;
+            max-width: none;
+            height: auto;
+            padding: 10px 54px 10px 18px;
+            font-weight: 500;
+            font-size: 17px;
+            line-height: 30px;
+            background-color: $color-white;
+            opacity: 1;
+            transition-duration: 0s;
+        }
+    }
+
+    &__btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 3;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 44px;
+        margin: 0;
+        padding: 4px 12px 4px 4px;
+        background-color: transparent;
+        border: none;
+        border-radius: inherit;
+
+        @media (max-width: $tablets-max) {
+            width: 100%;
+        }
+    }
+
+    &#{&}--nights &__btn,
+    &#{&}--members &__btn {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    &#{&}--active &__btn {
+        @media (max-width: $tablets-max) {
+            height: 50px;
+            background-image: url(../images/sprite.svg#icon-close);
+            background-repeat: no-repeat;
+            background-position: right 22px center;
+            background-size: 18px 18px;
+        }
+    }
+
+    &__icon {
+        width: 16px;
+        height: 16px;
+        fill: $color-gray;
+        opacity: 0.5;
+        transition-property: transform, opacity;
+        transition-duration: 0.3s;
+
+        @media (min-width: $tablets) {
+            width: 24px;
+            height: 24px;
+        }
+
+        @media (min-width: $desktops-sm) and (max-width: $desktops-sm-max) {
+            opacity: 0;
+        }
+    }
+
+    &__icon--arrow {
+        width: 16px;
+        height: 16px;
+        transform: scale(1, 1);
+    }
+
+    &#{&}--active &__icon {
+        opacity: 1;
+
+        @media (max-width: $tablets-max) {
+            display: none;
+        }
+
+        @media (min-width: $desktops-sm) and (max-width: $desktops-sm-max) {
+            opacity: 0;
+        }
+    }
+
+    &#{&}--active &__icon--arrow {
+        transform: scale(-1, -1);
+    }
+
+    &__body {
+        position: absolute;
+        top: calc(100% + 5px);
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        min-width: 100%;
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+        visibility: hidden;
+        transition-property: box-shadow, opacity;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in-out;
+        scale: 0;
+
+        @media (min-width: $tablets) {
+            padding: 16px 16px 8px;
+            background-color: $color-white;
+            box-shadow: 0 14px 40px rgba(165, 165, 197, 0.4);
+            border-radius: 4px;
+        }
+
+        @media (min-width: $desktops-sm) {
+            padding: 24px;
+        }
+    }
+
+    &--calendar &__body {
+        left: 0;
+        width: 100%;
+
+        @media (min-width: $desktops-sm) {
+            padding-top: 0;
+            padding-bottom: 0;
+            width: 700px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &--calendar &__btn {
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    &--nights &__body,
+    &--members &__body {
+        right: 0;
+    }
+
+    &#{&}--active &__body {
+        height: auto;
+        background-color: $color-white;
+        box-shadow: 0 8px 16px rgba(30, 8, 94, 0.16);
+        overflow: visible;
+        visibility: visible;
+        opacity: 1;
+        scale: 1;
+        border-radius: 0;
+
+        @media (min-width: $desktops-sm) {
+            border-radius: 6px;
+        }
+
+        @media (max-width: $tablets-max) {
+            position: relative;
+            top: unset;
+            flex-grow: 1;
+            overflow: auto;
+        }
+    }
+
+    &#{&}--active &__body > .daterangepicker {
+        @media (max-width: $tablets-max) {
+            position: relative !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: auto !important;
+            margin-left: auto;
+            margin-right: auto;
+            border: none;
+        }
+    }
+
+    & .cities {
+        @media (min-width: $desktops-sm) {
+            max-height: 360px;
+        }
+    }
+
+    &--members &__body {
+        @media (min-width: $tablets) {
+            width: 384px;
+            max-width: calc(100vw - 48px);
+        }
+    }
+
+    &__no-result {
+        @media (max-width: $tablets-max) {
+            padding-left: 30px;
+        }
+    }
+
+    &__body-btnwrap {
+        margin-top: auto;
+        padding-top: 32px;
+
+        @media (min-width: $desktops-sm) {
+            display: none;
+        }
+    }
+
+    &__body-btn {
+        width: 100%;
+        min-height: 56px;
+        border-radius: 0;
+
+        @media (min-width: $tablets) and (max-width: $tablets-max) {
+            width: calc(100% + 32px);
+            margin-right: -16px;
+            margin-left: -16px;
+            margin-bottom: -8px;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+<div class="{{aside-news-parent-mod}} aside-news  {{aside-news-mod}}">
+    <div class="aside-news__title">
+        <h2>
+            Новости
+        </h2>
+    </div>
+
+    <ul class="aside-news__list">
+        {{#each aside-news}}
+        <li class="aside-news__item">
+            <article class="aside-news__article">
+                <a href="" class="aside-news__link">
+                    <time class="aside-news__date" datetime="{{card-news-date-attr}}">
+                        {{date}}
+                    </time>
+
+                    <div class="aside-news__caption">
+                        <h3>
+                            {{title}}
+                        </h3>
+                    </div>
+
+                    <div class="aside-news__text">
+                        <p>
+                            {{text}}
+                        </p>
+                    </div>
+                </a>
+            </article>
+        </li>
+        {{/each}}
+    </ul>
+</div>

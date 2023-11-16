@@ -1,0 +1,82 @@
+ymaps[class*="balloon_layout_normal"] {
+    background-color: $color-white;
+    border-radius: 12px;
+    box-shadow: 0 5px 40px rgba(0, 0, 0, 0.08);
+}
+
+ymaps[class*="balloon__layout"] {
+    background-color: $color-white;
+    border-radius: 12px;
+}
+
+ymaps[class*="balloon__close"] {
+    width: 40px;
+}
+
+ymaps[class*="balloon__close"] + ymaps[class*="balloon__content"] {
+    min-width: 260px;
+    margin-right: 0;
+    padding: 20px;
+}
+
+ymaps[class*="balloon__content"] > * {
+    width: 100% !important;
+}
+
+.balloon {
+    font-family: "Montserrat", Arial, sans-serif;
+    color: $color-text;
+
+    &__head {
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 18px;
+        margin-bottom: 10px;
+    }
+
+    &__info {
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 18px;
+        letter-spacing: 0.02em;
+        color: $color-gray-dark;
+        margin-bottom: 10px;
+    }
+
+    &__link {
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 20px;
+        color: $color-red;
+        margin-bottom: 8px;
+        display: block;
+    }
+
+    &__times {
+    }
+
+    &__row {
+        display: flex;
+        margin-bottom: 4px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__times-text {
+        color: $color-gray;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 16px;
+        text-transform: uppercase;
+        margin-right: 8px;
+        width: 50px;
+    }
+
+    &__clock {
+        color: $color-gray-dark;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 16px;
+    }
+}

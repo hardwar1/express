@@ -1,0 +1,16 @@
+<span class="{{stars-parent-mod}} stars {{stars-mod}}">
+    <span class="stars__inner">
+        <span class="stars__list" aria-hidden="true">
+            {{#repeat stars}}
+            <svg width="15" height="15">
+                <use xlink:href="images/sprite.svg#star"></use>
+            </svg>
+            {{/repeat}}
+        </span>
+
+        <span class="stars__text visually-hidden">
+            {{stars}} зв{{#ifequal stars "5"}}ё{{else}}е{{/ifequal}}зд{{#ifequal stars "1"}}a{{else ifequal stars
+            "5"}}{{else}}ы{{/ifequal}}
+        </span>
+    </span>
+</span>

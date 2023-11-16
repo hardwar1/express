@@ -1,0 +1,200 @@
+-
+    text: Абхазия
+    mod: drop-country__item--big
+- text: Австралия
+- text: Австрия
+-
+    text: Азербайджан
+    mod: drop-country__item--middle
+-
+    text: Албания
+    mod: drop-country__item--middle
+    new-string: true
+- text: Андорра
+-
+    text: Армения
+    mod: drop-country__item--middle
+-
+    text: Бахрейн
+    mod: drop-country__item--middle
+-
+    text: Беларусь
+    mod: drop-country__item--middle
+- text: Бельгия
+-
+    text: Болгария
+    mod: drop-country__item--middle
+-
+    text: Бразилия
+    mod: drop-country__item--middle
+    new-string: true
+- text: Великобритания
+-
+    text: Венгрия
+    mod: drop-country__item--middle
+-
+    text: Вьетнам
+    mod: drop-country__item--middle
+- text: Германия
+-
+    text: Греция
+    mod: drop-country__item--middle
+-
+    text: Грузия
+    mod: drop-country__item--middle
+- text: Дания
+-
+    text: Доминикана
+    mod: drop-country__item--big
+    new-string: true
+-
+    text: Египет
+    mod: drop-country__item--big
+-
+    text: Израиль
+    mod: drop-country__item--middle
+- text: Индия
+-
+    text: Индонезия
+    mod: drop-country__item--middle
+-
+    text: Иордания
+    mod: drop-country__item--middle
+-
+    text: Иран
+    mod: drop-country__item--middle
+- text: Ирландия
+- text: Исландия
+-
+    text: Испания
+    mod: drop-country__item--middle
+    new-string: true
+-
+    text: Италия
+    mod: drop-country__item--middle
+-
+    text: Казахстан
+    mod: drop-country__item--middle
+- text: Камбоджа
+-
+    text: Катар
+    mod: drop-country__item--middle
+-
+    text: Кения
+    mod: drop-country__item--middle
+-
+    text: Кипр
+    mod: drop-country__item--middle
+-
+    text: Киргизия
+    mod: drop-country__item--big
+- text: Китай
+-
+    text: Куба
+    mod: drop-country__item--big
+- text: Лаос
+- text: Латвия
+-
+    text: Литва
+    new-string: true
+- text: Люксембург
+-
+    text: Маврикий
+    mod: drop-country__item--middle
+-
+    text: Мадагаскар
+    mod: drop-country__item--middle
+-
+    text: Малайзия
+    mod: drop-country__item--middle
+-
+    text: Мальдивы
+    mod: drop-country__item--middle
+- text: Мальта
+-
+    text: Марокко
+    mod: drop-country__item--middle
+-
+    text: Мексика
+    mod: drop-country__item--middle
+- text: Мьянма
+-
+    text: Нидерланды
+    new-string: true
+- text: Новая Зеландия
+- text: Норвегия
+-
+    text: ОАЭ
+    mod: drop-country__item--big
+-
+    text: Оман
+    mod: drop-country__item--middle
+- text: Польша
+- text: Португалия
+-
+    text: Россия
+    mod: drop-country__item--big
+- text: Румыния
+-
+    text: Саудовская Аравия
+    mod: drop-country__item--middle
+    new-string: true
+-
+    text: Сербия
+    mod: drop-country__item--middle
+- text: Сингапур
+- text: Словакия
+-
+    text: Словения
+    mod: drop-country__item--middle
+-
+    text: Таиланд
+    mod: drop-country__item--middle
+-
+    text: Танзания
+    mod: drop-country__item--middle
+-
+    text: Тунис
+    mod: drop-country__item--middle
+-
+    text: Турция
+    mod: drop-country__item--big
+-
+    text: Сейшелы
+    mod: drop-country__item--middle
+-
+    text: Сенегал
+    new-string: true
+-
+    text: Узбекистан
+    mod: drop-country__item--middle
+- text: Финляндия
+-
+    text: Франция
+    mod: drop-country__item--middle
+-
+    text: Хорватия
+    mod: drop-country__item--middle
+-
+    text: Черногория
+    mod: drop-country__item--middle
+- text: Чехия
+- text: Швейцария
+-
+    text: Швеция
+    new-string: true
+-
+    text: Шри-Ланка
+    mod: drop-country__item--middle
+-
+    text: Эстония
+    mod: drop-country__item--middle
+-
+    text: Эфиопия
+    mod: drop-country__item--middle
+-
+    text: Южная Африка
+    mod: drop-country__item--middle
+-
+    text: Япония
+

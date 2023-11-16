@@ -1,0 +1,10 @@
+<ul class="cities">
+    {{#each cities}}
+    <li>
+        <a {{#if noHref}}{{else}}href="#"{{/if}}{{#if active}} class="active"{{/if}}>
+            {{text}}
+        </a>
+    </li>
+    {{/each}}
+</ul>
+<span class="form-item__no-result text-m d-none">Совпадений не найдено</span>

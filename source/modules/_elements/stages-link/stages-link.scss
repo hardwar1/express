@@ -1,0 +1,66 @@
+.stages-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 24px 20px 24px 37px;
+    background-color: $color-white;
+    border: 1px solid $color-gray-light-3;
+    border-radius: 16px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+
+    @media (min-width: $tablets) {
+        padding: 40px 50px;
+        min-height: 120px;
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    @media (min-width: $desktops-md) {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    & > svg {
+        margin-right: 24px;
+        flex-shrink: 0;
+        transition: transform 0.3s;
+
+        @media (min-width: $tablets) {
+            position: absolute;
+            top: 50%;
+            left: 47px;
+            transform: translateY(-50%);
+        }
+    }
+
+    &:hover &__text svg {
+        @media (min-width: $desktops-sm) {
+            transform: translate(20px);
+        }
+    }
+    
+    &__text {
+        display: flex;
+        align-items: center;
+        color: $color-red;
+
+        @media (min-width: $tablets) {
+            padding-left: 48px;
+        }
+    }
+
+    &__text svg {
+        display: none;
+        @media (min-width: $tablets) {
+            display: block;
+            width: 24px;
+            height: 24px;
+            margin-left: 24px;
+            fill: $color-red;
+            transition: transform 0.3s;
+        }
+    }
+}

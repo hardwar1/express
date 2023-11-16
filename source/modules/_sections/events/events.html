@@ -1,0 +1,39 @@
+<div class="events {{events-parent-mod}} {{events-mod}}">
+    {{> btns btns-parent-mod="events__btns" btns-mod="" btns-list=btns.events}}
+
+    <div class="events__body">
+        <table>
+            <tbody>
+                <tr>
+                    <th>Мероприятие</th>
+                    <th>Дата, время</th>
+                </tr>
+                {{#each events-table}}
+                <tr>
+                    <td>
+                        <a href="">
+                            <div>
+                                {{label}}
+                            </div>
+                            <div class="table-row-title">
+                                {{title}}
+                            </div>
+                            <span>
+                                {{text}}
+                            </span>
+                        </a>
+                    </td>
+                    <td>
+                        <time datetime="2022-11-11">{{time}}</time>
+                        <p>{{desc}}</p>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+
+    <a class="events__link link link--red" href="">
+        Архив мероприятий
+    </a>
+</div>

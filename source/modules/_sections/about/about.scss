@@ -1,0 +1,40 @@
+.about {
+    @media (min-width: $tablets) {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__text {
+        padding-top: 0;
+        margin-bottom: 30px;
+
+        @media (min-width: $tablets) {
+            max-width: calc(100% - 252px);
+            width: 100%;
+            margin-right: 60px;
+            margin-bottom: 0;
+        }
+    }
+
+    &__img {
+        border-radius: 12px;
+        margin-bottom: 16px;
+    }
+
+    &__name {
+        display: block;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 4px;
+    }
+
+    &__position {
+        display: block;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 16px;
+        letter-spacing: 0.02em;
+        color: $color-gray-dark;
+    }
+}

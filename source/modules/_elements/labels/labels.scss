@@ -1,0 +1,10 @@
+.labels {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 4px;
+    margin-bottom: 40px;
+
+    @media (min-width: $desktops-md) {
+        column-gap: 8px;
+    }
+}

@@ -1,0 +1,535 @@
+@import "form-item";
+
+.header-form {
+    background-color: $color-white;
+
+    @media (min-width: $tablets) {
+        position: relative;
+        top: unset;
+    }
+
+    @media (min-width: $desktops-sm) {
+        position: sticky;
+        top: 0;
+        max-width: 100%;
+        z-index: 49;
+    }
+
+    &--index {
+        position: relative;
+        top: unset;
+    }
+
+    &.active {
+        z-index: 100;
+    }
+
+    &__wrapper {
+        position: relative;
+        background-color: $color-gray-dark-5;
+    }
+
+    &__container {
+        position: relative;
+
+        @media (max-width: $phones-max) {
+            transition: height 0.3s ease-in-out;
+            height: 0;
+            overflow: hidden;
+        }
+
+        @media (min-width: $tablets) {
+            height: unset !important;
+        }
+    }
+
+    &--closed:not(#{&}--index) &__container {
+        @media (max-width: $phones-max) {
+            height: 0;
+        }
+    }
+
+    &--closed:not(#{&}--index) &__container {
+        @media (max-width: $phones-max) {
+            height: auto;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        gap: 8px;
+        padding-top: 14px;
+        padding-bottom: 14px;
+        position: relative;
+        transition: padding 0.3s;
+
+        @media (max-width: $tablets-max) {
+            flex-direction: column;
+            padding-bottom: 8px;
+        }
+    }
+
+    &__list-wrap {
+        flex-grow: 1;
+    }
+
+    &__list {
+        display: flex;
+        width: 100%;
+        padding-left: 0;
+        list-style-type: none;
+
+        @media (max-width: $tablets-max) {
+            flex-wrap: wrap;
+            row-gap: 8px;
+        }
+    }
+
+    &__submit-wrap {
+        flex-shrink: 0;
+
+        @media (min-width: $tablets) and (max-width: $tablets-max) {
+            position: absolute;
+            bottom: 8px;
+            right: 0;
+            width: calc(100% / 4 - 10px);
+        }
+    }
+
+    &__submit {
+        width: 100%;
+        height: 56px;
+        font-size: 12px;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        @media (min-width: $tablets) {
+            height: 56px;
+        }
+
+        @media (min-width: $desktops-md) {
+            width: 188px;
+        }
+
+        @media (min-width: $desktops-lg) {
+            font-size: 13px;
+        }
+    }
+
+    &__formclose-wrap {
+        position: relative;
+
+        @media (min-width: $tablets) {
+            display: none;
+        }
+    }
+
+    &__formclose-btn {
+        width: 100%;
+        height: 52px;
+        padding-right: 20px;
+        padding-left: 20px;
+        font-weight: 600;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 18px;
+        text-align: right;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: $color-white;
+        background-color: $color-gray-dark-5;
+        border-width: 0;
+        position: relative;
+        overflow: hidden;
+        transition: height 0.3s;
+    }
+
+    &__formclose-btn.active {
+        height: 44px;
+    }
+
+    &__formclose-btn svg {
+        transition: opacity 0.9s;
+    }
+
+    &__formclose-btn.active svg {
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    &__formclose-text:first-child {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: transform 0.7s;
+    }
+
+    &__formclose-text:nth-child(2) {
+        position: absolute;
+        left: 50%;
+        top: 5px;
+        transform: translate(-50%, 60px);
+        transition: transform 0.3s;
+    }
+
+    &__formclose-btn.active &__formclose-text:first-child {
+        transform: translate(-50%, -60px);
+        transition: transform 0.3s;
+    }
+
+    &__formclose-btn.active &__formclose-text:nth-child(2) {
+        transform: translate(-50%, 0);
+        transition: transform 0.7s;
+    }
+
+    &__item {
+        @media (max-width: $phones-max) {
+            width: 100%;
+        }
+    }
+
+    &__item:first-child {
+        @media (min-width: $tablets) {
+            border-right: 1px solid $color-gray-light-3;
+            border-radius: 4px 0 0 4px;
+        }
+    }
+
+    &__item:nth-child(2) {
+        @media (min-width: $tablets) {
+            border-radius: 0 4px 4px 0;
+        }
+        @media (min-width: $desktops-sm) {
+            margin-right: 8px;
+        }
+        @media (max-width: $phones-max) {
+            border-right: 1px solid $color-gray-light-3;
+        }
+    }
+
+    &__item:nth-child(3) {
+        border-radius: 4px 0 0 4px;
+        border-right: 1px solid $color-gray-light-3;
+
+        @media (max-width: $phones-max) {
+            width: 50%;
+        }
+    }
+
+    &__item:nth-child(-n + 2) {
+        @media (min-width: $tablets) and (max-width: $tablets-max) {
+            width: 50%;
+        }
+    }
+
+    &__item:nth-child(n + 3) {
+        @media (min-width: $tablets) and (max-width: $tablets-max) {
+            width: calc(100% / 4 - 2px);
+        }
+    }
+
+    &__item:nth-child(3) {
+        flex-shrink: 0;
+        flex-grow: 0;
+
+        @media (min-width: $desktops-sm) {
+            width: 155px;
+        }
+
+        @media (min-width: $desktops-md) {
+            width: 170px;
+        }
+
+        @media (min-width: $desktops-lg) {
+            width: 180px;
+        }
+
+        @media (min-width: $desktops-xl) {
+            width: 200px;
+        }
+    }
+
+    &__item:nth-child(4) {
+        flex-shrink: 0;
+        flex-grow: 0;
+        border-radius: 0 4px 4px 0;
+
+        @media (min-width: $tablets) {
+            margin-right: 8px;
+        }
+
+        @media (min-width: $desktops-sm) {
+            width: 154px;
+        }
+
+        @media (min-width: $desktops-md) {
+            width: 170px;
+        }
+
+        @media (min-width: $desktops-lg) {
+            width: 180px;
+        }
+
+        @media (min-width: $desktops-xl) {
+            width: 200px;
+        }
+
+        @media (max-width: $phones-max) {
+            width: 50%;
+        }
+    }
+
+    &__item:nth-child(5) {
+        flex-shrink: 0;
+        flex-grow: 0;
+
+        @media (min-width: $desktops-sm) {
+            width: 150px;
+        }
+
+        @media (min-width: $desktops-md) {
+            width: 180px;
+        }
+
+        @media (min-width: $desktops-lg) {
+            width: 188px;
+        }
+
+        @media (min-width: $desktops-xl) {
+            width: 220px;
+        }
+    }
+
+    &--index &__container {
+        height: auto;
+    }
+
+    &--index &__formclose-btn {
+        display: none;
+    }
+
+    &--light {
+        z-index: 20;
+        position: relative;
+    }
+
+    &--light.active {
+        z-index: 100;
+    }
+
+    &--light &__wrapper {
+        padding: 7px;
+        background-color: #f3f5fd;
+        border-radius: 8px;
+    }
+
+    &--light &__inner {
+        padding: 0;
+    }
+
+    &--light &__formclose-wrap {
+        display: none;
+    }
+
+    &--light &__container {
+        @media (max-width: $phones-max) {
+            height: unset !important;
+        }
+    }
+
+    &--light .form-item:nth-child(2):not(.form-item--active) {
+        position: relative;
+    }
+
+    &--light .header-form__inner {
+        @media (min-width: $desktops-sm) {
+            column-gap: 0;
+        }
+    }
+
+    &--light .header-form__list {
+        @media (max-width: $desktops-md-max) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            row-gap: 8px;
+        }
+    }
+
+    // &--light .form-item__header {
+    //     box-shadow: inset 0 0 0 1px #dfe2f4;
+    // }
+
+    &--light &__item {
+        margin: 0;
+        width: 21%;
+        border: 1px solid $color-gray-light-3;
+
+        @media (max-width: $phones-max) {
+            width: 100%;
+        }
+    }
+
+    &--light &__item:nth-child(2) {
+        @media (min-width: $tablets) {
+            border-left: none;
+        }
+
+        @media (min-width: $desktops-lg) {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        @media (max-width: $phones-max) {
+            border-right: none;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+    }
+
+    &--light &__item:nth-child(3) {
+        @media (min-width: $desktops-lg) {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            border-left: none;
+        }
+
+        @media (max-width: $phones-max) {
+            border-radius: 0 4px 4px 0;
+        }
+    }
+
+    &--light &__item:nth-child(4) {
+        @media (min-width: $tablets) {
+            border-left: none;
+        }
+
+        @media (max-width: $phones-max) {
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+        }
+    }
+
+    &--light &__item:last-child {
+        @media (min-width: $tablets) {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+    }
+
+    &--light .form-item:nth-child(2):not(.form-item--active),
+    &--light .form-item:nth-child(3):not(.form-item--active) {
+        @media (max-width: $phones-max) {
+            width: 50%;
+        }
+    }
+
+    &--light .form-item:nth-child(3):not(.form-item--active),
+    &--light .form-item:nth-child(4):not(.form-item--active),
+    &--light .header-form__submit-wrap {
+        @media (min-width: $tablets) and (max-width: $desktops-md-max) {
+            width: 33.3%;
+        }
+    }
+    &--light .form-item:nth-child(3),
+    &--light .form-item:nth-child(4) {
+        @media (min-width: $desktops-sm) and (max-width: $desktops-md-max) {
+            width: 33.3%;
+        }
+    }
+
+    &--light .form-item:nth-child(-n + 2):not(.form-item--active) {
+        @media (min-width: $tablets) and (max-width: $desktops-sm-max) {
+            width: 50%;
+        }
+    }
+
+    &--light .form-item:nth-child(-n + 2) {
+        @media (min-width: $desktops-sm) and (max-width: $desktops-md-max) {
+            width: 50%;
+        }
+    }
+
+    &--light .form-item:nth-child(-n + 2) .form-item__body {
+        @media (min-width: $desktops-sm) {
+            top: 61px;
+        }
+    }
+
+    &--light .form-item:nth-child(2):not(.form-item--active) input {
+        @media (min-width: $tablets) and (max-width: $desktops-md-max) {
+            border-radius: 0 4px 4px 0;
+        }
+    }
+
+    &--light .form-item:nth-child(1):not(.form-item--active) input {
+        @media (min-width: $tablets) {
+            border-radius: 4px 0 0 4px;
+        }
+    }
+
+    &--light .form-item:nth-child(3) {
+        @media (min-width: $desktops-lg) {
+            width: 16%;
+        }
+    }
+
+    &--light .form-item:nth-child(3) .form-item__body {
+        @media (min-width: $desktops-sm) {
+            right: unset;
+            left: 0;
+        }
+    }
+
+    &--light .form-item:nth-child(4) {
+        @media (min-width: $desktops-lg) {
+            width: 22%;
+        }
+    }
+
+    &--light .form-item:nth-child(3):not(.form-item--active) input {
+        @media (min-width: $tablets) and (max-width: $desktops-md-max) {
+            border-radius: 4px 0 0 4px;
+        }
+    }
+
+    &--light .form-item:nth-child(2) .form-item__body {
+        @media (min-width: $desktops-sm) {
+            width: 700px;
+            min-width: unset;
+        }
+    }
+
+    &--light .header-form__submit-wrap {
+        @media (min-width: $tablets) and (max-width: $desktops-md-max) {
+            bottom: 0;
+            position: absolute;
+            right: 0;
+        }
+        @media (min-width: $desktops-lg) {
+            width: 20%;
+        }
+    }
+
+    &--light .header-form__submit {
+        @media (min-width: $tablets) {
+            border-radius: 0 4px 4px 0;
+            height: 58px;
+            width: 100%;
+        }
+    }
+
+    &--light .form-item__input {
+        @media (max-width: $phones-max) {
+            padding-top: 18px;
+            padding-bottom: 7px;
+        }
+    }
+
+    &--light .form-item__label {
+        @media (max-width: $phones-max) {
+            top: 2px;
+        }
+    }
+}

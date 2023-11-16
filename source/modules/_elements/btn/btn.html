@@ -1,0 +1,21 @@
+<{{#if btn-link}}a{{else}}button{{/if}} class="{{btn-parent-mod}} btn {{btn-mod}} {{btn-mod2}}" {{#if id}}id="{{id}}"{{/if}}
+{{#if btn-link}} href="{{btn-href}}"{{else if btn-type}}type="{{btn-type}}" {{else}}type="button"{{/if}} {{#if data-filter-category}}data-filter-category={{data-filter-category}}{{/if}} {{btn-attrs}}>
+    <span class="btn__text">
+        {{btn-text}}
+    </span>
+
+    {{#if btn-svg}}
+    <svg width="30" height="30">
+        <use xlink:href="images/sprite.svg#{{btn-svg}}"></use>
+    </svg>
+    {{/if}}
+    {{#if btn-load}}
+
+    <span class="btn__load-wrap">
+        <span class="btn__load-text">Идёт отправка</span>
+        <svg class="btn__icon-load" width="24" height="24">
+            <use xlink:href="images/sprite.svg#loading"></use>
+        </svg>
+    </span>
+    {{/if}}
+</{{#if btn-link}}a{{else}}button{{/if}}>

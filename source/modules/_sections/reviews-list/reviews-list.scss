@@ -1,0 +1,85 @@
+.reviews-list {
+    &__inner {
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+
+    &__item:not(:last-child) {
+        padding-bottom: 20px;
+
+        @media (min-width: $desktops-xl) {
+            padding-bottom: 30px;
+        }
+    }
+
+    &__item {
+        opacity: 1;
+        transition-property: opacity;
+        transition-duration: 0.8s;
+    }
+
+    &__item--hidden {
+        opacity: 0;
+        transition-duration: 0s;
+    }
+
+    &__btn-wrap {
+        padding-top: 40px;
+
+        @media (min-width: $desktops-xl) {
+            padding-top: 60px;
+        }
+    }
+
+    &__btn-wrap--hidden {
+        display: none;
+    }
+
+    &__btn {
+        width: 100%;
+        font-weight: 500;
+        font-size: 14px;
+        text-transform: none;
+        letter-spacing: normal;
+
+        @media (min-width: $desktops-xl) {
+            font-size: 16px;
+        }
+
+        @media (max-width: $phones-max) {
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+    }
+
+    &__btn-row {
+        margin-bottom: 30px;
+
+        @media (min-width: $tablets) {
+            margin-bottom: 40px;
+        }
+
+        @media (min-width: $desktops-md) {
+            margin-bottom: 60px;
+        }
+    }
+
+    &__bottom {
+        @media (min-width: $tablets) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__box {
+        margin-bottom: 30px;
+        @media (min-width: $tablets) {
+            margin-bottom: 0;
+            width: calc(50% - 10px);
+        }
+    }
+
+    &__box:last-child {
+        margin-bottom: 0;
+    }
+}

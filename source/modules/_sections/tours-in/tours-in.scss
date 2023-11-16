@@ -1,0 +1,25 @@
+.tours-in {
+    &__filter-bar:not(:last-child) {
+        margin-bottom: 30px;
+
+        @media (min-width: $tablets) {
+            margin-bottom: 40px;
+        }
+
+        @media (min-width: $desktops-md) {
+            margin-bottom: 60px;
+        }
+    }
+
+    &__empty-result:not(:first-child) {
+        margin-top: 40px;
+
+        @media (min-width: $desktops-md) {
+            margin-top: 60px;
+        }
+    }
+
+    &__empty-result:not(.visible) {
+        display: none;
+    }
+}

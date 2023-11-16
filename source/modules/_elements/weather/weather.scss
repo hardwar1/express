@@ -1,0 +1,68 @@
+.weather {
+    padding: 24px 20px 11px;
+    background-color: $color-white-1;
+    border-radius: 12px;
+
+    &__inner {
+        margin-bottom: 10px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: top;
+        justify-content: space-between;
+        margin-bottom: 4px;
+    }
+
+    &__item:last-child {
+        margin-bottom: 0;
+    }
+
+    &__text {
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 20px;
+        word-wrap: break-word;
+        width: 62px;
+        color: inherit;
+
+        @media (min-width: $desktops-md) {
+            width: 112px;
+        }
+    }
+
+    &__text[href]:focus,
+    &__text[href]:hover {
+        @media (min-width: $desktops-sm) {
+            color: $color-red;
+        }
+    }
+
+    &__meaning {
+        display: flex;
+        align-items: top;
+        justify-content: space-between;
+        width: 85px;
+
+        @media (min-width: $desktops-md) {
+            width: 98px;
+        }
+    }
+
+    &__numbers {
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    &__btn {
+        @include no-btn;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.05em;
+        color: $color-gray;
+        display: inline;
+        padding: 5px 0;
+    }
+}

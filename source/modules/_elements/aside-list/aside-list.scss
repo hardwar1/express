@@ -1,0 +1,121 @@
+.aside-list {
+    &__title {
+        margin-bottom: 19px;
+    }
+
+    &__title,
+    &__title > * {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 28px;
+        color: $color-gray;
+    }
+
+    &__link {
+        display: block;
+        position: relative;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 28px;
+        color: $color-text;
+
+        @media (min-width: $desktops-md) {
+            font-size: 17px;
+            line-height: 24px;
+            padding-top: 9px;
+            padding-bottom: 9px;
+        }
+    }
+
+    &__link.current {
+        color: $color-red;
+    }
+
+    &--popup a {
+        font-size: 14px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+
+    &__link--menu {
+        position: relative;
+    }
+
+    &__link--menu svg {
+        position: absolute;
+        right: 13px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 12px;
+        height: 12px;
+        transition: transform 0.3s;
+    }
+
+    &__link--menu.active svg {
+        transform: translateY(-50%) rotate(180deg);
+    }
+
+    &__link::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: calc(100% + 16px);
+        height: 100%;
+        z-index: -1;
+        border-radius: 6px;
+        transition: color 0.3s, background-color 0.3s;
+    }
+
+    &__link:focus::after,
+    &__link:not(.current):hover::after,
+    &__link.active::after {
+        @media (min-width: $desktops-sm) {
+            background-color: $color-white-1;
+        }
+    }
+
+    &__hide-box {
+        height: 0;
+        transition: height 0.3s;
+        overflow: hidden;
+    }
+
+    &__hide-menu {
+        padding: 8px 0;
+    }
+
+    &__hide-item:not(:last-child) {
+        margin-bottom: 4px;
+    }
+
+    &__hide-link {
+        display: block;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: $color-gray-dark;
+        padding: 6px 0;
+        transition: padding 0.3s, color 0.3s, background-color 0.3s;
+    }
+
+    &__hide-link:not(.current):hover {
+        @media (min-width: $desktops-sm) {
+            padding-left: 14px;
+            border-radius: 4px;
+            color: inherit;
+            background-color: $color-white-1;
+        }
+    }
+
+    &__hide-link.current:not(.active) {
+        color: $color-red;
+    }
+
+    &--big {
+        font-size: 17px;
+        line-height: 30px;
+    }
+}

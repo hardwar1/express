@@ -1,0 +1,62 @@
+.hotels-list {
+    &__top {
+        margin-bottom: 40px;
+
+        @media (min-width: $tablets) {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            column-gap: 24px;
+        }
+    }
+
+    &__btns {
+        margin-bottom: 15px;
+        @media (min-width: $tablets) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__body {
+        overflow: hidden;
+        position: relative;
+    }
+
+    &__title {
+        margin-bottom: 15px;
+    }
+
+    &__list {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 28px;
+        margin-bottom: 35px;
+
+        @media (min-width: $tablets) {
+            column-count: 2;
+            column-gap: 40px;
+        }
+
+        @media (min-width: $desktops-md) {
+            column-count: 3;
+        }
+    }
+
+    &__item svg {
+        display: inline-block;
+        transform: translateY(3px);
+        margin-right: 6px;
+    }
+
+    &__item svg:first-child {
+        margin-left: 14px;
+    }
+
+    &__link {
+        display: inline-block;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        color: inherit;
+    }
+}
+

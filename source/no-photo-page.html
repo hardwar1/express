@@ -1,0 +1,124 @@
+---
+layout: default
+title: без картинок
+news-block: true
+---
+<div class="main-content">
+    <div class="main-content__headline">
+        {{> menu-btn-big menu-btn-big-parent-mod="main-content__menu-btn" text="Меню"}}
+
+        <h1>
+            без картинок
+        </h1>
+    </div>
+
+    <div class="main-content__block">
+        <h2>card-hotel</h2>
+
+        {{> hotels
+        card-hotel-name=nophoto.card-hotel
+        }}
+    </div>
+
+    <div class="main-content__block">
+        <h2>
+            card-tour
+        </h2>
+
+        {{> tours-in
+        tours-in-parent-mod="main-content__tours-in"
+        card-tour-items=nophoto.card-tour
+        }}
+    </div>
+
+    <div class="main-content__block">
+        <h2>
+            slider-simple
+        </h2>
+
+        {{> slider-simple
+        slider-simple-parent-mod="main-content__slider-simple"
+        slider-simple=nophoto.slider-simple}}
+    </div>
+
+    <div class="main-content__block">
+        <h2>
+            news-list
+        </h2>
+
+        {{> news-list
+        news-list-parent-mod="main-content__news-list"
+        news-list=nophoto.news-list}}
+    </div>
+
+    <div class="main-content__block">
+        <h2>
+            slider
+        </h2>
+
+        {{> slider tour-detail-slide=nophoto.slider }}
+    </div>
+
+    <div class="main-content__block">
+        <h2>
+            half-img
+        </h2>
+
+        <picture>
+            <source srcset="images/half-img/main5.webp" type="image/webp">
+            <source srcset="images/half-img/main5.jpg" type="image/jpg">
+            <img class="half-img" src="images/half-img/main5.jpg" alt="прекрасный город у берега">
+        </picture>
+    </div>
+
+    <div class="main-content__block">
+        <h2>
+            double-block
+        </h2>
+
+        <div class="double-block double-block--img">
+            <div class="first">
+                <picture>
+                    <source srcset="images/half-img/20.webp" type="image/webp">
+                    <source srcset="images/half-img/20.jpg" type="image/jpg">
+                    <img src="images/half-img/20.jpg" height="200" alt="панарамный вид на интересые места">
+                </picture>
+            </div>
+
+            <div class="second">
+                <picture>
+                    <source srcset="images/half-img/30.webp" type="image/webp">
+                    <source srcset="images/half-img/30.jpg" type="image/jpg">
+                    <img src="images/half-img/30.jpg" height="200" alt="панарамный вид на интересые места">
+                </picture>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content__block">
+        <h2>
+            card-actions
+        </h2>
+
+
+        <ul class="card-list">
+            {{#each nophoto.card-actions}}
+            <li class="card-list__item">
+                {{> card-actions }}
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+
+    <div class="main-content__block">
+        <h2>
+            event-hero
+        </h2>
+
+        {{> event-hero
+        event-hero-parent-mod="event-one__event-hero"
+        img='one'
+        }}
+    </div>
+
+</div>

@@ -1,0 +1,19 @@
+<div class="slider-simple">
+    <div class="slider-simple__inner swiper">
+        <ul class="slider-simple__list swiper-wrapper">
+            {{#each slider-simple}}
+            <li class="slider-simple__item swiper-slide">
+                <a class="slider-simple__img-wrapper" href="images/slider-simple/{{img}}.png" data-fancybox="gallery02">
+                    <picture>
+                        <source srcset="images/slider-simple/{{img}}.webp" type="image/webp">
+                        <img class="slider-simple__img" src="images/slider-simple/{{img}}.png" height="250"
+                            alt="красивые места которые можно увидеть в туре">
+                    </picture>
+                </a>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+    {{> slider-btn slider-btn-parent-mod="slider-simple__slider-btn" slider-btn-mod="slider-btn--prev"}}
+    {{> slider-btn slider-btn-parent-mod="slider-simple__slider-btn" slider-btn-mod="slider-btn--next"}}
+</div>

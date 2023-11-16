@@ -1,0 +1,32 @@
+<section class="{{sale-parent-mod}} sale {{sale-mod}}">
+    <div class="sale__container container">
+        <h2 class="visually-hidden">
+            Распродажа
+        </h2>
+
+        <div class="sale__swiper swiper">
+            <ul class="sale__wrapper swiper-wrapper">
+                {{#repeat 7}}
+                <li class="sale__slide swiper-slide">
+                    <a class="sale__slide-inner" href="">
+                        <picture>
+                            <source media="(max-width: 719px)" srcset="images/sale/banner2_sm.webp" type="image/webp">
+                            <source media="(max-width: 719px)" srcset="images/sale/banner2_sm.png" type="image/png">
+                            <source srcset="images/sale/banner2.webp" type="image/webp">
+                            <img class="sale__img" src="images/sale/banner2.png" alt="">
+                        </picture>
+
+                        <p class="sale__info visually-hidden">
+                            Сентябрьская распродажа от курортов One&Only и Mazagan
+                        </p>
+                    </a>
+                </li>
+                {{/repeat}}
+            </ul>
+
+            {{> slider-pagination slider-pagination-parent-mod="sale__pagination"  slider-pagination-mod=""}}
+
+            {{> slider-btns slider-btns-parent-mod="sale__btns" slider-btns-mod=""}}
+        </div>
+    </div>
+</section>

@@ -1,0 +1,63 @@
+<div class="{{reviews-list-parent-mod}} reviews-list">
+    <ul class="reviews-list__inner">
+        {{#each reviews}}
+        <li class="reviews-list__item">
+            {{> card-review
+            card-review-parent-mod="reviews-list__card"
+            card-review-date="16.06.2022"
+            card-review-date-attr="2022-06-16"
+            }}
+        </li>
+
+        {{/each}}
+    </ul>
+
+    {{> btn-row btn-row-parent-mod="" btn-row-mod="reviews-list__btn-row" text="Показать еще"}}
+
+    <div class="reviews-list__bottom">
+        <div class="reviews-list__box card-control">
+            <svg width="32" height="32">
+                <use xlink:href="images/sprite.svg#review"></use>
+            </svg>
+
+            <div class="card-control__title">
+                Служба контроля качества
+            </div>
+
+            <div class="card-control__text">
+                Поделитесь своими впечатлениями о качестве нашей работы
+            </div>
+
+            <button class="card-control__btn btn btn--red">
+                оставить отзыв
+            </button>
+        </div>
+
+        <div class="reviews-list__box card-hotline ">
+            <svg width="32" height="32">
+                <use xlink:href="images/sprite.svg#support"></use>
+            </svg>
+
+            <div class="card-hotline__title">
+                Горячая линия для туристов
+            </div>
+            <div class="card-hotline__text">
+                Если находясь за границей, вы столкнулись с затруднениями, позвоните или напишите
+            </div>
+
+            <a class="card-hotline__link" href="">
+                <svg width="24" height="24">
+                    <use xlink:href="images/sprite.svg#social-wa"></use>
+                </svg>
+                на WhatsApp
+            </a>
+
+            <div class="card-hotline__bottom">
+                <a class="card-hotline__tel link-toleft link-toleft--red" href="tel:+79265116699">+7 (926) 511 66 99</a>
+                <a class="card-hotline__tel link-toleft link-toleft--red" href="tel:+79266906699">+7 (926) 690 66 99</a>
+            </div>
+        </div>
+    </div>
+
+
+</div>

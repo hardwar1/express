@@ -1,0 +1,15 @@
+
+<div class="{{hotels-parent-mod}} hotels {{hotels-mod}}">
+    <ul class="hotels__list card-list card-list--border">
+
+        {{#each card-hotel-name}}
+        <li class="card-list__item">
+
+            {{> card-hotel card-hotel-parent-mod="card-list__card" }}
+
+        </li>
+        {{/each}}
+    </ul>
+
+    {{> btn-row btn-row-parent-mod="hotels__btn" btn-row-mod="" text="Все отели"}}
+</div>

@@ -1,0 +1,67 @@
+<article class="{{card-tour-parent-mod}} card-tour {{card-tour-mod}}">
+    <a class="card-tour__inner" href="">
+        <div class="card-tour__img-box">
+            <div class="card-tour__img-wrapper">
+                {{#if img}}
+                <picture >
+                    <source srcset="images/card-tour/{{img}}.webp" type="image/webp">
+                    <source srcset="images/card-tour/{{img}}.jpg" type="image/jpg">
+                    <img class="card-tour__img" src="images/card-tour/{{img}}.jpg" height="216" width="320"
+                        alt="{{alt}}">
+                </picture>
+                {{/if}}
+            </div>
+        </div>
+
+        <div class="card-tour__info">
+            <ul class="card-tour__options">
+                {{options}}
+            </ul>
+
+            <div class="card-tour__title">
+                <h3>
+                    {{title}}
+                </h3>
+            </div>
+
+            <div class="card-tour__times">
+                Продолжительность:
+                <span class="card-tour__days">
+                    {{days}}
+                </span>
+            </div>
+
+            <div class="card-tour__date ico-svg">
+                <svg width="24" height="24">
+                    <use xlink:href="images/sprite.svg#date"></use>
+                </svg>
+
+                {{date-text-2}}
+            </div>
+
+            <div class="card-tour__place ico-svg">
+                <svg width="24" height="24">
+                    <use xlink:href="images/sprite.svg#place"></use>
+                </svg>
+                {{place}}
+            </div>
+
+            <div class="card-tour__price-box">
+                <div class="card-tour__price-wrapper">
+                    <span class="card-tour__price">
+                        {{price}}
+                    </span>
+                    <span class="card-tour__text">
+                        за человека
+                    </span>
+                </div>
+
+                <span class="card-tour__btn btn">
+                    <span class="btn__text">
+                        Забронировать
+                    </span>
+                </span>
+            </div>
+        </div>
+    </a>
+</article>

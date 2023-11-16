@@ -1,0 +1,16 @@
+<div class="{{security-parent-mod}} security {{security-mod}}">
+
+    <ul class="security__list">
+        {{#each security}}
+        <li class="security__item">
+            {{text}}
+            <span class="security__rto">{{rto}}</span>
+            <span class="security__cash">{{cash}}</span>
+        </li>
+        {{/each}}
+    </ul>
+
+    <a class="security__look underline" href="">
+        Смотреть подробнее
+    </a>
+</div>

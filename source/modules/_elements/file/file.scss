@@ -1,0 +1,143 @@
+.file {
+    width: 100%;
+    &__label {
+        display: block;
+        cursor: pointer;
+    }
+
+    &__label-inner {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px 18px;
+        padding: 25px;
+
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 28px;
+        color: $color-gray-dark;
+        text-align: center;
+        background-color: rgba(236, 236, 236, 0.2);
+        border: 1px dashed $color-gray-light-3;
+        border-radius: 4px;
+        transition-property: background-color, border-color;
+        transition-duration: 0.3s;
+    }
+
+    &__input:focus-visible + &__label-inner,
+    &__label:hover &__label-inner {
+        @media (min-width: $desktops-sm) {
+            border-color: $color-gray-dark;
+            background-color: rgba(236, 236, 236, 0.4);
+        }
+    }
+
+    &__input {
+        @include visually-hidden();
+    }
+
+    &__icon-wrap {
+        display: inline-flex;
+        margin-top: auto;
+        margin-bottom: auto;
+        opacity: 0.5;
+    }
+
+    &__icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    &__list {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 24px;
+        color: $color-blue;
+    }
+
+    &__item {
+        position: relative;
+        display: block;
+        min-height: 32px;
+        padding-right: 44px;
+        padding: 4px 16px;
+        background-color: rgba(236, 236, 236, 0.4);
+        border-radius: 4px;
+        margin-bottom: 4px;
+        transition: background-color 0.3s;
+    }
+
+    &__item:hover {
+        @media (min-width: $desktops-sm) {
+            background-color: rgba(236, 236, 236, 0.6);
+        }
+    }
+
+    &__item:first-child {
+        margin-top: 8px;
+    }
+
+    &__item:last-child {
+        margin-bottom: 0;
+    }
+
+    &__item-text {
+        display: inline-block;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        padding-left: 36px;
+        color: $color-gray-dark;
+        word-break: break-word;
+        background-image: url(../images/sprite.svg#file);
+        background-position: 0 4px;
+        background-size: 24px 24px;
+        background-repeat: no-repeat;
+        transition: color 0.3s;
+    }
+
+    &__item-text:hover {
+        @media (min-width: $desktops-sm) {
+            color: $color-red;
+        }
+    }
+
+    &__item-closebtn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 32px;
+        width: 32px;
+        margin: 0;
+        padding: 0;
+        color: $color-gray-dark;
+        background-color: transparent;
+        border: none;
+        opacity: 0.5;
+        transition-property: opacity;
+        transition-duration: 0.3s;
+    }
+
+    &__item-closeicon {
+        width: 12px;
+        height: 12px;
+        fill: #626262;
+        transition: fill 0.3s;
+    }
+
+    &__item-closebtn:hover svg {
+        @media (min-width: $desktops-sm) {
+            fill: $color-red;
+        }
+    }
+
+    &__item-closebtn:focus-visible,
+    &__item-closebtn:hover {
+        @media (min-width: $desktops-sm) {
+            opacity: 1;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+<div class="{{news-list-section-parent-mod}} news-list-section {{news-list-section-mod}}">
+    {{#if news-list-section-btns}}
+    {{> btns
+    btns-parent-mod="news-list-section__btns"
+    btns-list=news-list-section-btns
+    }}
+    {{/if}}
+
+    {{> news-list
+    news-list-parent-mod="news-list-section__news-list"
+    news-list=news-list-section-items
+    }}
+
+    {{#if news-list-section-btn-more}}
+    {{> btn-row
+    btn-row-parent-mod="news-list-section__btn"
+    text="Показать ещё"
+    }}
+    {{/if}}
+</div>

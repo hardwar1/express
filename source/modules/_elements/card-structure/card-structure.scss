@@ -1,0 +1,50 @@
+.card-structure {
+    padding: 24px 20px;
+    background: $color-white-1;
+    border-radius: 12px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+
+    @media (min-width: $tablets) {
+        padding: 32px 20px;
+    }
+
+    &__picture {
+    }
+
+    &__img {
+        height: 64px;
+        width: 186px;
+        object-fit: contain;
+        margin-bottom: 8px;
+
+        @media (min-width: $tablets) {
+            margin-bottom: 13px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 8px;
+    }
+
+    &__text {
+        margin-bottom: 8px;
+
+        @media (min-width: $tablets) {
+            margin-bottom: 12px;
+        }
+    }
+
+    p {
+        margin: 0;
+    }
+
+    &__year {
+        margin-top: auto;
+    }
+}

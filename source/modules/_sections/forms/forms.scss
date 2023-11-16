@@ -1,0 +1,58 @@
+.forms {
+    &__form {
+        @media (min-width: $tablets) {
+            background: $color-white;
+            border: 1px solid $color-gray-light-3;
+            border-radius: 12px;
+            padding: 39px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 32px;
+    }
+
+    &__body {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    &__text {
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 16px;
+        letter-spacing: 0.02em;
+    }
+
+    &__fieldset {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px 33px;
+        width: 100%;
+        border: 0;
+        margin: 0;
+        padding: 0 0 6px;
+    }
+
+    &__legend {
+        display: inline-block;
+        padding-top: 8px;
+        padding-bottom: 6px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.02em;
+        color: $color-gray;
+    }
+
+    &__btn {
+        width: 100%;
+        margin-top: 16px;
+
+        @media (min-width: $tablets) {
+            width: unset;
+            padding: 12px 73px;
+        }
+    }
+}

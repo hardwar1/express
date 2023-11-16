@@ -1,0 +1,82 @@
+<ul class="filter-bar {{filter-bar-parent-mod}} {{filter-bar-mod}}">
+    <li class="filter-bar__item">
+        <span class="filter-bar__text">
+            Город вылета
+        </span>
+
+        <div class="filter-bar__dropdown">
+            <div class="filter-bar__btn-box">
+                <button class="filter-bar__btn js-active" type="button">
+                    <span class="visually-hidden">
+                        выбрать фильтр
+                    </span>
+                    <svg width="7" height="12">
+                        <use xlink:href="#right-arrow"></use>
+                    </svg>
+                </button>
+
+                <input class="filter-bar__input" type="text" value="Без перелета" tabindex="-1" readonly>
+            </div>
+            {{>
+            form-drop-list
+            form-drop-list-parent-mod="filter-bar__menu"
+            form-drop-list-mod=""
+            }}
+        </div>
+    </li>
+
+    <li class="filter-bar__item">
+        <span class="filter-bar__text">
+            Куда
+        </span>
+
+        <div class="filter-bar__dropdown">
+            <div class="filter-bar__btn-box">
+                <button class="filter-bar__btn js-active" type="button">
+                    <span class="visually-hidden">
+                        выбрать фильтр
+                    </span>
+                    <svg width="7" height="12">
+                        <use xlink:href="#right-arrow"></use>
+                    </svg>
+                </button>
+
+                <input class="filter-bar__input" type="text" value="Санкт-Петербург" tabindex="-1" readonly>
+            </div>
+
+            {{>
+            form-drop-list
+            form-drop-list-parent-mod="filter-bar__menu"
+            form-drop-list-mod=""
+            }}
+        </div>
+    </li>
+
+    <li class="filter-bar__item">
+        <span class="filter-bar__text">
+            Тип
+        </span>
+
+        <div class="filter-bar__dropdown">
+
+            <div class="filter-bar__btn-box">
+                <button class="filter-bar__btn js-active" type="button">
+                    <span class="visually-hidden">
+                        выбрать фильтр
+                    </span>
+                    <svg width="7" height="12">
+                        <use xlink:href="#right-arrow"></use>
+                    </svg>
+                </button>
+
+                <input class="filter-bar__input" type="text" value="Экскурсионный тур" tabindex="-1" readonly>
+            </div>
+
+            {{>
+            form-drop-list
+            form-drop-list-parent-mod="filter-bar__menu"
+            form-drop-list-mod=""
+            }}
+        </div>
+    </li>
+</ul>

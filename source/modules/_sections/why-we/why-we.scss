@@ -1,0 +1,43 @@
+.why-we {
+    &__list {
+        @media (min-width: $tablets) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+
+    &__item {
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+
+        @media (min-width: $tablets) {
+            display: block;
+            width: calc(50% - 10px);
+            padding-right: 40px;
+        }
+
+        @media (min-width: $desktops-md) {
+            width: calc(33.33% - 14px);
+
+        }
+    }
+
+    &__item svg {
+        margin-right: 24px;
+        flex-shrink: 0;
+        @media (min-width: $tablets) {
+            display: block;
+            margin-bottom: 5px;
+        }
+    }
+
+    &__item:last-child {
+        margin-bottom: 0;
+    }
+
+    &__text {
+        display: block;
+    }
+}

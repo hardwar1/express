@@ -1,0 +1,231 @@
+.card-news {
+    display: flex;
+
+    &__inner {
+        position: relative;
+        display: block;
+        width: 100%;
+        color: $color-gray-dark;
+        padding: 16px;
+        background-color: $color-white;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 12px;
+        box-shadow: 0 14px 40px rgba(165, 165, 197, 0.16);
+        overflow: hidden;
+
+        @media (min-width: $tablets) {
+            padding: 24px;
+        }
+
+        @media (min-width: $desktops-sm) {
+            transition: box-shadow 0.3s;
+        }
+
+        @media (min-width: $desktops-xl) {
+            padding: 32px;
+        }
+    }
+
+    &__inner:hover {
+        @media (min-width: $desktops-sm) {
+            box-shadow: 0 14px 40px rgba(165, 165, 197, 0.4);
+        }
+    }
+
+    &__img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+        transform: translate(-50%, -50%);
+        filter: blur(0);
+
+        @media (min-width: $desktops-sm) {
+            transition-property: transform, filter;
+            transition-duration: 0.3s;
+        }
+    }
+
+    &--img &__inner:hover &__img {
+        @media (min-width: $desktops-sm) {
+            transform: translate(-50%, -50%) scale(1.1);
+            filter: blur(2px);
+        }
+    }
+
+    &__content {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__date {
+        margin-bottom: 4px;
+        font-size: 13px;
+        line-height: 20px;
+        letter-spacing: 0.04em;
+        color: $color-gray-icon;
+    }
+
+    &__title,
+    &__title > * {
+        max-height: calc(20px * 2);
+        margin-top: 0;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+        @include text-overflow(2);
+
+        @media (min-width: $tablets) {
+            max-height: calc(22px * 2);
+            font-size: 15px;
+            line-height: 22px;
+        }
+
+        @media (min-width: $desktops-xl) {
+            max-height: calc(26px * 2);
+            font-size: 17px;
+            line-height: 26px;
+        }
+    }
+
+    &__title {
+        @media (min-width: $desktops-sm) {
+            transition: color 0.3s;
+        }
+    }
+
+    &:not(&--img) &__inner:hover &__title {
+        @media (min-width: $desktops-sm) {
+            color: $color-red;
+        }
+    }
+
+    &__title:not(:last-child) {
+        margin-bottom: 6px;
+
+        @media (min-width: $tablets) {
+            margin-bottom: 12px;
+        }
+    }
+
+    &__text {
+        max-height: calc(22px * 5);
+        margin-top: 0;
+        font-size: 13px;
+        line-height: 22px;
+        @include text-overflow(5);
+
+        @media (min-width: $tablets) {
+            max-height: calc(24px * 6);
+            line-height: 24px;
+            -webkit-line-clamp: 6;
+        }
+
+        @media (min-width: $desktops-xl) {
+            max-height: calc(26px * 6);
+            font-size: 14px;
+            line-height: 26px;
+        }
+    }
+
+    &--img {
+        .card-news__inner:hover .card-news__title {
+            color: $color-white;
+        }
+
+        .card-news__inner {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            color: $color-white;
+        }
+
+        .card-news__inner::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            pointer-events: none;
+        }
+
+        .card-news__inner::before {
+            height: 100%;
+            background-color: $color-blue;
+            z-index: 4;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .card-news__inner:hover::before {
+            @media (min-width: $desktops-sm) {
+                opacity: 0.4;
+            }
+        }
+
+        .card-news__date {
+            color: $color-white;
+        }
+
+        .card-news__inner {
+            padding: 0;
+        }
+
+        .card-news__hidden-text {
+            position: relative;
+            z-index: 5;
+            padding: 16px;
+            background-image: linear-gradient(180deg, rgba(32, 34, 51, 0) 0%, rgba(32, 34, 51, 0.7) 100%);
+
+            @media (min-width: $tablets) {
+                padding: 24px;
+            }
+
+            @media (min-width: $desktops-xl) {
+                padding: 32px;
+            }
+        }
+    }
+
+    &--only-img {
+        // .card-news__inner {
+        //     background-repeat: no-repeat;
+        //     background-size: cover;
+        //     background-position: center;
+        // }
+
+        .card-news__hidden-text {
+            @include visually-hidden;
+        }
+
+        // .card-news__inner::before {
+        //     content: "";
+        //     position: absolute;
+        //     left: 0;
+        //     bottom: 0;
+        //     width: 100%;
+        //     height: 100%;
+        //     background-color: $color-blue;
+        //     z-index: 1;
+        //     opacity: 0;
+        //     transition: opacity 0.3s;
+        //     pointer-events: none;
+        // }
+
+        // .card-news__inner:hover::before {
+        //     @media (min-width: $desktops-sm) {
+        //         opacity: 0;
+        //     }
+        // }
+    }
+}

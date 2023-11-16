@@ -1,0 +1,79 @@
+
+card-hotel:
+    -
+        alt: полотенца на лавочке
+        title: Arsi Enfi City Beach
+        stars: "5"
+        country: Инжекум - Алания
+        day: 23 ноября — 25 ноября, 2 ночи
+        price: от 153 506 ₽
+        option: <li class="label"> Первая линия </li> <li class="label"> Водные горки </li> <li class="label"> До аэропорта 40 км </li> <li class="label"> Реновация 3 года назад </li>
+    -
+        alt: полотенца на лавочке
+        title: Arsi Enfi City Beach
+        stars: "5"
+        country: Инжекум - Алания
+        day: 23 ноября — 25 ноября, 2 ночи
+        price: от 153 506 ₽
+        option: <li class="label"> Первая линия </li> <li class="label"> Песчано-галечный пляж </li> <li class="label"> Бесплатный Wi-Fi </li> <li class="label"> Водные горки </li> <li class="label"> До аэропорта 40 км </li> <li class="label"> Реновация 3 года назад </li> <li class="label"> Детский бассейн </li>
+card-tour:
+    -
+        img:
+        alt: красивое место
+        options: <li class="label"> Экскурсионный тур </li>
+                <li class="label"> Санкт-Петербург </li>
+        title: Большое путешествие в Петербург
+        days: 10 дней/ 9 ночей
+        date-text-2: <b>Пятница – воскресенье.</b><br> В период c 21.10.22 г. по 25.12.22 г. и с 20.01.23 г. по 23.04.23 г.
+        place: Санкт-Петербург.
+        price: от 2 506 ₽
+slider-simple:
+    -
+        img:
+    -
+        img:
+news-list:
+    -
+        date: "16.06.2022"
+        alt: красивый остров
+        title: «Русский Экспресс» открыл офис в Беларуси
+        img: 20
+        text: "Мы открыли официальное представительство в Минске. Контакты офиса: ул. Сурганова, 61 (БЦ «Зебра»), 3 этаж, офис 41. "
+    -
+        date: "16.06.2022"
+        alt: красивый остров
+        title: "Кешбэк за туры по России: с 25 августа по 10 сентября"
+        img: 20
+        text: "Информируем, что холдинг «Русский Экспресс» вновь участвует в государственной программе по субсидированию туров по России в рамках трех площадок."
+slider:
+    -
+        img: 20
+        href:
+        alt: красивый островной берег
+    -
+        img: 20
+        href:
+        alt: красивый островной берег
+    -
+        img: 20
+        href:
+        alt: красивый островной берег
+    -
+        img: 20
+        href:
+        alt: красивый островной берег
+card-actions:
+    -
+        alt: панорамный вид на интересные места
+        options: <li class="label active">ОАЭ</li>
+        title: "Кешбэк 100 USD за туры в Дубай"
+        date-text-2: "11.11.2022 – 31.12.2022"
+        place: "Бронируйте туры в Дубай и получайте кешбэк до 100$ на следующую бронь"
+    -
+        alt: панорамный вид на интересные места
+        options: <li class="label active">ОАЭ</li>
+                <li class="label">JW Marriott Mauritius Resort</li>
+                <li class="label">Le Meridien Ile Maurice</li>
+        title: "Акция от отелей JW Marriott Mauritius Resort и Le Meridien Ile Maurice"
+        date-text-2: "15.06.2022 – 01.06.2023"
+        place: "Успейте раньше других! Забронируйте тур в отели JW Marriott Mauritius Resort или Le Meridien Ile Maurice как можно скорее и выиграйте ваучер на 2 ночи в одном из этих отелей!"

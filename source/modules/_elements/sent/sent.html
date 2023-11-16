@@ -1,0 +1,19 @@
+<div class="sent {{sent-parent-mod}} {{sent-mod}}">
+    <div class="sent__title h2">
+        <svg width="30" height="30">
+            <use xlink:href="images/sprite.svg#check-circle"></use>
+        </svg>
+        Ваш отзыв успешно оправлен
+    </div>
+
+    <p class="sent__text">
+        После модерации Ваш отзыв (что-то написать)....
+    </p>
+
+    {{>
+    btn
+    btn-text="ОТПРАВИТЬ ЕЩЕ РАЗ"
+    btn-parent-mod="sent__btn"
+    btn-mod="btn--red"
+    }}
+</div>

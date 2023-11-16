@@ -1,0 +1,18 @@
+<div class="{{tours-in-parent-mod}} tours-in {{tours-in-mod}}">
+    {{#if tours-in-filter}}{{> filter-bar filter-bar-parent-mod="tours-in__filter-bar" }}{{/if}}
+
+    <ul class="tours-in__card-list card-list">
+        {{#each card-tour-items}}
+        <li class="card-list__item">
+            {{> card-tour card-tour-parent-mod="tours-in__card-tour" }}
+        </li>
+        {{/each}}
+    </ul>
+
+    {{#if tours-in-filter}}
+    {{> empty-result
+        empty-result-parent-mod="tours-in__empty-result"
+        empty-result-mod=tours-in-empty-result-mod
+    }}
+    {{/if}}
+</div>

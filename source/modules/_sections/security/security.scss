@@ -1,0 +1,46 @@
+.security {
+    &__list {
+        margin-bottom: 16px;
+    }
+
+    &__item {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 10px;
+
+        @media (min-width: $tablets) {
+            display: flex;
+        }
+
+        @media (min-width: $desktops-md) {
+            font-size: 15px;
+            line-height: 28px;
+        }
+    }
+
+    &__item:last-child {
+        margin-bottom: 10px;
+    }
+
+    &__rto {
+        font-weight: 400;
+        display: block;
+
+        @media (min-width: $tablets) {
+            margin-left: 16px;
+            margin-right: auto;
+        }
+    }
+
+    &__cash {
+        display: block;
+    }
+
+    &__look {
+        color: $color-red;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+    }
+}

@@ -1,0 +1,74 @@
+/* Scrollbar */
+.swiper-scrollbar {
+    position: relative;
+    cursor: pointer;
+    -ms-touch-action: none;
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 4px;
+        background: rgba(129, 137, 156, 0.1);
+        border-radius: 10px;
+    }
+
+    .swiper-scrollbar-disabled>&,
+    &.swiper-scrollbar-disabled {
+        display: none !important;
+    }
+
+    .swiper-horizontal>&,
+    &.swiper-scrollbar-horizontal {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 50;
+        height: 16px;
+        width: 100%;
+    }
+
+    .swiper-vertical>&,
+    &.swiper-scrollbar-vertical {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 50;
+        width: 16px;
+        height: 100%;
+    }
+}
+
+.swiper-scrollbar-drag {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: $color-gray;
+    border-radius: 10px;
+    left: 0;
+    top: 0;
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 4px;
+        background: $color-gray;
+        border-radius: 10px;
+        opacity: 0.4;
+    }
+}
+
+.swiper-scrollbar-cursor-drag {
+    cursor: move;
+}
+
+.swiper-scrollbar-lock {
+    display: none;
+}

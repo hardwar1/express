@@ -1,0 +1,18 @@
+&--bordered &__input {
+    width: 200px;
+    padding: 8px 30px 8px 16px;
+    font-size: 15px;
+}
+
+&--bordered &__input-wrap::before {
+    border-color: $color-gray-light-2;
+}
+
+&--bordered &__icon-wrap {
+    width: 30px;
+    padding-right: 12px;
+}
+
+&--bordered &__list-wrap {
+    min-width: 100%;
+}

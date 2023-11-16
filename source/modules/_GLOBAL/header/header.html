@@ -1,0 +1,105 @@
+<header class="{{header-parent-mod}} header js-active">
+    <div class="header__notice-wrap">
+        {{> site-notice parent-mod="header__notice" }}
+    </div>
+
+    <div class="header__middle">
+        <div class="header__container container">
+            <div class="header__inner">
+                <div class="header__logo-wrap">
+                    <a class="header__logo-box" href="1.html">
+                        <picture>
+                            <source media="(min-width: 980px)" srcset="{{root}}images/logo.svg">
+                            <source media="(max-width: 979px)" srcset="{{root}}images/logo_sm.svg">
+                            <img class="header__logo" src="{{root}}images/logo.svg" width="240" height="83"
+                                alt="Логотип">
+                        </picture>
+                    </a>
+                </div>
+
+                <div class="header__main js-active">
+                    <div class="header__main-inner">
+
+                        <div class="header__main-part">
+                            <div class="header__nav-wrap">
+                                {{> nav nav-parent-mod="header__nav" }}
+                            </div>
+
+                            <div class="header__lk-wrap">
+                                {{> link-lk link-lk-parent-mod="header__lk" }}
+                            </div>
+                        </div>
+
+                        <div class="header__main-part">
+                            <div class="header__currency-wrap">
+                                {{> currency currency-parent-mod="header__currency" currency-mod=""}}
+                            </div>
+
+                            <div class="header__info-wrap">
+                                <div class="header__info">
+                                    <div class="header__defs">
+                                        {{> tel-block
+                                        parent-mod="header__def"
+                                        mod=""
+                                        caption="Для турагентств"
+                                        body="tel"
+                                        tel="+7 (495) 009-66-99"
+                                        tel-link="+74950096699"
+                                        }}
+
+                                        {{> tel-block
+                                        parent-mod="header__def"
+                                        mod=""
+                                        caption="Для частных лиц"
+                                        body="tel"
+                                        tel="+7 (495) 662-99-40"
+                                        tel-link="+74956629940"
+                                        }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="header__main-part">
+                            {{> aside-links--mobile aside-links-parent-mod="header__aside-links"
+                            aside-links-mod="aside-links--center"}}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header__mobile-main">
+                    {{> tel-block
+                    parent-mod="header__mobile-tel"
+                    mod="tel-block--black"
+                    caption="Для турагентств"
+                    body="tel"
+                    tel="+7 (495) 009-66-99"
+                    tel-link="+74950096699"
+                    }}
+
+                    {{> tel-block
+                    parent-mod="header__mobile-tel"
+                    mod="tel-block--black"
+                    caption="Для частных лиц"
+                    body="tel"
+                    tel="+7 (495) 662-99-40"
+                    tel-link="+74956629940"
+                    }}
+
+                    <div class="header__mobilelk-wrap">
+
+                    </div>
+
+                    <div class="header__menubtn-wrap">
+                        {{> menu-btn
+                        menu-btn-parent-mod="header__menu-btn"
+                        menu-btn-mod=""
+                        menu-btn-text="Меню"
+                        js-active="js-active"
+                        }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,112 @@
+<div class="{{contacts-parent-mod}} contacts {{contacts-mod}}">
+    {{> btns
+    btns-parent-mod="contacts__menu"
+    btns-list=contacts-menu
+    btns-mod="tabs-menu"
+    }}
+
+    <address class="contacts__address">
+        <ul class="contacts__body tabs-list">
+            {{#each contacts}}
+            <li class="contacts__body-item">
+                <div class="contacts__top text-l">
+                    <div class="contacts__caption">
+                        <span class="h3">
+                            {{title}}
+                        </span>
+                    </div>
+
+                    <div class="contacts__text">
+                        109004, Россия, Москва, ул. Земляной Вал, 59, стр. 2, 6 этаж
+                    </div>
+
+                    <a class="contacts__link link" href="">
+                        +7 (495) 009-66-99
+                        <span class="contacts__sub-text">
+                            (многоканальный)
+                        </span>
+                    </a>
+                </div>
+                <div class="contacts__bottom">
+                    <div class="contacts__sub-caption">
+                        <span class="h4">
+                            Офис для частных лиц
+                        </span>
+                    </div>
+
+                    <div class="contacts__links">
+                        <a class="contacts__link contacts__link--icon contacts__link--fill  link" href="">
+                            <svg width="24" height="24">
+                                <use xlink:href="images/sprite.svg#map-marker"></use>
+                            </svg>
+                            109004, Москва, ул. Николоямская, дом 40с1, 2 этаж, офис 212–213
+                        </a>
+
+                        <a class="contacts__link contacts__link--icon contacts__link--fill link" href="">
+                            <svg width="24" height="24">
+                                <use xlink:href="images/sprite.svg#phone"></use>
+                            </svg>
+                            +7 (495) 662-99-40
+                        </a>
+
+                        <div class="contacts__link contacts__link--icon contacts__link--fill link">
+                            <svg width="24" height="24">
+                                <use xlink:href="images/sprite.svg#at"></use>
+                            </svg>
+
+                            <a class="contacts__tel" href="mailto:client@r-express.ru">client@r-express.ru</a>
+                            <a class="contacts__tel" href="mailto:agent@r-express.ru">agent@r-express.ru</a>
+                            Если нужно пояснение
+                        </div>
+
+                        <div class="contacts__link contacts__link--icon">
+                            <svg width="24" height="24">
+                                <use xlink:href="images/sprite.svg#clock"></use>
+                            </svg>
+
+                            <span class="contacts__link-text"> пн — с 10:00 до 19:00; </span>
+                            <span class="contacts__link-text"> вт-пт — с 10:00 до 20:00; </span>
+                            <span class="contacts__link-text"> сб — с 11:00 до 19:00 </span>
+                        </div>
+                    </div>
+
+                    <div class="contacts__text">
+                        Экстренная поддержка туристов во время отдыха:
+                        <div class="contacts__row">
+                            <a class="contacts__tel" href="">
+                                +7 (926) 511-66-99
+                            </a>
+                            <a class="contacts__tel" href="">
+                                +7 (926) 690-66-99
+                            </a>
+                            <span class="contacts__sub-text">
+                                (будни с 20:00 до 09:00, выходные – круглосуточно)
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="contacts__text">
+                        Номер для бесплатных звонков только с городских региональных телефонов:
+                        <div class="contacts__row">
+                            <a class="contacts__tel" href="">
+                                8 (800) 775-66-99
+                            </a>
+                        </div>
+                    </div>
+
+                    {{#if mod}}
+                    <div class="contacts__text">
+                        Номер для бесплатных звонков только с городских региональных телефонов:
+                        <div class="contacts__row">
+                            <a class="contacts__tel" href="">
+                                8 (800) 775-66-99
+                            </a>
+                        </div>
+                    </div>
+                    {{/if}}
+                </div>
+            </li>
+            {{/each}}
+        </ul>
+    </address>
+</div>

@@ -1,0 +1,31 @@
+<div class="event-hero {{event-hero-parent-mod}} {{event-hero-mod}}">
+
+    <div class="event-hero__info">
+        <span class="event-hero__btn">
+            Бизнес-завтрак
+        </span>
+        <div class="event-hero__title">
+            <h2>
+                КАТАР
+            </h2>
+        </div>
+
+        <span class="event-hero__text">
+            <svg width="24" height="24">
+                <use xlink:href="{{root}}images/sprite.svg#date"></use>
+            </svg>
+            13 декабря
+        </span>
+        <span class="event-hero__text">
+            <svg width="24" height="24">
+                <use xlink:href="{{root}}images/sprite.svg#marker"></use>
+            </svg>
+            Ресторан Hemingway
+        </span>
+    </div>
+
+    <picture>
+        <source srcset="{{root}}images/event/{{img}}.webp" type="image/webp">
+        <img class="event-hero__img" src="{{root}}images/event/{{img}}.png" height="200" alt="красивый город">
+    </picture>
+</div>

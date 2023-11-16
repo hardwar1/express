@@ -1,0 +1,93 @@
+.card-event {
+    padding: 30px 20px;
+    background-color: $color-white;
+    border: 1px solid $color-gray-light-3;
+    border-radius: 12px;
+    font-size: 15px;
+    line-height: 28px;
+
+    @media (min-width: $tablets) {
+        padding: 40px;
+    }
+
+    &__item {
+        display: flex;
+        margin-bottom: 16px;
+    }
+
+    &__item svg {
+        flex-shrink: 0;
+        width: 24px;
+        height: 24px;
+        margin-right: 16px;
+        fill: $color-gray-icon;
+        opacity: 0.7;
+    }
+
+    &__text {
+        font-weight: 500;
+        display: block;
+    }
+
+    &__bottom {
+        @media (min-width: $tablets) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 40px;
+        }
+    }
+
+    &__price-wrapper {
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        line-height: 20px;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        color: rgba(75, 75, 97, 0.8);
+        margin-bottom: 12px;
+
+        @media (min-width: $tablets) {
+            margin-bottom: 0;
+            align-items: flex-end;
+            line-height: 19px;
+        }
+
+        @media (min-width: $desktops-md) {
+            font-size: 15px;
+            line-height: 26px;
+        }
+
+        @media (max-width: $phones-max) {
+            padding-left: 40px;
+        }
+    }
+
+    &__price {
+        font-weight: 600;
+        font-size: 16px;
+        color: $color-red;
+        margin-right: 8px;
+
+        @media (min-width: $tablets) {
+            font-size: 20px;
+            line-height: 22px;
+        }
+
+        @media (min-width: $desktops-md) {
+            font-size: 24px;
+            line-height: 32px;
+        }
+    }
+
+    &__btn {
+        display: block;
+        width: 100%;
+        padding: 11px 30px;
+
+        @media (min-width: $tablets) {
+            width: unset;
+        }
+    }
+}

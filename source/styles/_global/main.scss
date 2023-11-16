@@ -1,0 +1,64 @@
+.main {
+    &__content-wrap {
+        display: flex;
+    }
+
+    &__content {
+        flex-shrink: 0;
+        flex-grow: 1;
+        width: 100%;
+    }
+
+    &__content:not(:first-child) {
+        @media (min-width: $desktops-sm) {
+            width: calc(100% - 42px - 204px);
+        }
+
+        @media (min-width: $desktops-md) {
+            width: calc(100% - 30px - 264px);
+        }
+
+        @media (min-width: $desktops-lg) {
+            width: calc(100% - 54px - 264px);
+        }
+
+        @media (min-width: $desktops-xl) {
+            width: calc(100% - 97px - 264px);
+        }
+    }
+
+    &__aside {
+        display: none;
+
+        @media (min-width: $desktops-sm) {
+            display: block;
+            flex-shrink: 0;
+            width: 204px;
+            margin-right: 42px;
+            padding-top: 8px;
+        }
+
+        @media (min-width: $desktops-md) {
+            width: 264px;
+            margin-right: 30px;
+        }
+
+        @media (min-width: $desktops-lg) {
+            margin-right: 54px;
+            padding-top: 16px;
+        }
+
+        @media (min-width: $desktops-xl) {
+            margin-right: 97px;
+        }
+    }
+
+    &__aside>*:not(:last-child) {
+        margin-bottom: 40px;
+    }
+
+    &__aside>*:last-child {
+        position: sticky;
+        top: 120px;
+    }
+}

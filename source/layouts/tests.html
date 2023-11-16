@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    {{> head title=title }}
+</head>
+
+<body>
+    <div class="page">
+        <main class="page__main main">
+            <div class="main__content-wrap">
+                <div class="main__content">
+                    {{> body }}
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- svg sprite start -->
+    {{> icons }}
+    <!-- svg sprite end -->
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/plugins.min.js"></script>
+    <script src="./js/scripts.js"></script>
+    <script src="./js/tests.js"></script>
+</body>
+
+</html>

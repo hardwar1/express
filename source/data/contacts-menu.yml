@@ -1,0 +1,20 @@
+-
+    btn-text: Москва
+    btn-link: true
+    id: msc
+-
+    btn-text: Санкт-Петербург
+    btn-link: true
+    id: spb
+-
+    btn-text: Екатеринбург
+    btn-link: true
+    id: ekb
+-
+    btn-text: Алматы
+    btn-link: true
+    id: alm
+-
+    btn-text: Региональные представительства
+    btn-link: true
+    id: regions

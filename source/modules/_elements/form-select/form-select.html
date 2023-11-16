@@ -1,0 +1,33 @@
+<div class="{{form-select-parent-mod}} form-select {{form-select-mod}}">
+    <div class="form-select__relative">
+    <div class="form-select__header">
+
+        <label class="form-select__wrap">
+            <input class="form-select__input {{input-mod}}" type="search" value="{{form-select-value}}" {{#if
+                form-select-readonly}}readonly tabindex="-1" {{/if}} {{required}}>
+            <span class="form-select__label">
+                {{form-select-label}}
+            </span>
+        </label>
+
+        <button class="form-select__btn" type="button" aria-label="{{form-select-button-aria-label}}">
+            {{#ifequal form-select-icon 'icon-arrow-simple'}}
+            <svg class="form-select__icon form-select__icon--arrow" width="16" height="16" fill="currentColor">
+                <use xlink:href="#{{form-select-icon}}"></use>
+            </svg>
+            {{else}}
+            <svg class="form-select__icon" width="24" height="24" fill="currentColor">
+                <use xlink:href="#{{form-select-icon}}"></use>
+            </svg>
+            {{/ifequal}}
+        </button>
+    </div>
+
+    {{> form-drop-list form-drop-list-parent-mod="form-select__form-drop-list" form-drop-list-mod=""}}
+</div>
+    {{#if form-select-caption}}
+    <div class="form-select__caption">
+        {{form-select-caption}}
+    </div>
+    {{/if}}
+</div>

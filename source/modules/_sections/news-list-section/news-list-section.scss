@@ -1,0 +1,13 @@
+.news-list-section {
+    &__btns:not(:last-child) {
+        margin-bottom: 40px;
+
+        @media (min-width: $desktops-xl) {
+            margin-bottom: 60px;
+        }
+    }
+
+    &__btn {
+        margin-top: 40px;
+    }
+}

@@ -1,0 +1,24 @@
+<div class="{{weather-parent-mod}} weather {{weather-mod}}">
+    <ul class="weather__inner">
+        {{#each weather}}
+
+        <li class="weather__item">
+            <a class="weather__text" href="#">
+                {{text}}
+            </a>
+
+            <div class="weather__meaning">
+                <svg width="22" height="22">
+                    <use xlink:href="images/sprite.svg#{{svg}}"></use>
+                </svg>
+
+                <span class="weather__numbers">
+                    +17..+26
+                </span>
+            </div>
+        </li>
+        {{/each}}
+
+    </ul>
+    <button class="weather__btn link" type="button">Все курорты</button>
+</div>

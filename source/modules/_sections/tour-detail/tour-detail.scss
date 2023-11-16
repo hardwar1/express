@@ -1,0 +1,136 @@
+.tour-detail {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+
+    @media (min-width: $desktops-md) {
+        font-size: 14px;
+    }
+
+    &__tour-detail-card,
+    &__form,
+    &__block {
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+        @media (min-width: $desktops-md) {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__caption+&__form {
+        margin-top: 0;
+    }
+
+    &__tour-detail-card {
+        margin-top: 40px;
+        margin-bottom: 40px;
+
+        @media (min-width: $desktops-md) {
+            margin-top: 60px;
+            margin-bottom: 60px;
+        }
+    }
+
+    &__row {
+        color: $color-gray-dark;
+        margin-bottom: 32px;
+
+        @media (min-width: $tablets) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        @media (min-width: $desktops-md) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__weather {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__weather-item {
+        margin-right: 24px;
+        margin-bottom: 8px;
+        display: flex;
+        align-items: center;
+        color: inherit;
+        transition: color 0.3s;
+
+        @media (min-width: $tablets) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__weather-item[href]:hover {
+        @media (min-width: $desktops-sm) {
+            color: $color-red;
+        }
+    }
+
+    &__weather-item svg {
+        margin-right: 8px;
+    }
+
+    &__weather-item:last-child {
+        margin-right: 0;
+    }
+
+    &__link {
+        color: $color-red;
+    }
+
+    &__slider {
+        margin-bottom: 30px;
+
+        @media (min-width: $desktops-md) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        border: 1px solid $color-gray-light-3;
+        box-shadow: 0 2px 12px rgba(165, 165, 197, 0.1);
+        border-radius: 12px;
+        margin-bottom: 30px;
+        padding: 10px 24px 10px 16px;
+
+        @media (min-width: $tablets) {
+            width: fit-content;
+            font-size: 15px;
+            line-height: 20px;
+            padding-right: 30px;
+        }
+
+        @media (min-width: $desktops-md) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__btn svg {
+        margin-right: 15px;
+    }
+
+    &__caption,
+    &__caption > * {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 26px;
+        margin-bottom: 15px;
+        @media (min-width: $desktops-md) {
+            font-size: 20px;
+            line-height: 28px;
+        }
+    }
+
+    @include reset-child-margins();
+}

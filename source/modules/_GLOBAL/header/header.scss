@@ -1,0 +1,381 @@
+.header {
+    background-color: $color-white;
+    position: relative;
+
+    &.active {
+        z-index: 0;
+    }
+
+    &:hover {
+        z-index: 99;
+    }
+
+    &__notice-wrap {
+        position: relative;
+        z-index: -1;
+
+        @media (min-width: $desktops-sm) {
+            position: sticky;
+            top: 0;
+        }
+    }
+
+    &__container {
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        @media (min-width: $tablets) and (max-width: $tablets-max) {
+            padding-top: 13px;
+            padding-bottom: 13px;
+        }
+
+        @media (min-width: $desktops-xl) {
+            padding-bottom: 14px;
+        }
+
+        @media (max-width: $tablets-max) {
+            padding-right: 16px;
+            padding-left: 16px;
+        }
+
+        @media (max-width: $phones-max) {
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+    }
+
+    &__middle {
+        border-radius: 16px 16px 0 0;
+        background-color: $color-white;
+
+        @media (max-width: $tablets-max) {
+            border-bottom: 1px solid transparent;
+        }
+    }
+
+    &__middle--scroll {
+        @media (max-width: $tablets-max) {
+            border-bottom-color: rgba($color-gray-icon, 0.5) ;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 10px;
+
+        @media (min-width: $tablets) {
+            column-gap: 54px;
+        }
+
+        @media (min-width: $desktops-lg) {
+            column-gap: 12px;
+        }
+
+        @media (min-width: $desktops-xl) {
+            column-gap: 80px;
+        }
+
+        @media (max-width: $tablets-max) {
+            position: relative;
+            z-index: 5;
+        }
+    }
+
+    &__inner::before {
+        @media (max-width: $tablets-max) {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            border-radius: 16px 16px 0 0;
+            height: 100%;
+            background-color: $color-white;
+        }
+    }
+
+    &__logo-wrap {
+        display: flex;
+        position: relative;
+
+        @media (min-width: $desktops-sm) {
+            left: -6px;
+        }
+
+        @media (min-width: $desktops-md) {
+            left: -38px;
+        }
+
+        @media (min-width: $desktops-lg) {
+            left: -86px;
+        }
+
+        @media (min-width: $desktops-xl) {
+            left: -88px;
+        }
+
+        @media (max-width: $tablets-max)  {
+            top: 6px;
+        }
+    }
+
+    &__logo-box {
+        display: block;
+    }
+
+    &__logo {
+        width: 144px;
+        height: 50px;
+        object-fit: contain;
+        object-position: left top;
+
+        @media (min-width: $tablets) {
+            width: 178px;
+            height: 62px;
+        }
+
+        @media (min-width: $desktops-sm) {
+            width: 240px;
+            height: 83px;
+        }
+    }
+
+    &__main {
+        @media (max-width: $tablets-max) {
+            position: fixed;
+            top: 143px;
+            left: 0;
+            z-index: -2;
+            width: 100%;
+            height: 100vh;
+            max-height: calc(100vh - 143px);
+            padding: 23px 5px 48px 18px;
+            background-color: $color-white;
+            transform: translate(50%, -50%) scale(0);
+            transition: transform 0.3s ease-in-out;
+            overflow-y: scroll;
+            @include set-scroll();
+        }
+
+        @media (max-width: $phones-max) {
+            top: 117px;
+            max-height: calc(100vh - 117px);
+        }
+
+        @media (min-width: $desktops-sm) {
+            flex-grow: 1;
+            min-width: 650px;
+        }
+    }
+
+    &__main.active {
+        @media (max-width: $tablets-max) {
+            transform: translate(0, 0) scale(1);
+        }
+    }
+
+    &__main-inner {
+        @media (max-width: $tablets-max) {
+            width: 100%;
+        }
+
+        @media (min-width: $desktops-sm) {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__main-part {
+        @media (max-width: $tablets-max) {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (min-width: $desktops-sm) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            column-gap: 14px;
+        }
+
+        @media (min-width: $desktops-xl) {
+            column-gap: 24px;
+        }
+    }
+
+    &__main-part:not(:last-child) {
+        @media (max-width: $tablets-max) {
+            margin-bottom: 24px;
+        }
+
+        @media (min-width: $desktops-sm) {
+            padding-top: 6px;
+        }
+    }
+
+    &__currency-wrap {
+        @media (max-width: $tablets-max) {
+            order: 2;
+        }
+    }
+
+    &__aside-links {
+        @media (min-width: $tablets) {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @media (min-width: $desktops-sm) {
+            display: none;
+        }
+    }
+
+    &__info-wrap {
+        @media (max-width: $tablets-max) {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__info {
+        @media (max-width: $tablets-max) {
+            display: flex;
+            flex-direction: column;
+            row-gap: 16px;
+        }
+
+        @media (min-width: $desktops-sm) {
+            display: flex;
+            justify-content: space-between;
+            column-gap: 14px;
+        }
+
+        @media (min-width: $desktops-xl) {
+            max-width: 860px;
+        }
+    }
+
+    &__defs {
+        @media (max-width: $tablets-max) {
+            display: flex;
+            flex-direction: column;
+            row-gap: 6px;
+        }
+
+        @media (max-width: $phones-max) {
+            row-gap: 14px;
+        }
+
+        @media (min-width: $desktops-sm) {
+            display: flex;
+            justify-content: space-between;
+            column-gap: 24px;
+        }
+    }
+
+    &__nav-wrap {
+        @media (min-width: $desktops-sm) {
+            max-width: 546px;
+            display: flex;
+        }
+
+        @media (min-width: $desktops-md) {
+            max-width: 677px;
+        }
+
+        @media (min-width: $desktops-lg) {
+            max-width: 770px;
+        }
+
+        @media (min-width: $desktops-xl) {
+            max-width: 803px;
+        }
+    }
+
+    &__lk-wrap {
+        @media (max-width: $tablets-max) {
+            display: none;
+        }
+    }
+
+    &__mobile-main {
+        @media (max-width: $tablets-max) {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        @media (max-width: $phones-max) {
+            column-gap: 12px;
+        }
+
+        @media (min-width: $desktops-sm) {
+            display: none;
+        }
+    }
+
+    &__mobile-tel {
+        display: none;
+
+        @media (min-width: $tablets) {
+            display: flex;
+            margin-right: 24px;
+        }
+    }
+
+    &__tabletlinks-list {
+        margin: 0;
+        padding-left: 0;
+        list-style-type: none;
+
+        @media (max-width: $phones-max) {
+            display: none;
+        }
+
+        @media (min-width: $tablets) and (max-width: $tablets-max) {
+            display: flex;
+            align-items: center;
+            column-gap: 40px;
+            padding-right: 30px;
+        }
+
+        @media (min-width: $desktops-sm) {
+            display: none;
+        }
+    }
+
+    &__mobilelk-wrap {
+        display: flex;
+        align-items: center;
+
+        @media (min-width: $tablets) {
+            margin-right: 8px;
+            margin-left: 10px;
+        }
+    }
+
+    &__mobilelk-wrap svg {
+        display: block;
+    }
+
+    &__mobilelk-btn {
+        @include no-btn;
+    }
+
+    &__menubtn-wrap {
+        flex-shrink: 0;
+    }
+
+    &__menu-btn {
+        flex-shrink: 0;
+        width: 44px;
+        height: 44px;
+
+        @media (min-width: $tablets) {
+            width: 48px;
+            height: 48px;
+        }
+    }
+}

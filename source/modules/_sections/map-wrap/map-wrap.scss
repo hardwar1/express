@@ -1,0 +1,27 @@
+.map-wrap {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    height: 440px;
+    overflow: hidden;
+
+    &:not(&--wide) {
+        border-radius: 16px;
+    }
+
+    @media (min-width: $desktops-xl) {
+        height: 530px;
+    }
+
+    &--wide:not(:first-child) {
+        margin-top: 16px;
+
+        @media (min-width: $tablets) {
+            margin-top: 24px;
+        }
+
+        @media (min-width: $desktops-md) {
+            margin-top: 30px;
+        }
+    }
+}

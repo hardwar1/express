@@ -1,0 +1,13 @@
+<ul class="{{aside-links-parent-mod}} aside-links  {{aside-links-mod}}">
+    {{#each aside-links}}
+    <li class="aside-links__item">
+        <a class="aside-links__link" href="">
+            <svg width="48" height="48">
+                <use xlink:href="images/sprite.svg#aside-link-{{svg}}"></use>
+            </svg>
+
+            {{text}}
+        </a>
+    </li>
+    {{/each}}
+</ul>

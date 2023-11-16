@@ -1,0 +1,24 @@
+-
+    text: Аланья
+    svg: weather-snow
+-
+    text: Анкара
+    svg: weather-cloudy
+-
+    text: Анталья
+    svg: weather-sun
+-
+    text: Белек
+    svg: weather-rain-snow
+-
+    text: Бодрум
+    svg: weather-snow
+-
+    text: Кемер
+    svg: weather-rain
+-
+    text: Мармарис
+    svg: weather-snow
+-
+    text: Стамбул
+    svg: weather-snow

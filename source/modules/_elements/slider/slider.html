@@ -1,0 +1,26 @@
+<div class="{{slider-parent-mod}} slider  {{slider-mod}}">
+    <div class="slider__swiper swiper">
+        <ul class="slider__list swiper-wrapper">
+            {{#each tour-detail-slide}}
+            <li class="slider__item swiper-slide">
+                <a class="slider__img-box{{#if video}} slider__img-box--video{{/if}} fancybox" href="{{#if video}}https://youtu.be/FtU7gPXOy3M{{else}}images/tour-detail/{{img}}.jpg{{/if}}" data-fancybox="gallery">
+                    <picture>
+                        <source srcset="images/tour-detail/{{img}}.webp" type="image/webp">
+                        <source srcset="images/tour-detail/{{img}}.jpg" type="image/jpg">
+                        <img class="slider__img" src="images/tour-detail/{{img}}.jpg" alt="{{alt}}">
+                    </picture>
+                    {{#if video}}
+                    <svg width="20" height="24">
+                        <use xlink:href="#triangle"></use>
+                    </svg>
+                    {{/if}}
+                </a>
+            </li>
+
+            {{/each}}
+        </ul>
+    </div>
+
+    {{> slider-btn slider-btn-parent-mod="slider__slider-btn" slider-btn-mod="slider-btn--prev"}}
+    {{> slider-btn slider-btn-parent-mod="slider__slider-btn" slider-btn-mod="slider-btn--next"}}
+</div>

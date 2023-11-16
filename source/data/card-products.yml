@@ -1,0 +1,21 @@
+-
+    card-products-mod2:
+    title: ТрЭволюция
+    text: Масштабные бизнес-конференции в городах России для партнеров-турагентов
+    img: 1
+-
+    card-products-mod2: card-products--brown
+    title: Маэстро путешествий
+    text: Ежегодная премия для награждения турагентств с лучшими продажами
+    img: 2
+-
+    card-products-mod2: card-products--blue
+    title: Драгоценные агенты
+    text: Бонусная программа для поощрения лояльных и активно сотрудничающих турагентов
+    img: 3
+-
+    card-products-mod2: card-products--grey
+    title: Travel Community
+    text: Закрытый клуб для руководителей турагентств, сотрудничающих с холдингом
+    img: 4
+

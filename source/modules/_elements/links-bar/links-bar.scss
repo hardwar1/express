@@ -1,0 +1,56 @@
+.links-bar {
+    padding: 18px;
+    background-color: $color-white;
+    border: 1px solid $color-gray-light-3;
+    border-radius: 12px;
+
+    @media (min-width: $tablets) {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 40px;
+        padding: 20px 30px;
+    }
+
+    @media (min-width: $desktops-md) {
+        padding: 22px 38px;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        color: $color-gray-dark;
+        padding-top: 3px;
+        padding-bottom: 3px;
+
+        @media (min-width: $tablets) {
+            font-size: 15px;
+            line-height: 28px;
+        }
+
+        @media (min-width: $desktops-md) {
+            font-size: 17px;
+        }
+    }
+
+    &__badge {
+        font-weight: 700;
+        font-size: 10px;
+        line-height: 12px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: $color-white;
+        display: inline-block;
+        padding: 2px 4px;
+        background-color: $color-red;
+        border-radius: 2px;
+        margin-right: 6px;
+        -webkit-text-fill-color: white;
+
+        @media (min-width: $tablets) {
+            margin-right: 12px;
+        }
+    }
+}

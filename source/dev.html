@@ -1,0 +1,24 @@
+---
+layout: 1
+title: Страницы разработчика
+list-dev:
+    -
+        page: _empty-page
+        text: Страница без контента
+    -
+        page: _tests
+        text: тесты
+    -
+        page: svg-sprite-stack
+        text: svg-sprite-stack (цветные, находится в images/sprite.svg)
+    -
+        page: svg-sprite-symbol
+        text: svg-sprite-symbol (бесцветные, интегрируются в конце страниц)
+---
+<ol>
+    {{#each list-dev}}
+    <li>
+        <a href="{{page}}.html">{{text}}</a>
+    </li>
+    {{/each}}
+</ol>

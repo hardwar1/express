@@ -1,0 +1,50 @@
+<article class="{{card-hotel-parent-mod}} card-hotel {{card-hotel-mod}}">
+    <a class="card-hotel__inner" href="">
+        <div class="card-hotel__img-box">
+            <div class="card-hotel__img-wrapper">
+                {{#if img}}
+                <picture>
+                    <source srcset="images/card-hotel/{{img}}.webp" type="image/webp">
+                    <source srcset="images/card-hotel/{{img}}.jpg" type="image/jpg">
+                    <img class="card-hotel__img" src="images/card-hotel/{{img}}.jpg" height="160" width="242"
+                        alt="{{alt}}">
+                </picture>
+                {{/if}}
+            </div>
+        </div>
+
+        <div class="card-hotel__info">
+            <div class="card-hotel__title-box">
+                <div class="card-hotel__title">
+                    <h3>
+                        {{title}}
+                    </h3>
+                </div>
+                {{> stars stars-parent-mod="card-hotel__stars" }}
+            </div>
+
+            <div class="card-hotel__country">
+                {{country}}
+            </div>
+
+            <div class="card-hotel__day">
+                {{day}}
+            </div>
+
+            {{#if option}}
+            <ul class="card-hotel__options">
+                {{option}}
+            </ul>
+            {{/if}}
+
+            <div class="card-hotel__price-box">
+                <span class="card-hotel__price">
+                    {{price}}
+                </span>
+                <span class="card-hotel__price-text">
+                    за человека
+                </span>
+            </div>
+        </div>
+    </a>
+</article>

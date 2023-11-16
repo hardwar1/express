@@ -1,0 +1,12 @@
+<div class="{{form-drop-list-parent-mod}} form-drop-list js-active  {{form-drop-list-mod}}">
+    <ul class="form-drop-list__list">
+        {{#each select-drop-list}}
+        <li class="form-drop-list__item">
+            <a class="form-drop-list__link" {{#if noHref}}{{else}}href=""{{/if}}>
+                {{text}}
+            </a>
+        </li>
+        {{/each}}
+    </ul>
+    <span class="form-drop-list__no-result text-m d-none">Совпадений не найдено</span>
+</div>

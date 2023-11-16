@@ -1,0 +1,59 @@
+.breadcrumbs {
+    &__inner {
+        @media (max-width: $phones-max) {
+            overflow: hidden;
+            margin-right: -18px;
+            margin-left: -18px;
+        }
+    }
+
+    &__list {
+        display: block;
+        padding-left: 0;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 14px;
+        color: $color-gray-dark-6;
+        list-style-type: none;
+        cursor: default;
+
+        @media (max-width: $phones-max) {
+            white-space: nowrap;
+            overflow: visible hidden;
+            margin-bottom: -20px;
+            padding-bottom: 20px;
+            padding-right: 18px;
+            padding-left: 18px;
+        }
+    }
+
+    &__item {
+        position: relative;
+        display: inline;
+    }
+
+    &__item:not(:first-child)::before {
+        content: "/";
+        margin-left: 1px;
+        margin-right: 1px;
+    }
+
+    &__link {
+        color: inherit;
+    }
+
+    &__link:not([href]) {
+        cursor: default;
+    }
+
+    &__link[href] {
+        transition: color 0.3s;
+    }
+
+    &__link[href]:focus-visible,
+    &__link[href]:hover {
+        @media (min-width: $desktops-sm) {
+            color: $color-black;
+        }
+    }
+}

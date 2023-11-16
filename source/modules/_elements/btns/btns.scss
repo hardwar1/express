@@ -1,0 +1,38 @@
+.btns {
+    &__list-wrap {
+        @media (max-width: $phones-max) {
+            margin-right: -18px;
+            margin-left: -18px;
+            overflow: hidden;
+        }
+    }
+
+    &__list {
+        display: flex;
+        gap: 4px;
+
+        @media (min-width: $phones-max) {
+            flex-wrap: wrap;
+        }
+
+        @media (min-width: $tablets) {
+            row-gap: 8px
+        }
+
+        @media (min-width: $desktops-md) {
+            row-gap: 12px
+        }
+
+        @media (max-width: $phones-max) {
+            overflow: scroll hidden;
+            padding-right: 18px;
+            padding-left: 18px;
+            padding-bottom: 20px;
+            margin-bottom: -20px;
+        }
+    }
+
+    &__list>* {
+        flex-shrink: 0;
+    }
+}

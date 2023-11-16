@@ -1,0 +1,44 @@
+<div class="drop-menu-column {{drop-menu-column-parent-mod}} {{drop-menu-column-mod}}">
+    <div class="drop-menu-column__item">
+        <div class="drop-menu-column__title">
+            Информация
+        </div>
+        <ul class="drop-menu-column__list">
+            {{#each drop-menu-column.info}}
+            <li class="drop-menu-column__list-item">
+                <a class="drop-menu-column__link link" href="">
+                    {{text}}
+                </a>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+    <div class="drop-menu-column__item">
+        <div class="drop-menu-column__title">
+            Обучение
+        </div>
+        <ul class="drop-menu-column__list">
+            {{#each drop-menu-column.learn}}
+            <li class="drop-menu-column__list-item">
+                <a class="drop-menu-column__link link" href="">
+                    {{text}}
+                </a>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+    <div class="drop-menu-column__item">
+        <div class="drop-menu-column__title">
+            Продажи
+        </div>
+        <ul class="drop-menu-column__list">
+            {{#each drop-menu-column.sell}}
+            <li class="drop-menu-column__list-item">
+                <a class="drop-menu-column__link link" href="">
+                    {{text}}
+                </a>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="{{select-input-parent-mod}} select-input {{select-input-mod}}">
+    <div class="select-input__inner">
+        <div class="select-input__input-wrap">
+            <input class="select-input__input" type="text" placeholder="{{select-input-placeholder}}" aria-label="{{select-input-aria-label}}" value="{{select-input-value}}" size="16"{{#if select-input-readonly}} readonly tabindex="-1"{{/if}} required>
+
+            <button class="select-input__icon-wrap" type="button">
+                <span class="visually-hidden">Показать или скрыть список</span>
+                <svg class="select-input__icon" width="24" height="24"  fill="currentColor">
+                    <use xlink:href="#icon-arrow-simple"></use>
+                </svg>
+            </button>
+        </div>
+
+        <div class="select-input__list-wrap">
+            <ul class="select-input__list">
+                {{#each select-input-dropdown-list}}
+                <li class="select-input__item">
+                    <button class="select-input__item-inner" type="button">
+                        <span class="select-input__item-top">{{text}}</span>
+                    </button>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</div>

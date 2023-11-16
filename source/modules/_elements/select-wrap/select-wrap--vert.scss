@@ -1,0 +1,8 @@
+&--vert {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+&--vert &__caption {
+    margin-right: 0;
+}

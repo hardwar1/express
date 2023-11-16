@@ -1,0 +1,58 @@
+.link-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    column-gap: 12px;
+    min-width: 44px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    color: $color-gray-dark-3;
+
+    @media (min-width: $desktops-sm) {
+        justify-content: center;
+        padding-right: 8px;
+    }
+
+    &:focus,
+    &:hover {
+        @media (min-width: $desktops-sm) {
+            color: $color-red;
+        }
+    }
+
+    &__icon {
+        position: relative;
+        left: 0;
+        width: 24px;
+        height: 24px;
+        fill: currentColor;
+        transition-property: fill, transform, opacity;
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
+        opacity: 0.5;
+
+        @media (min-width: $desktops-sm) {
+            transform: translateX(0);
+        }
+    }
+
+    &:focus &__icon,
+    &:hover &__icon {
+        @media (min-width: $desktops-sm) {
+            opacity: 1;
+        }
+
+        @media (min-width: $desktops-sm) {
+            transform: translateX(8px);
+        }
+    }
+
+    &--text-invisible-m &__text {
+        @media (max-width: $phones-max) {
+            @include visually-hidden;
+        }
+    }
+}

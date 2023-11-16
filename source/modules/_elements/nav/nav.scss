@@ -1,0 +1,36 @@
+.nav {
+
+    a {
+        text-decoration: none;
+    }
+
+    &__inner {
+        width: 100%;
+    }
+
+    &__list {
+        display: flex;
+        width: 100%;
+        padding-left: 0;
+        list-style-type: none;
+
+        @media (max-width: $tablets-max) {
+            flex-direction: column;
+        }
+
+        @media (min-width: $desktops-sm) {
+            justify-content: space-between;
+        }
+    }
+
+    &__item:not(:last-child) {
+        @media (min-width: $desktops-sm) {
+            padding-right: 30px;
+        }
+        @media (min-width: $desktops-md) {
+            padding-right: 48px;
+        }
+    }
+}
+
+@import "nav-item/nav-item";

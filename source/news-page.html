@@ -1,0 +1,26 @@
+---
+layout: default
+title: Страница без контента
+h1: Страница без контента
+aside-list: 3
+links-block: true
+---
+<div class="main-content">
+    <div class="main-content__headline">
+        {{> menu-btn-big menu-btn-big-parent-mod="main-content__menu-btn" text="Меню"}}
+
+        <h1>
+            Новости
+        </h1>
+    </div>
+    <!-- 
+    btns=btns.summary-news
+    news-list=news-list.items10 
+    -->
+
+    {{> news-list-section
+    news-list-section-btns=btns.summary-news
+    news-list-section-items=news-list.items10
+    news-list-section-btn-more=true
+    }}
+</div>

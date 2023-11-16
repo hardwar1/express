@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    {{> head title=title }}
+</head>
+
+<body>
+    <div class="page">
+        {{> header header-parent-mod="page__header" }}
+
+        <div class="page__btns-wrap container">
+            <div class="page__btns">
+                {{#each btns.header-form-top}}
+                    {{> btn btn-mod2="btn--page"}}
+                {{/each}}
+            </div>
+        </div>
+
+        {{> header-form header-form-parent-mod="page__header-form"}}
+
+        <main class="page__main {{page-main-mods}} main">
+            <div class="main__content-wrap">
+                {{#unlesspage '404'}}
+                <div class="main__headline-wrap{{#ifpage 'index'}} visually-hidden{{/ifpage}}">
+                    <div class="main__headline">
+                        <h1>
+                            {{h1}}
+                        </h1>
+                    </div>
+                </div>
+                {{/unlesspage}}
+
+                <div class="main__content">
+                    {{> body }}
+                </div>
+            </div>
+        </main>
+
+        {{> footer footer-parent-mod="page__footer"}}
+    </div>
+
+    <!-- svg sprite start -->
+    {{> icons }}
+    <!-- svg sprite end -->
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/plugins.min.js"></script>
+    <script src="./js/scripts.js"></script>
+</body>
+
+</html>

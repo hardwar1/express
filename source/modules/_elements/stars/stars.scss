@@ -1,0 +1,14 @@
+.stars {
+    &__list {
+        display: flex;
+    }
+
+    svg {
+        width: 15px;
+        height: 15px;
+    }
+
+    svg:not(:last-child) {
+        margin-right: 5px;
+    }
+}

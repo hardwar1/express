@@ -1,0 +1,43 @@
+<li class="{{form-item-parent-mod}} form-item {{form-item-mod}}">
+    <div class="form-item__header">
+        <label class="form-item__wrap">
+            <input class="form-item__input" id="{{form-item-id}}" type="text" value="{{form-item-value}}" {{#if
+                form-item-readonly}}readonly tabindex="-1" {{/if}} required>
+            <span class="form-item__label">
+                {{form-item-label}}
+            </span>
+        </label>
+
+        <button class="form-item__btn" type="button" aria-label="{{form-item-button-aria-label}}">
+            {{#ifequal form-item-icon 'icon-arrow-simple'}}
+            <svg class="form-item__icon form-item__icon--arrow" width="16" height="16" fill="currentColor">
+                <use xlink:href="#{{form-item-icon}}"></use>
+            </svg>
+            {{else}}
+            <svg class="form-item__icon" width="24" height="24" fill="currentColor">
+                <use xlink:href="#{{form-item-icon}}"></use>
+            </svg>
+            {{/ifequal}}
+        </button>
+    </div>
+
+    <div class="form-item__body">
+        {{#ifequal form-item-dropdown 'cities'}}
+        {{> cities }}
+        {{else ifequal form-item-dropdown 'nights'}}
+        {{> nights }}
+        {{else ifequal form-item-dropdown 'members'}}
+        {{> members }}
+
+
+        <div class="form-item__body-btnwrap">
+            {{> btn
+            btn-text="Продолжить"
+            btn-parent-mod="form-item__body-btn form-item__body-btn--close"
+            btn-mod="btn--red"
+            }}
+        </div>
+        {{else}}
+        {{/ifequal}}
+    </div>
+</li>

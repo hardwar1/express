@@ -1,0 +1,26 @@
+---
+layout: default
+title: Страница без контента
+h1: Страница без контента
+aside-list: 1
+weather-block: true
+news-block: true
+links-block: false
+---
+<div class="main-content">
+    <div class="main-content__headline">
+        {{> menu-btn-big menu-btn-big-parent-mod="main-content__menu-btn" text="Меню"}}
+
+        <h1>
+            Туры в России
+        </h1>
+    </div>
+
+    <div class="main-content__block">
+        {{> tours-in
+        tours-in-parent-mod="main-content__tours-in"
+        card-tour-items=card-tour-7
+        tours-in-filter=true
+        }}
+    </div>
+</div>

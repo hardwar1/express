@@ -1,0 +1,126 @@
+.filter-bar {
+    background-color: $color-white;
+    border: 1px solid $color-gray-light-3;
+    border-radius: 12px;
+    padding: 14px;
+
+    @media (min-width: $tablets) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    @media (min-width: $desktops-lg) {
+        padding: 23px;
+    }
+
+    &__item {
+        @media (min-width: $tablets) {
+            width: calc(33.33% - 16px);
+        }
+
+        @media (min-width: $desktops-lg) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-shrink: 1;
+        }
+    }
+
+    &__item:nth-child(-n + 2) {
+        @media (min-width: $desktops-lg) {
+            flex-shrink: 0;
+        }
+    }
+
+    &__item:not(:last-child) {
+        @media (min-width: $tablets) {
+            margin-right: 16px;
+        }
+
+        @media (min-width: $desktops-lg) {
+            margin-right: 24px;
+        }
+
+        @media (max-width: $phones-max) {
+            margin-bottom: 8px;
+        }
+    }
+
+    &__text {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 20px;
+        color: $color-gray-dark;
+        display: block;
+
+        @media (min-width: $desktops-lg) {
+            flex-shrink: 0;
+            padding-right: 14px;
+            font-size: 13px;
+            letter-spacing: 0.04em;
+        }
+
+        @media (max-width: $desktops-md-max) {
+            padding-bottom: 4px;
+        }
+    }
+
+    &__menu.active {
+        z-index: 10;
+    }
+
+    &__dropdown {
+        width: 100%;
+        position: relative;
+    }
+
+    &__btn-box {
+        position: relative;
+    }
+
+    &__btn {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+        @include no-btn;
+
+        @media (min-width: $desktops-md) {
+            padding-top: 9px;
+            padding-bottom: 9px;
+            padding-right: 26px;
+        }
+    }
+
+    &__btn.active ~ &__input,
+    &__btn:hover ~ &__input {
+        background-color: $color-white-3;
+    }
+
+    &__btn svg {
+        fill: $color-gray-icon;
+        position: absolute;
+        right: 14px;
+        top: 50%;
+        transform: translateY(-50%) rotate(90deg);
+    }
+
+    &__input {
+        position: relative;
+        display: block;
+        width: 100%;
+        padding: 9px 35px 9px 15px;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 20px;
+        text-align: left;
+        text-overflow: ellipsis;
+        background-color: $color-white;
+        border: 1px solid $color-gray-light-3;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+    }
+}

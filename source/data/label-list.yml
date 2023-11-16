@@ -1,0 +1,7 @@
+event-detail:
+    - label-text: "Казань"
+      label-mod: label--active
+    - label-text: "Бизнес-завтрак"
+
+tour:
+    - label-text: Экскурсионный тур

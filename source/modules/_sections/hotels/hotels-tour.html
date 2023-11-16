@@ -1,0 +1,30 @@
+<section class="{{hotels-parent-mod}} hotels {{hotels-mod}}">
+    <div class="hotels__row">
+        <div class="hotels__title">
+            <h2 class="h3">
+                Гарантированные отели
+            </h2>
+        </div>
+
+        <a class="hotels__link">
+            <span class="hotels__link-text">
+                Смотреть все
+            </span>
+            <svg width="24" height="24">
+                <use xlink:href="{{root}}images/sprite.svg#icon-arrow-e"></use>
+            </svg>
+        </a>
+    </div>
+
+    <ul class="hotels__list card-list card-list--border">
+
+        {{#each card-hotel-name}}
+        <li class="card-list__item">
+
+            {{> card-hotel card-hotel-parent-mod="card-list__card" card-hotel-mod="" stars="5"}}
+
+        </li>
+        {{/each}}
+    </ul>
+
+</section>

@@ -1,0 +1,40 @@
+---
+layout: default
+title: Страница без контента
+h1: Страница без контента
+aside-list: 2
+news-block: true
+links-block: true
+---
+<div class="main-content">
+    <div class="main-content__headline">
+        {{> menu-btn-big menu-btn-big-parent-mod="main-content__menu-btn" text="Меню"}}
+
+        <h1>
+            Формы
+        </h1>
+    </div>
+
+    <div class="main-content__block">
+        {{> forms forms-parent-mod="main-content__forms" forms-mod=""}}
+    </div>
+
+    <div class="main-content__block">
+        {{> alert alert-text="Ваша заявка успешно отправлена" }}
+
+        {{> alert
+        alert-mod="alert--error"
+        alert-text='Произошла ошибка. Код DFG3245.'
+        alert-text-2='Попробуйте позже или перезагрузите страницу'
+        }}
+
+        <p style="font-style: italic;">
+            Пропадающее сообщение сверху экрана
+        </p>
+
+    </div>
+
+    <div class="main-content__block">
+        {{> sent sent-parent-mod="main-content__sent" sent-mod=""}}
+    </div> 
+</div>

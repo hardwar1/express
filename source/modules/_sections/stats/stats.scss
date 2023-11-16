@@ -1,0 +1,75 @@
+.stats {
+
+}
+
+.stats-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__item {
+        width: calc(50% - 10px);
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+        color: $color-gray-dark;
+        margin-bottom: 16px;
+
+        @media (min-width: $tablets) {
+            width: calc(20% - 15px);
+        }
+    }
+
+    &__item:nth-child(5n - 4),
+    &__item:nth-child(5n) {
+        @media (min-width: $desktops-md) {
+            width: calc(20% - 15px);
+        }
+    }
+
+    &__text {
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 16px;
+        letter-spacing: 0.02em;
+        color: $color-gray-dark;
+        display: block;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+
+        @media (min-width: $tablets) {
+            margin-top: 4px;
+        }
+    }
+
+    &--red {
+        .stats-list__item {
+            letter-spacing: 0.05em;
+            color: $color-red;
+
+            @media (min-width: $tablets) {
+                width: calc(50% - 10px);
+                font-size: 30px;
+                line-height: 40px;
+            }
+
+            @media (min-width: $desktops-md) {
+                width: calc(30% - 16px);
+            }
+        }
+
+        &__item:nth-child(5n - 4),
+        &__item:nth-child(5n) {
+            @media (min-width: $desktops-md) {
+                width: calc(30% - 16px);
+            }
+        }
+
+        .stats-list__item:nth-child(4n),
+        .stats-list__item:nth-child(4n - 3) {
+            @media (min-width: $desktops-md) {
+                width: calc(20% - 15px);
+            }
+        }
+    }
+}

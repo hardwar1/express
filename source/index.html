@@ -1,0 +1,34 @@
+---
+layout: default-no-col
+title: Главная
+h1: Главная
+page-main-mods: page__main--no-padding bg-light
+---
+<div class="main-content main-content--wide">
+    <div class="main-content__block main-content__block--before-rounded main-content__block--sticky bg-light">
+        {{> hero hero-parent-mod="main-content__hero" hero-mode=""}}
+    </div>
+
+    <div class="main-content__block main-content__block--relative main-content__block--rounded main-content__block--news-slider bg-light">
+        {{> news news-parent-mod="main-content__news" news-mode=""}}
+    </div>
+
+    <div class="main-content__block main-content__block--relative bg-light">
+        {{> sale sale-parent-mod="main-content__sale" sale-mode=""}}
+    </div>
+
+    <div class="main-content__block main-content__block--relative bg-light">
+        <div class="main-content__container container">
+            <div class="main-content__block-header">
+                <h2 class="h3">
+                    Наши офисы
+                </h2>
+                <div class="main-content__block-links">
+                    {{> link-arrow link-arrow-text="Контакты"}}
+                </div>
+            </div>
+        </div>
+
+        {{> map-wrap map-wrap-mod="map-wrap--wide" }}
+    </div>
+</div>

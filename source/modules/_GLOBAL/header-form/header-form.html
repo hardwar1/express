@@ -1,0 +1,85 @@
+<div class="{{header-form-parent-mod}} header-form js-active {{header-form-mod}}">
+
+    <div class="header-form__wrapper">
+        <div class="header-form__container container">
+            <form class="header-form__inner">
+                <div class="header-form__list-wrap">
+                    <ul class="header-form__list">
+                        {{> form-item
+                        form-item-parent-mod="header-form__item"
+                        form-item-mod=""
+                        form-item-button-aria-label="Выбрать место отправления"
+                        form-item-label="Откуда"
+                        form-item-value="Москва"
+                        form-item-icon="icon-arrow-simple"
+                        form-item-id="header-form-from"
+                        form-item-dropdown="cities"
+                        }}
+                        {{> form-item
+                        form-item-parent-mod="header-form__item"
+                        form-item-mod=""
+                        form-item-button-aria-label="Выбрать место назначения"
+                        form-item-label="Куда"
+                        form-item-value=""
+                        form-item-icon="icon-arrow-simple"
+                        form-item-id="header-form-to"
+                        form-item-dropdown="cities"
+                        }}
+                        {{> form-item
+                        form-item-parent-mod="header-form__item"
+                        form-item-mod="form-item--calendar"
+                        form-item-button-aria-label="Выбрать период отправления"
+                        form-item-label="Дата вылета"
+                        form-item-value="27.09–30.09"
+                        form-item-icon="date"
+                        form-item-id="header-form-dates"
+                        form-item-dropdown="dates"
+                        form-item-readonly=true
+                        }}
+                        {{> form-item
+                        form-item-parent-mod="header-form__item"
+                        form-item-mod="form-item--nights"
+                        form-item-button-aria-label="Выбрать количество ночей"
+                        form-item-label="Ночей"
+                        form-item-value="2-11"
+                        form-item-id="header-form-nights"
+                        form-item-dropdown="nights"
+                        form-item-readonly=true
+                        }}
+                        {{> form-item
+                        form-item-parent-mod="header-form__item"
+                        form-item-mod="form-item--members"
+                        form-item-button-aria-label="Выбрать количество туристов"
+                        form-item-label="Туристы"
+                        form-item-value="2 человека"
+                        form-item-icon="icon-users-mono"
+                        form-item-id="header-form-members"
+                        form-item-dropdown="members"
+                        form-item-readonly=true
+                        }}
+                    </ul>
+                </div>
+
+                <div class="header-form__submit-wrap">
+                    {{> btn
+                    btn-parent-mod="header-form__submit"
+                    btn-mod="btn--red"
+                    type="submit"
+                    btn-text="Подобрать тур"
+                    }}
+                </div>
+            </form>
+        </div>
+
+        <div class="header-form__formclose-wrap">
+
+            <button class="header-form__formclose-btn" type="button">
+                <span class="header-form__formclose-text">Подобрать тур</span>
+                <span class="header-form__formclose-text">Скрыть</span>
+                <svg width="30" height="30">
+                    <use xlink:href="images/sprite.svg#search"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>

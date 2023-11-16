@@ -1,0 +1,37 @@
+<ul class="news-list {{news-list-parent-mod}} {{news-list-mod}}">
+    {{#each news-list}}
+    <li class="news-list__item" {{data-filter-category}}>
+        <article class="news-list__article">
+            <a class="news-list__link" href="">
+                <div class="news-list__row">
+                    <div class="news-list__info">
+                        <time class="news-list__time" datetime="2022-06-16">{{date}}</time>
+                        <div class="news-list__caption">
+                            <h3>
+                                {{title}}
+                            </h3>
+                        </div>
+
+                        {{#if text}}
+                        <div class="news-list__text">
+                            {{text}}
+                        </div>
+                        {{/if}}
+                    </div>
+                    {{#if img}}
+                    <div class="news-list__img-wrap">
+                        <div class="news-list__img-box">
+                            <picture>
+                                <source srcset="images/news-list/{{img}}.webp" type="image/webp">
+                                <source srcset="images/news-list/{{img}}.jpg" type="image/jpg">
+                                <img src="images/news-list/{{img}}.jpg" height="167" alt="{{alt}}">
+                            </picture>
+                        </div>
+                    </div>
+                    {{/if}}
+                </div>
+            </a>
+        </article>
+    </li>
+    {{/each}}
+</ul>

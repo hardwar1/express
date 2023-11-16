@@ -1,0 +1,48 @@
+<section class="hero {{hero-parent-mod}} {{hero-mod}}">
+
+    <h2 class="visually-hidden">
+        Популярные направления
+    </h2>
+
+    <div class="hero__swiper swiper">
+        <ul class="hero__swiper-wrapper swiper-wrapper">
+            {{#repeat 7}}
+            <li class="hero__slide swiper-slide" >
+                <picture>
+                    <source srcset="images/hero/banner.webp" type="image/webp">
+                    <img class="hero__img" src="images/hero/banner.png" alt="солнечный берег у океана">
+                </picture>
+
+                <div class="hero__container container">
+                    <div class="hero__inner">
+                        <a class="hero__info" href="">
+                            <div class="hero__title">
+                                <h3>
+                                    Мальдивы
+                                </h3>
+                            </div>
+
+                            <p class="hero__fly ico-svg">
+                                <svg width="40" height="40">
+                                    <use xlink:href="images/sprite.svg#plane"></use>
+                                </svg>
+                                Летим из Санкт-Петербурга <br>
+                                а/к «Аэрофлот»
+                            </p>
+
+                            <div class="hero__text">
+                                <p>
+                                    С удобной стыковкой в Москве
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            {{/repeat}}
+        </ul>
+
+        {{> slider-nav slider-nav-parent-mod="hero__slider-nav" slider-nav-mod=""}}
+    </div>
+
+</section>

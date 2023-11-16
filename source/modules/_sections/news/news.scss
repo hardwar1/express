@@ -1,0 +1,105 @@
+.news {
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 5;
+
+    &__row {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1420px;
+        height: 40px;
+        margin-bottom: 12px;
+
+        @media (min-width: $desktops-md) {
+            margin-bottom: 16px;
+        }
+
+        @media (min-width: $desktops-xl) {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        color: inherit;
+    }
+
+    &__title,
+    &__title > * {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+
+        @media (min-width: $tablets) {
+            font-size: 20px;
+            line-height: 28px;
+        }
+
+        @media (min-width: $desktops-xl) {
+            font-size: 24px;
+            line-height: 32px;
+        }
+    }
+
+    &__title svg {
+        width: 24px;
+        height: 24px;
+        margin-left: 15px;
+        fill: $color-gray-icon;
+
+        @media (min-width: $desktops-sm) {
+            transition: transform 0.3s, fill 0.3s;
+        }
+    }
+
+    &__title:hover svg {
+        @media (min-width: $desktops-sm) {
+            transform: translateX(10px);
+            fill: $color-red;
+        }
+    }
+
+    &__slider {
+        overflow: visible;
+    }
+
+    &__slider-inner {
+        display: flex;
+    }
+
+    &__slide {
+        flex-shrink: 0;
+        width: 242px;
+        min-height: 212px;
+
+        @media (min-width: $tablets) {
+            width: 298px;
+            min-height: 260px;
+        }
+
+        @media (min-width: $desktops-xl) {
+            width: 340px;
+            min-height: 298px;
+        }
+    }
+
+    &__card {
+        height: 100%;
+    }
+
+    &__slider-btns {
+        display: block;
+
+        button {
+            background-color: rgba($color-gray-icon, 0.15);
+        }
+
+        svg {
+            fill: $color-gray-icon;
+        }
+    }
+}

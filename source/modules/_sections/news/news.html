@@ -1,0 +1,27 @@
+<section class="news {{news-parent-mod}} {{news-mod}}">
+    <div class="news__wrap container">
+        <div class="news__row">
+            <a class="news__title" href="">
+                <h2>
+                    Новости
+                </h2>
+                <svg width="24" height="24">
+                    <use xlink:href="{{root}}images/sprite.svg#icon-arrow-e"></use>
+                </svg>
+            </a>
+            {{> slider-btns slider-btns-parent-mod="news__slider-btns" slider-btns-mod=""}}
+        </div>
+
+        <div class="news__inner">
+            <div class="news__slider">
+                <div class="news__slider-inner">
+                    {{#each news.index}}
+                    <div class="news__slide">
+                        {{> card-news }}
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

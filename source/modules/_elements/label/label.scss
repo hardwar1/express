@@ -1,0 +1,23 @@
+.label {
+    color: inherit;
+    transition: color 0.3s, background-color 0.3s;
+    padding: 2px 8px;
+    display: inline-block;
+    border-radius: 4px;
+    background-color: $color-gray-light-2;
+    font-weight: 600;
+    font-size: 10px;
+    color: $color-gray-dark;
+    line-height: 20px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    @media (min-width: $desktops-md) {
+        padding: 4px 12px;
+    }
+
+    &.active {
+        color: $color-white;
+        background-color: $color-gray-icon;
+    }
+}

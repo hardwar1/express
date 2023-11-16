@@ -1,0 +1,83 @@
+.card-products {
+    background-color: $color-purple;
+    color: $color-white;
+    padding: 24px 20px 14px;
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    @media (min-width: $tablets) {
+        height: 100%;
+        padding-top: 32px;
+        padding-bottom: 20px;
+        letter-spacing: 0.02em;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        max-width: calc(100% - 90px);
+
+        @media (min-width: $desktops-lg) {
+            max-width: calc(100% - 160px);
+        }
+    }
+
+    &__title {
+        margin-bottom: 12px;
+    }
+
+    &__text {
+        @media (min-width: $tablets) {
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+
+    &__link {
+        display: inline-flex;
+        width: fit-content;
+        margin-top: auto;
+        padding-top: 12px;
+        padding-bottom: 14px;
+        font-size: 13px;
+        color: inherit;
+    }
+
+    &__link:hover {
+        @media (min-width: $desktops-sm) {
+            color: $color-white;
+        }
+    }
+
+    &__link svg {
+        opacity: 1;
+    }
+
+    &__img {
+        width: 70px;
+        height: 70px;
+        object-fit: contain;
+        object-position: right top;
+
+        @media (min-width: $desktops-lg) {
+            width: 140px;
+            height: 140px;
+        }
+    }
+
+    &--brown {
+        background-color: $color-brown;
+    }
+
+    &--blue {
+        background-color: $color-blue;
+    }
+
+    &--grey {
+        background-color: $color-gray-dark-4;
+    }
+}

@@ -1,0 +1,459 @@
+---
+layout: default
+title: Сводная страница
+breadcrumbs-parent-page-link: countries
+breadcrumbs-parent-page-text: Страны
+breadcrumbs-current-page-text: Турция
+aside-list: 1
+weather-block: true
+news-block: true
+links-block: true
+---
+<div class="main-content">
+    <div class="main-content__headline">
+        {{> menu-btn-big menu-btn-big-parent-mod="main-content__menu-btn" text="Меню"}}
+
+        <h1>
+            Сводная страница
+        </h1>
+    </div>
+
+    <div class="main-content__block">
+        {{> links-bar links-bar-parent-mod="main-content__links-bar" links-bar-mode=""}}
+    </div>
+
+    <section class="main-content__block hotels {{hotels-mod}}">
+        <div class="main-content__block-header">
+            <h2 class="h3">
+                Гарантированные отели
+            </h2>
+
+            <div class="main-content__block-links">
+                {{> link-arrow link-arrow-mod="link-arrow--text-invisible-m" link-arrow-text="Смотреть все" }}
+            </div>
+        </div>
+
+        {{> hotels
+        card-hotel-name=card-hotel
+        }}
+
+    </section>
+
+    <div class="main-content__block content-block">
+        <p class="text-l">
+            Краткий общий текст. Турция – государство, расположенное на границе Юго-Западной Азии и Южной Европы.
+            Площадь
+            страны составляет 780 580 кв.м. Основная часть территории находится на Анатолийском полуострове, омывается
+            Средиземным и Черным морями, а также Эгейским и Мраморным. Европейская и азиатская части разделены проливами
+            Босфор и Дарданеллы. Большая часть территории – это хребты Малоазиатского нагорья и Анатолийское
+            плоскогорье.
+            Турция на востоке граничит с Грузией, Арменией, Азербайджаном и Ираном, с Ираком и Сирией на юге, с Грецией
+            и
+            Болгарией на западе.
+        </p>
+
+
+        {{> slider slider-parent-mod="content-block__slider" slider-mod=""}}
+
+        <h2>
+            Достопримечательности, отдых и развлечения H2
+        </h2>
+
+        <p>
+            Турция – это не только бесконечные пляжи, теплое море и отели «все включено». На территории страны
+            расположено
+            множество исторических и культурных памятников. Здесь некогда высились стены неприступной Трои, а в городе
+            Мира
+            сохранились древние ликийские гробницы в скалах, руины греко-римского театра, гробница Св. Николая, мощи
+            которого хранятся сейчас в городе Бари, Италия. Каппадокия восхищает изумительными пейзажами вулканического
+            происхождения, древними подземными городам, насчитывающими два тысячелетия, и пещерными монастырями ранних
+            христиан. Античный город Эфес хранит на своей территории руины храма Артемиды, некогда одного из чудес
+            света.
+            Знаменитое природное чудо – белоснежный Памуккале с его горячими минеральными источниками, водопадами и
+            террасами бассейнов.
+        </p>
+
+        <h3>
+            Кухня H3
+        </h3>
+
+        <p>
+            Турецкая кухня берёт истоки в традициях кочевых тюркских племён, вобравших черты индийской, иранской,
+            арабской,
+            и средиземноморской кулинарии.
+        </p>
+        <p>
+            Среди мясных блюд распространены различные кебабы: «донер-кебаб», «искендер-кебаб» (из ягнятины в томатном
+            соусе), «шиш-кебаб», «адана-кебаб» (из мясного фарша с острыми приправами). Также популярны «кёфте»
+            (тефтели) и
+            «пилави» (различные рецепты пловов).
+        </p>
+        <p>
+            Характерна местная выпечка: «пита» (толстая мягкая лепёшка из дрожжевого теста), «экмек» (белый хлеб),
+            «симит»
+            (бублик, обсыпанный сезамом), «лагмаджо» (пицца с мясным фаршем, овощами и пряностями).
+        </p>
+        <p>
+            Стоит обратить внимание на популярные турецкие сласти – лукум, халва и пахлава, «тулумба», «ревани»,
+            «сютлач» и
+            другие. Среди напитков выделаются турецкие чай и кофе. Распространенные виды алкоголя – «ракия» (анисовая
+            водка), «бира» (пиво), «шарап» (вино).
+        </p>
+
+        <h4>
+            Достопримечательности, отдых и развлечения H4
+        </h4>
+
+        <p>
+            Турция – это не только бесконечные пляжи, теплое море и отели «все включено». На территории страны
+            расположено
+            множество исторических и культурных памятников. Здесь некогда высились стены неприступной Трои, а в городе
+            Мира
+            сохранились древние ликийские гробницы в скалах, руины греко-римского театра, гробница Св. Николая, мощи
+            которого хранятся сейчас в городе Бари, Италия. Каппадокия восхищает изумительными пейзажами вулканического
+            происхождения, древними подземными городам, насчитывающими два тысячелетия, и пещерными монастырями ранних
+            христиан. Античный город Эфес хранит на своей территории руины храма Артемиды, некогда одного из чудес
+            света.
+            Знаменитое природное чудо – белоснежный Памуккале с его горячими минеральными источниками, водопадами и
+            террасами бассейнов.
+        </p>
+
+        <div class="key">
+            <h3>
+                Важная информация H3
+            </h3>
+
+            <p>
+                С ноября 2018 г. в Тунисе действует туристический налог на каждого туриста старше 12 лет. Налог
+                оплачивается
+                единовременно при регистрации в отеле или перед выездом, в зависимости от концепции отеля. Налог
+                начисляется
+                за первые 7 дней размещения (3 TD с человека за ночь при размещении в отеле 4* и 5*, 2 TD с человека за
+                ночь
+                при размещении в отеле 3*).
+            </p>
+            <p>
+                В случае выезда до запланированной даты (независимо от причины выезда) налог не возвращается.
+            </p>
+        </div>
+
+        <div class="key">
+            <p>
+                С ноября 2018 г. в Тунисе действует туристический налог на каждого туриста старше 12 лет. Налог
+                оплачивается
+                единовременно при регистрации в отеле или перед выездом, в зависимости от концепции отеля. Налог
+                начисляется
+                за первые 7 дней размещения (3 TD с человека за ночь при размещении в отеле 4* и 5*, 2 TD с человека за
+                ночь
+                при размещении в отеле 3*).
+            </p>
+        </div>
+
+        <div class="double-block">
+            <div class="first">
+                <h3>
+                    Язык
+                </h3>
+                <p>
+                    Официальный язык Турции – турецкий. В туристическом секторе распространены английский, немецкий,
+                    французский
+                    и русский языки.
+                </p>
+            </div>
+
+            <div class="second">
+                <h3>
+                    Время и график работы
+                </h3>
+                <p>
+                    Часовой пояс UTC+3. Разница во времени между Турцией и Москвой отсутствует.
+                </p>
+            </div>
+        </div>
+
+        <h3>
+            Посольства и консульства
+        </h3>
+
+        <div class="double-block">
+            <div class="first">
+                <h4>
+                    Посольство РФ в Турции:
+                </h4>
+
+                <dl>
+                    <dt>
+                        Адрес:
+                    </dt>
+                    <dd>
+                        Andrey Karlov sokagi, No 5, 06692, Çankaya (P.K. 35 Kavaklidere), Ankara, Türkiye
+                    </dd>
+
+                    <dt>
+                        Телефон:
+                    </dt>
+                    <dd>
+                        <a href="tel:+903124392183">
+                            +90 (312) 439-21-83 (с 09:00 до 12:00)
+                        </a>
+                    </dd>
+
+                    <dt>
+                        E-mail:
+                    </dt>
+                    <dd>
+                        <a href="mailto:rus-ankara@yandex.ru">
+                            rus-ankara@yandex.ru
+                        </a>
+                    </dd>
+                </dl>
+            </div>
+
+            <div class="second">
+                <h4>
+                    Посольство Турции в РФ:
+                </h4>
+
+                <dl>
+                    <dt>Адрес:</dt>
+                    <dd> 115127 Москва, 7-й Ростовский пер., 12</dd>
+
+                    <dt>Телефон:</dt>
+                    <dd><a href="tel:"> +7 (495) 994-93-59 (по будням с 14:00 до 18:00)</a></dd>
+                </dl>
+            </div>
+        </div>
+
+
+        <h3>
+            Государственные праздники и выходные дни (основные точки серые, нужны ли красные?)
+        </h3>
+
+        <ul class="red">
+            <li><b>1 января</b> — Новый год</li>
+
+            <li><b>23 апреля</b> - День национальной независимости и детей Турции</li>
+
+            <li><b>1 мая</b> - День труда и солидарности</li>
+
+            <li><b>19 мая</b> - День памяти Ататюрка, молодёжи и спорта</li>
+
+            <li><b>30 августа</b> - День Победы</li>
+
+            <li><b>29 октября</b> - День Республики</li>
+        </ul>
+
+        <h3>10 причин задержаться в Anantara The Palm Dubai:</h3>
+
+        <ol>
+            <li>
+                Останавиться на культовом острове Palm Jumeirah с потрясающими видами на Atlantis, Burj Al Arab и
+                очертания Дубая
+            </li>
+            <li>
+                Поплавать в 10,000 кв. м терморегулируемых лагунах и основном бассейне
+            </li>
+            <li>
+                Открыть для себя изысканную кулинарию, представленную в семи ресторанах, которая способна удовлетворить
+                самых искушенных гурманов
+            </li>
+        </ol>
+
+        <h3 class="icon icon--bed">
+            В номере
+        </h3>
+
+        <ul class="column">
+            <li>
+                Ванная комната с двойной раковиной
+            </li>
+            <li>
+                Тропический душ в помещении и на открытом воздухе
+            </li>
+            <li>
+                Женский туалетный столик
+            </li>
+            <li>
+                Кофемашина Nespresso и принадлежности для приготовления чая и кофе
+            </li>
+            <li>
+                Терраса
+            </li>
+            <li>
+                Wi-Fi
+            </li>
+            <li>
+                Кондиционер
+            </li>
+            <li>
+                ТВ
+            </li>
+            <li>
+                Мини-бар
+            </li>
+            <li>
+                Туалетно-косметические принадлежности
+            </li>
+        </ul>
+
+        <div class="dt-width text-l">
+            <dl>
+                <dt>Адрес: </dt>
+                <dd>
+                    Fairmont Maldives Sirru Fen Fushi, Shaviyani Atoll, Maldives
+                </dd>
+
+                <dt>Телефон: </dt>
+                <dd>
+                    <a href="tel:+9606548888">+960 654-8888</a>
+                </dd>
+
+                <dt>Email: </dt>
+                <dd>
+                    <a href="mailto:dubaipalm@anantara.com"> dubaipalm@anantara.com</a>
+                </dd>
+
+                <dt>Сайт: </dt>
+                <dd>
+                    <a class="external">www.fairmont.com/maldives</a>
+                </dd>
+
+            </dl>
+        </div>
+    </div>
+
+    <div class="main-content__block">
+        {{> city-list city-list-parent-mod="main-content__city-list" city-list=city-list}}
+    </div>
+
+    <section class="main-content__block">
+        <div class="main-content__block-header">
+            <h2 class="h1">
+                Туры в России
+            </h2>
+        </div>
+
+        {{> tours-in
+        tours-in-parent-mod="main-content__tours-in"
+        card-tour-items=card-tour
+        tours-in-filter=true
+        tours-in-empty-result-mod="visible"
+        }}
+    </section>
+
+    <section class="main-content__block">
+        <div class="main-content__block-header">
+            <h2 class="h1">
+                Новости
+            </h2>
+        </div>
+
+        {{> news-list-section
+        news-list-section-btns=btns.summary-news
+        news-list-section-items=news-list.items2
+        }}
+    </section>
+
+    <div class="main-content__block">
+        {{> deposit-links }}
+    </div>
+
+    <div class="main-content__block">
+        {{> half-img }}
+        {{> half-img link="true"}}
+        {{> half-img video="true"}}
+
+        <div class="double-block double-block--img">
+            <div class="first">
+                <picture>
+                    <source srcset="images/half-img/2.webp" type="image/webp">
+                    <source srcset="images/half-img/2.jpg" type="image/jpg">
+                    <img src="images/half-img/2.jpg" height="200" alt="">
+                </picture>
+            </div>
+
+            <div class="second">
+                <picture>
+                    <source srcset="images/half-img/3.webp" type="image/webp">
+                    <source srcset="images/half-img/3.jpg" type="image/jpg">
+                    <img src="images/half-img/3.jpg" height="200" alt="">
+                </picture>
+
+            </div>
+        </div>
+
+        <div class="double-block double-block--img">
+            <a class="first video-btn" href="https://youtu.be/FtU7gPXOy3M" data-fancybox="gallery5">
+                <picture>
+                    <source srcset="images/half-img/2.webp" type="image/webp">
+                    <source srcset="images/half-img/2.jpg" type="image/jpg">
+                    <img src="images/half-img/2.jpg" height="200" alt="">
+                </picture>
+                <svg width="20" height="24">
+                    <use xlink:href="#triangle"></use>
+                </svg>
+            </a>
+
+            <a class="second" href="images/half-img/3.jpg" data-fancybox="gallery5">
+                <picture>
+                    <source srcset="images/half-img/3.webp" type="image/webp">
+                    <source srcset="images/half-img/3.jpg" type="image/jpg">
+                    <img src="images/half-img/3.jpg" height="200" alt="">
+                </picture>
+            </a>
+        </div>
+    </div>
+
+    <section class="main-content__block">
+        <div class="main-content__headline main-content__headline--with-subtitle">
+            <h2 class="h1">
+                Conrad Maldives Rangali Island
+            </h2>
+
+            {{> stars stars-parent-mod="main-content__stars" stars-mod="" stars="5"}}
+
+            <div class="main-content__sub-title">
+                Название курорта
+            </div>
+        </div>
+
+        {{> tour-detail tour-detail-parent-mod="main-content__tour-detail" }}
+    </section>
+
+    <div class="main-content__block content-block">
+        <ul class="menu-cols margins-l">
+            <li>
+                <a href="">Документы и договоры</a>
+            </li>
+            <li>
+                <a href="">Программа комиссий и бонусов</a>
+            </li>
+            <li>
+                <a href="">Возврат денежных средств</a>
+            </li>
+            <li>
+                <a href="">Услуга «Опция»</a>
+            </li>
+            <li>
+                <a href="">Условия и способы оплаты</a>
+            </li>
+            <li>
+                <a href="">Порядок оплаты туров</a>
+            </li>
+            <li>
+                <a href="">Условия аннуляции в рамках Договора</a>
+            </li>
+            <li>
+                <a href="">Пригласить куратора в офис</a>
+            </li>
+            <li>
+                <a href="">Получение документов</a>
+            </li>
+            <li>
+                <a href="">Уведомление о представлении равнозначного туристического продукта</a>
+            </li>
+        </ul>
+
+        {{> menu-images menu-images-mod="margins-l"}}
+    </div>
+</div>

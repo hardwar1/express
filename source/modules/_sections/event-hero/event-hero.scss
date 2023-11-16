@@ -1,0 +1,99 @@
+.event-hero {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    background-image: url(../images/nophoto1_x2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center right;
+
+    &__info {
+        position: relative;
+        z-index: 2;
+        padding: 50px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        background-color: rgba(29, 25, 49, 0.8);
+        color: $color-white;
+
+        @media (min-width: $tablets) {
+            max-width: 540px;
+            padding: 50px 80px;
+            min-height: 400px;
+        }
+    }
+
+    svg {
+        flex-shrink: 0;
+        width: 24px;
+        height: 24px;
+        margin-right: 16px;
+        fill: $color-red;
+    }
+
+    &__btn {
+        margin-bottom: 16px;
+        display: inline-block;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 18px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: $color-white;
+        padding: 6px 12px;
+        background-color: $color-red;
+        border-radius: 4px;
+    }
+
+    &__title {
+        margin-bottom: 24px;
+    }
+
+    &__title > * {
+        font-weight: 800;
+        font-size: 34px;
+        line-height: 40px;
+        letter-spacing: 0.04em;
+        color: $color-white;
+        text-shadow: 0 2px 4px rgba(44, 45, 60, 0.08), 0 8px 40px rgba(44, 45, 60, 0.25);
+
+        @media (min-width: $tablets) {
+            font-size: 40px;
+            line-height: 50px;
+        }
+
+        @media (min-width: $desktops-md) {
+            font-size: 46px;
+            line-height: 56px;
+        }
+    }
+
+    &__text {
+        display: flex;
+        align-items: center;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 28px;
+        text-shadow: 0 2px 4px rgba(44, 45, 60, 0.08), 0 8px 40px rgba(44, 45, 60, 0.25);
+        margin-bottom: 8px;
+    }
+
+    &__text:last-child {
+        margin-bottom: 0;
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        object-fit: cover;
+        object-position: center;
+    }
+}

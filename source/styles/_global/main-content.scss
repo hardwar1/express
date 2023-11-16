@@ -1,0 +1,172 @@
+.main-content {
+    &__block:not(:first-child) {
+        padding-top: 40px;
+
+        // @media (min-width: $tablets) {
+        //     padding-top: 40px;
+        // }
+
+        @media (min-width: $desktops-md) {
+            padding-top: 60px;
+        }
+    }
+
+    &__block--before-rounded {
+        margin-bottom: -16px;
+    }
+
+    &__block--rounded {
+        position: relative;
+        z-index: 1;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+    }
+
+    &--wide &__block:not(:first-child) {
+        @media (min-width: $desktops-xl) {
+            padding-top: 80px;
+        }
+    }
+
+    &__block--news-slider+&__block:not(:first-child),
+    &__headline+&__block {
+        padding-top: 0;
+    }
+
+    &__headline {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        column-gap: 26px;
+        margin-bottom: 24px;
+        background-repeat: no-repeat;
+        background-size: 45px 30px;
+        background-position: right 1px;
+        width: fit-content;
+
+        @media (min-width: $tablets) {
+            margin-bottom: 30px;
+            background-position: right 5px;
+        }
+
+        @media (min-width: $desktops-md) {
+            margin-bottom: 40px;
+            background-position: right 6px;
+        }
+    }
+
+    &__headline--with-flag {
+        padding-right: 65px;
+    }
+
+    &__headline--with-subtitle {
+        margin-bottom: 8px;
+
+        @media (min-width: $tablets) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__btns {
+        margin-bottom: 20px;
+    }
+
+    &__stars {
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+        svg {
+            @media (max-width: $phones-max) {
+                width: 10px;
+                height: 10px;
+            }
+        }
+
+        svg:not(:last-child) {
+            @media (min-width: $tablets) {
+                margin-right: 7px;
+            }
+        }
+    }
+
+    &__sub-title {
+        display: block;
+        color: $color-gray;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 20px;
+        width: 100%;
+        padding-top: 4px;
+
+        @media (min-width: $tablets) {
+            padding-top: 8px;
+        }
+    }
+
+    &__block-header {
+        display: flex;
+        align-items: center;
+        gap: 8px 24px;
+
+        @media (min-width: $desktops-sm) {
+            column-gap: 48px;
+        }
+    }
+
+    &__block-header:not(:last-child) {
+        margin-bottom: 16px;
+
+        @media (min-width: $tablets) {
+            margin-bottom: 24px;
+        }
+
+        @media (min-width: $desktops-md) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__block-links {
+        display: flex;
+        min-height: 26px;
+        margin-left: auto;
+    }
+
+    &__news {
+        padding-bottom: 30px;
+
+        @media (min-width: $tablets) {
+            padding-bottom: 40px;
+        }
+
+        @media (min-width: $desktops-md) {
+            padding-bottom: 60px;
+        }
+    }
+
+    &__labels {
+        margin-bottom: 6px;
+
+        @media (min-width: $tablets) {
+            margin-bottom: 12px;
+        }
+    }
+
+    &--wide &__news {
+        @media (min-width: $desktops-xl) {
+            padding-bottom: 80px;
+        }
+    }
+
+    &__block--relative {
+        position: relative;
+        z-index: 1;
+    }
+
+    &__block--sticky {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+}
+
+

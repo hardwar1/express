@@ -1,0 +1,49 @@
+.slider-simple {
+    position: relative;
+
+    &__inner {
+        overflow: hidden;
+        border-radius: 12px;
+    }
+
+    &__img-wrapper {
+        position: relative;
+        display: block;
+        padding-top: 59.76%;
+        overflow: hidden;
+        background-image: url(../images/nophoto2_x2.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    &__slider-btn {
+        position: absolute;
+        top: 50%;
+        left: -16px;
+        z-index: 30;
+        transform: translateY(-50%);
+        background-color: $color-white;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        box-shadow: 0 4px 16px rgba(59, 65, 124, 0.1);
+    }
+
+    &__slider-btn svg {
+        fill: $color-gray-icon;
+    }
+
+    &__slider-btn:last-child {
+        right: -16px;
+        left: unset;
+    }
+}

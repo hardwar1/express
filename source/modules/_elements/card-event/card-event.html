@@ -1,0 +1,36 @@
+<div class="card-event {{card-event-parent-mod}} {{card-event-mod}}">
+    <div class="card-event__item">
+        <svg width="24" height="24">
+            <use xlink:href="{{root}}images/sprite.svg#date"></use>
+        </svg>
+        <div class="card-event__text-box">
+            <span class="card-event__text">
+                Дата, время:
+            </span>
+            13.12.2022 10:00
+        </div>
+    </div>
+
+    <div class="card-event__item">
+        <svg width="24" height="24">
+            <use xlink:href="{{root}}images/sprite.svg#marker"></use>
+        </svg>
+        <div class="card-event__text-box">
+            <span class="card-event__text">
+                Место проведения:
+            </span>
+            Hyatt Regency Ekaterinburg, Екатеринбург, ул. Бориса Ельцина, 8
+        </div>
+    </div>
+
+    <div class="card-event__bottom">
+        <div class="card-event__price-wrapper">
+            <span class="card-event__price">
+                от 2 506 ₽
+            </span>
+            за человека
+        </div>
+
+        {{> btn btn-parent-mod="card-event__btn" btn-mod="btn--red" btn-text="Зарегистрироваться" btn-link=true}}
+    </div>
+</div>

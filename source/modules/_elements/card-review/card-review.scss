@@ -1,0 +1,78 @@
+.card-review {
+    display: flex;
+    font-size: 13px;
+    line-height: 24px;
+
+    @media (min-width: $tablets) {
+        font-size: 14px;
+        line-height: 26px;
+    }
+
+    @media (min-width: $desktops-md) {
+        font-size: 15px;
+        line-height: 28px;
+    }
+
+    &__inner {
+        display: block;
+        width: 100%;
+        padding: 23px 19px;
+        background-color: $color-white;
+        border: 1px solid $color-gray-light;
+        border-radius: 16px;
+
+        @media (min-width: $desktops-md) {
+            padding: 31px 23px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 8px;
+        margin: 0;
+
+        @media (min-width: $tablets) {
+            row-gap: 16px;
+            padding-left: 40px;
+            background-image: url("../images/sprite.svg#format_quote");
+            background-position: 0 0;
+            background-size: 24px 24px;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__date {
+        font-weight: 500;
+        color: $color-gray-dark-3;
+
+        @media (max-width: $tablets-max) {
+            font-size: 14px;
+            line-height: 26px;
+        }
+
+        @media (max-width: $phones-max) {
+            line-height: 24px;
+        }
+    }
+
+    &__author {
+        display: flex;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 24px;
+    }
+
+    &__name {
+        margin-right: 16px;
+
+        @media (min-width: $desktops-md) {
+            font-size: 13px;
+        }
+    }
+
+    &__place {
+        color: $color-gray-dark-3;
+    }
+}

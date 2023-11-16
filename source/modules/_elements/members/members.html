@@ -1,0 +1,87 @@
+<div class="members">
+    <div class="members__main">
+        <div class="members__row-number">
+            <div class="members__row-inner">
+                <div class="members__row-caption">
+                    <span class="members__caption">Взрослые </span>
+                    <span class="members__caption-desc"> (18+)</span>
+                </div>
+
+                <div class="members__input-wrap">
+                    {{> input-number
+                    input-number-name="membersIs18"
+                    input-number-val=2
+                    input-number-min=1
+                    input-number-max=6
+                    }}
+                </div>
+            </div>
+        </div>
+
+        <div class="members__row-number">
+            <div class="members__row-inner">
+                <div class="members__row-caption">
+                    <span class="members__caption">
+                        Дети
+                    </span>
+                    <span class="members__caption-desc">
+                        (до 18)
+                    </span>
+                </div>
+
+                <div class="members__input-wrap">
+                    {{> input-number
+                    input-mod = "input-number__input--child"
+                    input-number-name="memberNot18"
+                    input-number-val=2
+                    input-number-min=0
+                    input-number-max=3
+                    }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="members__add ">
+        <div class="members__add-inner">
+            <div class="members__row">
+                {{> select-wrap
+                select-wrap-mod="select-wrap--members"
+                select-wrap-caption="Ребёнок 1. Возраст"
+                select-input-mod="select-input--age"
+                select-input-placeholder="Возраст ребёнка"
+                select-input-aria-label="Выберите возраст ребёнка"
+                select-input-value="2 года"
+                select-input-dropdown-list=age
+                select-input-readonly=true
+                }}
+            </div>
+
+            <div class="members__row">
+                {{> select-wrap
+                select-wrap-mod="select-wrap--members"
+                select-wrap-caption="Ребёнок 2. Возраст"
+                select-input-mod="select-input--age"
+                select-input-placeholder="Возраст ребёнка"
+                select-input-aria-label="Выберите возраст ребёнка"
+                select-input-value="2 года"
+                select-input-dropdown-list=age
+                select-input-readonly=true
+                }}
+            </div>
+
+            <div class="members__row d-none">
+                {{> select-wrap
+                select-wrap-mod="select-wrap--members"
+                select-wrap-caption="Ребёнок 3. Возраст"
+                select-input-mod="select-input--age"
+                select-input-placeholder="Возраст ребёнка"
+                select-input-aria-label="Выберите возраст ребёнка"
+                select-input-value="2 года"
+                select-input-dropdown-list=age
+                select-input-readonly=true
+                }}
+            </div>
+        </div>
+    </div>
+</div>

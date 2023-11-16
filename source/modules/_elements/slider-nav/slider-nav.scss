@@ -1,0 +1,39 @@
+.slider-nav {
+    position: absolute;
+    // bottom: 25px;
+    bottom: 14px;
+    left: 0;
+    width: 100%;
+
+    &__container {
+    }
+
+    &__inner {
+        height: 40px;
+        position: relative;
+        z-index: 15;
+    }
+
+    &__pagination {
+        display: flex;
+        position: absolute;
+        left: 50% !important;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: unset !important;
+
+        @media (min-width: $tablets) {
+            left: 0 !important;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__slider-btns {
+        @media (min-width: $tablets) {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}

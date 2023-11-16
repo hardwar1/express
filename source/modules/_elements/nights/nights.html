@@ -1,0 +1,11 @@
+<div class="nights">
+    <ol class="nights__grid">
+        {{#each nights}}
+        <li class="nights__item">
+            <button class="nights__item-inner {{num-mod}}" type="button" {{#if disabled}}disabled{{/if}}>
+                {{num}}
+            </button>
+        </li>
+        {{/each}}
+    </ol>
+</div>

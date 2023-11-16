@@ -1,0 +1,150 @@
+.hero {
+    margin-bottom: -15px;
+    &__swiper {
+    }
+
+    &__swiper-wrapper {
+    }
+
+    &__slide {
+        background-image: url(../images/nophoto2_x2.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        z-index: 2;
+        height: 280px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        @media (min-width: $tablets) {
+            height: 384px;
+            padding-top: 60px;
+            padding-bottom: 50px;
+        }
+
+        @media (min-width: $desktops-md) {
+            height: 480px;
+            padding-top: 50px;
+        }
+
+        @media (min-width: $desktops-lg) {
+            height: 500px;
+        }
+    }
+
+    &__info {
+        color: $color-white;
+        margin-bottom: 30px;
+    }
+
+    &__info:active {
+        color: $color-white;
+    }
+
+    &__title,
+    &__title > * {
+        font-weight: 800;
+        font-size: 44px;
+        line-height: 1;
+        letter-spacing: 0.04em;
+        text-shadow: 0 2px 4px rgba(44, 45, 60, 0.08), 0 8px 40px rgba(44, 45, 60, 0.25);
+
+        @media (min-width: $tablets) {
+            font-size: 90px;
+        }
+
+        @media (min-width: $desktops-md) {
+            font-size: 120px;
+        }
+
+        @media (min-width: $desktops-lg) {
+            font-size: 140px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 15px;
+        @include text-overflow(1);
+
+        @media (min-width: $desktops-md) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__fly {
+        display: block;
+        margin: 0 0 10px;
+        font-weight: 500;
+        padding-left: 0;
+        line-height: 28px;
+        text-shadow: 0 2px 4px rgba(44, 45, 60, 0.08), 0 8px 40px rgba(44, 45, 60, 0.25);
+        font-size: 20px;
+        @include text-overflow(2);
+
+        @media (min-width: $tablets) {
+            font-size: 26px;
+            line-height: 40px;
+            padding-left: 60px;
+            margin-bottom: 8px;
+        }
+
+        @media (min-width: $desktops-md) {
+            margin-bottom: 14px;
+            font-size: 34px;
+            line-height: 48px;
+        }
+
+        svg {
+            display: none;
+            @media (min-width: $tablets) {
+                top: 0;
+                transform: translateY(0);
+                display: block;
+            }
+        }
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 24px;
+        text-shadow: 0 2px 4px rgba(44, 45, 60, 0.08), 0 8px 40px rgba(44, 45, 60, 0.25);
+        @include text-overflow(2);
+
+        @media (min-width: $tablets) {
+            padding-left: 60px;
+            font-size: 18px;
+            line-height: 32px;
+        }
+
+        @media (min-width: $desktops-md) {
+            font-size: 24px;
+        }
+    }
+
+    &__slider-nav {
+        @media (min-width: $tablets) {
+            bottom: 25px;
+        }
+    }
+
+    &__slider-btns {
+    }
+}

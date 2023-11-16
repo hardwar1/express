@@ -1,0 +1,64 @@
+.menu-btn {
+  position: relative;
+  display: block;
+  padding: 0;
+  background-color: transparent;
+  border-width: 0;
+
+  &__lay,
+  &__lay::before,
+  &__lay::after {
+    position: absolute;
+    width: 22px;
+    height: 2px;
+    display: block;
+    background-color: $color-black-1;
+    border-radius: 2px;
+    transition-timing-function: ease-in-out;
+  }
+
+  &__lay {
+    top: calc(100% / 3 - 1px);
+    left: calc(50% - 11px);
+    transition: background-color 0.3s, transform 0.1s 0s, top 0.1s 0.1s;
+  }
+
+  &__lay::before {
+    content: "";
+    top: 7px;
+    opacity: 1;
+    transition: background-color 0.3s, transform 0.1s 0s, opacity 0.1s 0.1s;
+  }
+
+  &__lay::after {
+    content: "";
+    top: 14px;
+    transition: background-color 0.3s, transform 0.1s 0s, top 0.1s 0.1s;
+  }
+
+  &.active &__lay {
+    top: calc(50% - 1.5px);
+    transform: rotate(-45deg);
+    transition: background-color 0.3s, transform 0.1s 0.2s, top 0.1s 0.1s;
+  }
+
+  &.active &__lay::before {
+    opacity: 0;
+    transform: rotate(45deg);
+    transition: background-color 0.3s, transform 0.1s 0.2s, opacity 0.1s 0.1s;
+  }
+
+  &.active &__lay::after {
+    top: 0;
+    transform: rotate(90deg);
+    transition: background-color 0.3s, transform 0.1s 0.2s, top 0.1s 0.1s;
+  }
+
+  &--black {
+    .menu-btn,
+    .menu-btn__lay::before,
+    .menu-btn__lay::after {
+      color: $color-black-2;
+    }
+  }
+}

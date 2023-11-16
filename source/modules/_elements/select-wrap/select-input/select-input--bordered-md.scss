@@ -1,0 +1,18 @@
+&--bordered-md &__input {
+    width: 200px;
+    padding: 12px 30px 12px 16px;
+    font-size: 15px;
+}
+
+&--bordered-md &__input-wrap::before {
+    border-color: $color-gray-light-2;
+}
+
+&--bordered-md &__icon-wrap {
+    width: 30px;
+    padding-right: 16px;
+}
+
+&--bordered-md &__list-wrap {
+    min-width: 100%;
+}

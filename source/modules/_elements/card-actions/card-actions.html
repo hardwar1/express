@@ -1,0 +1,53 @@
+<article class="card-actions">
+    <a class="card-actions__inner" href="">
+        <div class="card-actions__img-box">
+            <div class="card-actions__img-wrapper">
+                {{#if img}}
+                <picture>
+                    <source media="(min-width: 720px)" srcset="images/card-actions/{{img}}.jpg">
+                    <img class="card-actions__img" src="images/card-actions/{{img}}.jpg" height="216" width="320"
+                        alt="{{alt}}">
+                </picture>
+                {{/if}}
+            </div>
+        </div>
+
+        <div class="card-actions__info">
+            <ul class="card-actions__options">
+                {{options}}
+            </ul>
+
+            <div class="card-actions__title">
+                <h3>
+                    {{title}}
+                </h3>
+            </div>
+
+            <div class="card-actions__times">
+                <span class="card-actions__days">
+                    {{days}}
+                </span>
+            </div>
+
+            <div class="card-actions__date ico-svg">
+                <svg width="24" height="24">
+                    <use xlink:href="images/sprite.svg#date"></use>
+                </svg>
+
+                {{date-text-2}}
+            </div>
+
+            <div class="card-actions__place">
+                {{place}}
+            </div>
+
+            <div class="card-actions__price-box">
+                <span class="card-actions__btn btn">
+                    <span class="btn__text">
+                        Забронировать
+                    </span>
+                </span>
+            </div>
+        </div>
+    </a>
+</article>

@@ -1,0 +1,23 @@
+<article class="card-structure {{card-structure-parent-mod}} {{card-structure-mod}}">
+    <picture>
+        <source srcset="images/card-structure/{{img}}.webp" type="image/webp">
+        <source srcset="images/card-structure/{{img}}.png" type="image/png">
+        <img class="card-structure__img" src="images/card-structure/{{img}}.png" height="55" alt="{{alt}}">
+    </picture>
+
+    <div class="card-structure__title">
+        <h3 class="h4">
+            {{title}}
+        </h3>
+    </div>
+
+    <div class="card-structure__text">
+        <p>
+            {{text}}
+        </p>
+    </div>
+
+    <span class="card-structure__year">
+        {{year}}
+    </span>
+</article>

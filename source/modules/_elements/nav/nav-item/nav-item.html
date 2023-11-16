@@ -1,0 +1,49 @@
+<li class="{{nav-item-parent-mod}} nav-item js-active {{nav-item-mod}}">
+    <div class="nav-item__inner">
+        <div class="nav-item__head">
+            <a class="nav-item__title" href="{{nav-item-link}}">
+                {{nav-item-title}}
+            </a>
+
+            {{#if nav-item-submenu}}
+
+            <button class="nav-item__btn" type="button">
+                <span class="visually-hidden">
+                    Подменю открыть/закрыть
+                </span>
+                <svg class="nav-item__icon" width="24" height="24" fill="currentColor">
+                    <use xlink:href="#icon-arrow-simple"></use>
+                </svg>
+            </button>
+            {{/if}}
+        </div>
+
+        {{#if country}}
+        <div class="nav-item__body">
+            <div class="nav-item__body-inner">
+                <div class="nav-item__container container">
+                    {{> drop-country drop-country-parent-mod="" drop-country-mod=""}}
+                </div>
+            </div>
+        </div>
+        {{/if}}
+
+        {{#if agency}}
+        <div class="nav-item__body">
+            <div class="nav-item__body-inner">
+                <div class="nav-item__container container">
+                    {{> drop-menu-column drop-menu-column-parent-mod="" drop-menu-column-mod=""}}
+                </div>
+            </div>
+        </div>
+        {{/if}}
+
+        {{#if tourist}}
+        <div class="nav-item__body">
+            <div class="nav-item__body-inner">
+                {{> drop-menu drop-menu-parent-mod="" drop-menu-mod="" drop-menu=drop-menu.tourist}}
+            </div>
+        </div>
+        {{/if}}
+    </div>
+</li>

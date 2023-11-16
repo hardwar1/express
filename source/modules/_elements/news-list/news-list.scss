@@ -1,0 +1,111 @@
+.news-list {
+    font-size: 14px;
+
+    @media (min-width: $desktops-md) {
+        font-size: 15px;
+    }
+
+    @media (min-width: $desktops-xl) {
+        font-size: 16px;
+        line-height: 30px;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    &__item:not(:last-child) {
+        margin-bottom: 40px;
+    }
+
+    &__link {
+        color: inherit;
+    }
+
+    &__time {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 16px;
+        letter-spacing: 0.05em;
+        color: $color-gray-icon;
+    }
+
+    &__caption:not(:last-child) {
+        margin-bottom: 12px;
+
+        @media (min-width: $desktops-md) {
+            margin-bottom: 17px;
+        }
+    }
+
+    &__link:hover &__caption {
+        @media (min-width: $desktops-sm) {
+            color: $color-red;
+        }
+    }
+
+    &__caption * {
+        transition: color 0.3s;
+    }
+
+    &__text:not(:last-child) {
+        margin-bottom: 12px;
+    }
+
+    &__row {
+        @media (min-width: $tablets) {
+            display: flex;
+            align-items: flex-start;
+        }
+    }
+
+    &__info {
+        flex-grow: 1;
+    }
+
+    &__info:not(:last-child) {
+        @media (min-width: $tablets) {
+            margin-right: 60px;
+        }
+
+        @media (max-width: $phones-max) {
+            margin-bottom: 12px;
+        }
+    }
+
+    &__img-wrap {
+        @media (min-width: $tablets) {
+            max-width: 176px;
+            width: 100%;
+            flex-shrink: 0;
+        }
+
+        @media (min-width: $desktops-lg) {
+            max-width: 192px;
+        }
+    }
+
+    &__img-box {
+        display: block;
+        position: relative;
+        background-image: url(../images/nophoto_2.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 12px;
+        padding-top: 87.4%;
+        overflow: hidden;
+    }
+
+    &__img-box img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}

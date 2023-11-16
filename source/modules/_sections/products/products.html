@@ -1,0 +1,9 @@
+<div class="products {{products-parent-mod}} {{products-mod}}">
+    <ul class="products__list">
+        {{#each card-products}}
+        <li class="products__item">
+            {{> card-products card-products-parent-mod="products__card" card-products-mod=""}}
+        </li>
+        {{/each}}
+    </ul>
+</div>

@@ -1,0 +1,133 @@
+.tour-detail-card {
+    padding: 24px 20px;
+    background-color: $color-white;
+    border: 1px solid $color-gray-light-3;
+    border-radius: 12px;
+    font-size: 14px;
+    line-height: 24px;
+
+    @media (min-width: $tablets) {
+        padding: 32px;
+        font-size: 15px;
+        line-height: 26px;
+    }
+
+    @media (min-width: $desktops-md) {
+        padding: 40px;
+        font-size: 17px;
+        line-height: 30px;
+    }
+
+    &__item {
+        margin-bottom: 16px;
+    }
+
+    &__item:last-child {
+        margin-bottom: 0;
+    }
+
+    &__item--icon {
+        @media (min-width: $tablets) {
+            position: relative;
+            padding-left: 40px;
+        }
+    }
+
+    &__name {
+        display: flex;
+        align-items: center;
+        margin-bottom: 4px;
+        font-weight: 500;
+    }
+
+    &__name svg {
+        margin-right: 8px;
+        width: 24px;
+        height: 24px;
+        fill: $color-gray-icon;
+        opacity: 0.7;
+
+        @media (min-width: $tablets) {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    &__season {
+        margin-bottom: 8px;
+        // @media (min-width: $tablets) {
+        //     margin-top: 10px;
+        // }
+    }
+
+    &__date-text {
+        @media (min-width: $tablets) {
+            column-count: 3;
+        }
+    }
+
+    p {
+        margin-bottom: 0;
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
+
+    &__bottom {
+        @media (min-width: $tablets) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 40px;
+        }
+    }
+
+    &__price-wrapper {
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        line-height: 20px;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        color: rgba(75, 75, 97, 0.8);
+        margin-bottom: 12px;
+
+        @media (min-width: $tablets) {
+            margin-bottom: 0;
+            align-items: flex-end;
+            line-height: 19px;
+        }
+
+        @media (min-width: $desktops-md) {
+            font-size: 15px;
+            line-height: 26px;
+        }
+    }
+
+    &__price {
+        font-weight: 600;
+        font-size: 16px;
+        color: $color-red;
+        margin-right: 8px;
+
+        @media (min-width: $tablets) {
+            font-size: 20px;
+            line-height: 22px;
+        }
+
+        @media (min-width: $desktops-md) {
+            font-size: 24px;
+            line-height: 32px;
+        }
+    }
+
+    &__btn {
+        display: block;
+        width: 100%;
+        padding: 11px 30px;
+
+        @media (min-width: $tablets) {
+            width: unset;
+        }
+    }
+}

@@ -1,0 +1,7 @@
+.slider-btns {
+    display: none;
+
+    @media (min-width: $tablets) {
+        display: block;
+    }
+}

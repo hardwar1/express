@@ -1,0 +1,23 @@
+<div class="{{parent-mod}} tel-block {{mod}}">
+    <div class="tel-block__inner">
+        <div class="tel-block__caption">
+            {{caption}}
+        </div>
+
+        <div class="tel-block__body-wrap">
+            <div class="tel-block__body">
+                <div class="tel-block__tels">
+                    <a class="tel-block__tel underline" href="tel:{{tel-link}}">
+                        {{tel}}
+                    </a>
+
+                    {{#if tel-secondary}}
+                    <a class="tel-block__tel-sec underline" href="tel:{{tel-secondary-link}}">
+                        {{tel-secondary}}
+                    </a>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

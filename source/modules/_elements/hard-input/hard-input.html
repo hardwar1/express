@@ -1,0 +1,9 @@
+<label class="{{hard-input-parent-mod}} hard-input {{hard-input-mod}}">
+    {{#if textarea}}
+    <textarea class="hard-input__input" required></textarea>
+    {{else}}
+    <input class="hard-input__input {{error}} empty" type="{{#if hard-input-type}}{{hard-input-type}}{{else}}text{{/if}}" name="{{hard-input-name}}" value="{{value}}" required{{#ifequal hard-input-type 'number'}} inputmode="numeric"{{/ifequal}}>
+    {{/if}}
+
+    <span class="hard-input__text">{{hard-input-text}}</span>
+</label>

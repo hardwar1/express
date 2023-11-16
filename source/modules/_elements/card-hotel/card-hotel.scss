@@ -1,0 +1,221 @@
+.card-hotel {
+    &__inner {
+        display: block;
+        color: inherit;
+        @media (min-width: $tablets) {
+            display: flex;
+            align-items: flex-start;
+            position: relative;
+        }
+    }
+
+    &__inner:hover &__title {
+        @media (min-width: $desktops-sm) {
+            color: $color-red;
+        }
+    }
+
+    &__img-box {
+        flex-shrink: 0;
+
+        @media (min-width: $tablets) {
+            width: 225px;
+            margin-right: 28px;
+        }
+
+        @media (min-width: $desktops-md) {
+            width: 240px;
+            margin-right: 40px;
+        }
+    }
+
+    &__img-wrapper {
+        display: block;
+        position: relative;
+        height: 0;
+        padding-top: 67.25%;
+        border-radius: 12px;
+        overflow: hidden;
+        background-image: url(../images/nophoto_1.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.7s;
+    }
+
+    &__img:hover {
+        @media (min-width: $desktops-sm) {
+            transform: translate(-50%, -50%) scale(1.2);
+        }
+    }
+
+    &__info {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 20px;
+
+        @media (min-width: $tablets) {
+            width: 100%;
+            padding-top: 4px;
+        }
+
+        @media (max-width: $phones-max) {
+            padding: 15px 8px 0;
+        }
+    }
+
+    &__title-box {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 4px;
+
+        @media (min-width: $tablets) {
+            max-width: calc(100% - 125px - 15px);
+            margin-bottom: 9px;
+        }
+    }
+
+    &__title,
+    &__title > * {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 22px;
+        width: fit-content;
+
+        @media (min-width: $tablets) {
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        @media (min-width: $desktops-md) {
+            font-size: 17px;
+            line-height: 24px;
+        }
+    }
+
+    &__title {
+        margin-right: 18px;
+        max-width: calc(100% - 115px);
+        transition: color 0.3s;
+
+        @media (min-width: $tablets) {
+            max-width: unset;
+        }
+    }
+
+    &__country {
+        @media (min-width: $tablets) {
+            max-width: calc(100% - 125px - 15px);
+            font-size: 14px;
+            line-height: 22px;
+        }
+
+        @media (min-width: $desktops-md) {
+            font-size: 15px;
+            line-height: 24px;
+        }
+    }
+
+    &__day {
+        color: $color-gray;
+        margin-bottom: 14px;
+
+        @media (min-width: $tablets) {
+            max-width: calc(100% - 125px - 15px);
+            font-size: 13px;
+            line-height: 22px;
+            margin-bottom: 24px;
+        }
+
+        @media (min-width: $desktops-md) {
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+
+    &__options {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 4px;
+
+        @media (min-width: $desktops-xl) {
+            max-width: calc(100% - 125px - 15px);
+        }
+
+        @media (max-width: $phones-max) {
+            margin-bottom: 12px;
+        }
+    }
+
+    &__option {
+        padding: 2px 8px;
+        background-color: $color-white-1;
+        border-radius: 4px;
+        font-weight: 600;
+        font-size: 10px;
+        line-height: 2;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #4b4b61;
+
+        @media (min-width: $desktops-md) {
+            padding: 4px 12px;
+        }
+    }
+
+    &__price-box {
+        display: flex;
+
+        @media (min-width: $tablets) {
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 10px;
+            text-align: right;
+        }
+
+        @media (min-width: $desktops-sm) {
+            top: 5px;
+        }
+    }
+
+    &__price {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        color: $color-red;
+        margin-right: 8px;
+
+        @media (min-width: $tablets) {
+            display: block;
+            margin: 0;
+            font-size: 20px;
+            line-height: 22px;
+        }
+    }
+
+    &__price-text {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 20px;
+        letter-spacing: 0.04em;
+        color: $color-gray-dark;
+
+        @media (min-width: $tablets) {
+            font-size: 13px;
+            line-height: 20px;
+        }
+    }
+}

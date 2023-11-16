@@ -1,0 +1,28 @@
+<div class="{{file-parent-mod}} file {{file-mod}}">
+    <label class="file__label">
+        <input class="file__input" type="file" name="file" {{file-input-attr}} multiple>
+        <span class="file__label-inner">
+            <span class="file__icon-wrap" aria-hidden="true">
+                <svg class="file__icon" width="24" height="24">
+                    <use xlink:href="images/sprite.svg#inbox"></use>
+                </svg>
+            </span>
+
+            <span class="file__text">Перетащите сюда файлы или кликните для выбора</span>
+        </span>
+    </label>
+
+    <div class="file__list">
+        {{#repeat 3}}
+        <div class="file__item">
+            <a class="file__item-text" href="">filename.pdf</a>
+            <button class="file__item-closebtn" type="button">
+                <svg class="file__item-closeicon" width="12" height="12">
+                    <use xlink:href="#icon-close"></use>
+                </svg>
+                <span class="visually-hidden">Удалить</span>
+            </button>
+        </div>
+        {{/repeat}}
+    </div>
+</div>

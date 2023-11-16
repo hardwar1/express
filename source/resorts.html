@@ -1,0 +1,25 @@
+---
+layout: default
+title: Отели
+h1: Отели
+breadcrumbs-grandparent-page-link: countries
+breadcrumbs-grandparent-page-text: Страны
+breadcrumbs-parent-page-link: country
+breadcrumbs-parent-page-text: Болгария
+breadcrumbs-current-page-text: Курорты
+aside-list: 1
+weather-block: true
+---
+<div class="main-content">
+    <div class="main-content__headline">
+        {{> menu-btn-big menu-btn-big-parent-mod="main-content__menu-btn" text="Меню"}}
+
+        <h1>
+            Болгария
+        </h1>
+    </div>
+
+    <div class="main-content__block">
+        {{> city-list3 city-list-parent-mod="" city-list=city-list3 city-list-mod="city-list--pt0"}}
+    </div>
+</div>

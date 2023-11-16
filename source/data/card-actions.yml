@@ -1,0 +1,31 @@
+-
+    img: 1
+    alt:
+    options: <li class="label active">ОАЭ</li>
+    title: "Кешбэк 100 USD за туры в Дубай"
+    date-text-2: "11.11.2022 – 31.12.2022"
+    place: "Бронируйте туры в Дубай и получайте кешбэк до 100$ на следующую бронь"
+-
+    img: 2
+    alt:
+    options: <li class="label active">ОАЭ</li>
+            <li class="label">JW Marriott Mauritius Resort</li>
+            <li class="label">Le Meridien Ile Maurice</li>
+    title: "Акция от отелей JW Marriott Mauritius Resort и Le Meridien Ile Maurice"
+    date-text-2: "15.06.2022 – 01.06.2023"
+    place: "Успейте раньше других! Забронируйте тур в отели JW Marriott Mauritius Resort или Le Meridien Ile Maurice как можно скорее и выиграйте ваучер на 2 ночи в одном из этих отелей!"
+-
+    img: 3
+    alt:
+    options: <li class="label active">Мальдивы</li>
+            <li class="label">Movenpick Resort Kuredhivaru Maldives</li>
+    title: "Movenpick Resort Kuredhivaru Maldives"
+    date-text-2: "01.11.2022 – 28.02.2023"
+    place: "Получайте комплементарные ночи за бронирования!"
+-
+    img: 4
+    alt:
+    options: <li class="label active">Греция</li>
+    title: "Sani и Ikos: программа вознаграждений для агентов"
+    date-text-2: "Постоянная"
+    place: "Поощрительная акция для туристических агентств. 15 ночей + 1 ночь в подарок. Период бронирования: до 28.02.2023 г."

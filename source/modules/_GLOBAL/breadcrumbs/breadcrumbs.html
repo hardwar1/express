@@ -1,0 +1,35 @@
+<div class="{{breadcrumbs-parent-mod}} breadcrumbs">
+    <div class="breadcrumbs__wrap">
+        <nav class="breadcrumbs__inner" aria-label="Путь до текущей страницы от главной:">
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="index.html">
+                        Главная
+                    </a>
+                </li>
+                {{#if breadcrumbs-grandparent-page-link}}
+
+                <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="{{breadcrumbs-grandparent-page-link}}.html">
+                        {{#if breadcrumbs-grandparent-page-text}}{{breadcrumbs-grandparent-page-text}}{{else}}{{breadcrumbs-grandparent-page-link}}{{/if}}
+                    </a>
+                </li>
+                {{/if}}
+                {{#if breadcrumbs-parent-page-link}}
+
+                <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="{{breadcrumbs-parent-page-link}}.html">
+                        {{#if breadcrumbs-parent-page-text}}{{breadcrumbs-parent-page-text}}{{else}}{{breadcrumbs-parent-page-link}}{{/if}}
+                    </a>
+                </li>
+                {{/if}}
+
+                <li class="breadcrumbs__item">
+                    <span class="breadcrumbs__link" aria-current="page">
+                        {{#if breadcrumbs-current-page-text}}{{breadcrumbs-current-page-text}}{{else}}{{page}}{{/if}}
+                    </span>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>

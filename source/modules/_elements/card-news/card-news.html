@@ -1,0 +1,29 @@
+<article class="{{card-news-parent-mod}} card-news {{card-news-mod}}">
+    <a class="card-news__inner" href="{{card-news-href}}">
+        {{#if bgi}}
+        <!-- <picture>
+            <source srcset="images/news/{{bgi}}.webp" type="image/webp"> -->
+            <img class="card-news__img" src="images/news/{{bgi}}.jpg" alt="">
+        <!-- </picture> -->
+        {{/if}}
+        <div class="card-news__hidden-text">
+            <div class="card-news__content">
+                <time class="card-news__date" datetime="{{card-news-date-attr}}">
+                    {{card-news-date}}
+                </time>
+
+                <div class="card-news__title">
+                    <h3>
+                        {{card-news-title}}
+                    </h3>
+                </div>{{#if card-news-text}}
+
+                <div class="card-news__text">
+                    <p>
+                        {{card-news-text}}
+                    </p>
+                </div>{{/if}}
+            </div>
+        </div>
+    </a>
+</article>

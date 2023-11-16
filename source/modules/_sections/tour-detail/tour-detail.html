@@ -1,0 +1,77 @@
+<div class="{{tour-detail-parent-mod}} tour-detail  {{tour-detail-mod}}">
+    <div class="tour-detail__row">
+        <div class="tour-detail__weather">
+            <span class="tour-detail__weather-item">
+                <svg width="22" height="22">
+                    <use xlink:href="images/sprite.svg#weather-cloudy"></use>
+                </svg>
+                +27..+29°С
+            </span>
+
+            <span class="tour-detail__weather-item">
+                Check in: 15:00
+            </span>
+
+            <a class="tour-detail__weather-item" href="www.sitehotel.com/conrad_maldives" target="_blank">
+                www.sitehotel.com/conrad_maldives
+            </a>
+        </div>
+
+        <a class="tour-detail__link ico-svg" href="#map">
+            <svg width="24" height="24">
+                <use xlink:href="images/sprite.svg#u_map"></use>
+            </svg>
+            <span class="underline">
+                Отель на карте
+            </span>
+        </a>
+    </div>
+
+    {{> slider slider-parent-mod="tour-detail__slider" }}
+
+    {{> btn
+    btn-parent-mod="tour-detail__btn"
+    btn-mod="btn--svg"
+    btn-mod2="btn--hover-red"
+    btn-svg="icon-360"
+    btn-text="Реалистичный видео-тур"
+    btn-link=""
+    }}
+
+    <div class="tour-detail__caption">
+        <h3>
+            Найти тур в отель
+        </h3>
+    </div>
+
+    {{> header-form-light
+    header-form-parent-mod="tour-detail__form"
+    header-form-mod="header-form--light"
+    }}
+
+    <div class="tour-detail__block">
+        <div class="content-block">
+            <p class="text-l">
+                Краткое описание в один абзац. Отель Sirru Fen Fushi расположен на атолле Шавияни, который может
+                похвастаться одной из крупнейших в стране курортных лагун Fairmont Maldives. Пляжи с белым песком,
+                окаймленные качающимися пальмами, омываемые бирюзовыми водами лагуны площадью 600 гектаров, уступают
+                место
+                спокойной голубизне Индийского океана и бесконечному горизонту. Здесь находится самый длинный
+                пейзажный
+                бассейн на Мальдивах, который ведет к Coralarium, первому и единственному проекту регенерации
+                кораллов
+                на
+                Мальдивах в виде подводной арт-инсталляции Джейсона де Кайреса Тейлора.
+            </p>
+        </div>
+    </div>
+
+    <div class="tour-detail__block">
+        {{> btns btns-list=btns.hotel}}
+    </div>
+
+    {{> tour-detail-card
+    tour-detail-card-parent-mod="tour-detail__tour-detail-card"
+    tour-detail-card-mod="text-l"
+    }}
+</div>

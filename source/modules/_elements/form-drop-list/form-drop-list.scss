@@ -1,0 +1,60 @@
+.form-drop-list {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 0;
+    width: 100%;
+    padding: 12px 4px;
+    overflow: hidden auto;
+    transform: translateY(-50%) scale(0);
+    transition-property: transform, z-index;
+    transition-duration: 0.3s, 0s;
+    transition-delay: 0s, 0.3s;
+    background-color: $color-white;
+    box-shadow: 0 14px 40px rgba(165, 165, 197, 0.4);
+    border-radius: 4px;
+    max-height: 260px;
+
+    @include set-scroll();
+
+    &.active {
+        transform: translateY(0) scale(1);
+        z-index: 5;
+        transition-delay: 0s, 0s;
+    }
+
+    &__link {
+        display: block;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 24px;
+        padding: 8px 16px;
+        margin-bottom: 4px;
+        color: inherit;
+        border-radius: 6px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    &__link:last-child {
+        margin-bottom: 0;
+    }
+
+    &__link[href]:hover {
+        @media (min-width: $tablets) {
+            background-color: $color-white-1;
+        }
+    }
+
+    &__link[href].active {
+        background-color: $color-red;
+        color: $color-white;
+    }
+
+    &__link:not([href]) {
+        opacity: 0.3;
+    }
+
+    &__no-result {
+        padding-left: 16px;
+    }
+}

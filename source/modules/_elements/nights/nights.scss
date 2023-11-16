@@ -1,0 +1,58 @@
+.nights {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 18px;
+
+    &__grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px 6px;
+
+        @media (min-width: $desktops-sm) {
+            display: grid;
+            grid-template-columns: repeat(10, 40px);
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex: 0 0 40px;
+    }
+
+    &__item-inner {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 8px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 22px;
+        background-color: $color-white;
+        border: 1px solid $color-gray-light-7;
+        border-radius: 4px;
+        appearance: none;
+        transition-property: color, background-color, border-color;
+        transition-duration: 0.3s;
+    }
+
+    &__item-inner--active {
+        color: $color-white;
+        background-color: $color-red;
+        border-color: $color-red;
+    }
+
+    &__item-inner:disabled,
+    &__item-inner--disabled {
+        color: $color-gray-dark-3;
+        background-color: $color-white-3;
+        border-color: $color-gray-light-7;
+    }
+
+    &__item-inner:not(:disabled):focus-visible,
+    &__item-inner:not(:disabled):hover,
+    &__item-inner--hover {
+        @media (min-width: $desktops-sm) {
+            border-color: $color-red;
+        }
+    }
+}

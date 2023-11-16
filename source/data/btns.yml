@@ -1,0 +1,81 @@
+summary-news:
+    - btn-text: Все новости
+      btn-mod: active
+      id: news-all
+      data-filter-category: 'all'
+    -
+        btn-text: Новости компании
+        data-filter-category: 'cat1'
+        id: news-about
+    -
+        btn-text: Новости по направлениям
+        data-filter-category: 'cat2'
+        id: news-vector
+hotels-list:
+    - btn-text: По курортам
+      btn-mod: active
+    - btn-text: По категории
+    - btn-text: По алфавиту
+event-detail:
+    - btn-text: По курортам
+      btn-mod: btn--white-1 active
+    - btn-text: По категории
+      btn-mod: btn--white-1
+    - btn-text: По алфавиту
+      btn-mod: btn--white-1
+events:
+    - btn-text: Все города
+      btn-mod: active
+    - btn-text: Екатеринбург
+    - btn-text: Казань
+    - btn-text: Москва
+    - btn-text: Уфа
+dates:
+    - btn-text: 1996 - 2001 гг.
+      btn-link: true
+      btn-mod: active
+    - btn-text: 2002 - 2006 гг.
+      btn-link: true
+    - btn-text: 2007 - 2011 гг.
+      btn-link: true
+    - btn-text: 2012- 2016 гг.
+      btn-link: true
+    - btn-text: 2017 - 2021 гг.
+      btn-link: true
+hotel:
+    - btn-text: В отеле
+      btn-href: "#v_otele"
+      btn-link: true
+    - btn-text: Описание номеров
+      btn-href: "#opisanie_nomerov"
+      btn-link: true
+    - btn-text: В номере
+      btn-href: "#v_nomere"
+      btn-link: true
+    - btn-text: Питание
+      btn-href: "#pitanie"
+      btn-link: true
+    - btn-text: Спорт и развлечения
+      btn-href: "#sport_i_razvlecheniya"
+      btn-link: true
+    - btn-text: Для детей
+      btn-href: "#dlya_detei"
+      btn-link: true
+    - btn-text: Пляж
+      btn-href: "#plyazh"
+      btn-link: true
+    - btn-text: Лечение и SPA
+      btn-href: "#lechenie_i_spa"
+      btn-link: true
+    - btn-text: Контакты
+      btn-href: "#kontakti"
+      btn-link: true
+header-form-top:
+    - btn-text: Туры
+      btn-mod: active
+      btn-link: true
+    - btn-text: FIT-express
+      btn-link: true
+    - btn-text: Online Express
+      btn-link: true
+

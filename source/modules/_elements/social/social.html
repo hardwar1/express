@@ -1,0 +1,15 @@
+<ul class=" social {{social-parent-mod}} {{social-mod}}">
+    {{#each social}}
+    <li class="social__item">
+        <a class="social__link social__link--{{id}}" href="" target="_blank">
+            <svg width="40" height="40">
+                <use xlink:href="images/sprite.svg#social-{{id}}"></use>
+            </svg>
+
+            <span class="visually-hidden">
+                {{text}}
+            </span>
+        </a>
+    </li>
+    {{/each}}
+</ul>

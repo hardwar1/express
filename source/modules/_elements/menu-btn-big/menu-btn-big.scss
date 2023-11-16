@@ -1,0 +1,87 @@
+.menu-btn-big {
+    position: relative;
+    display: block;
+    min-width: 40px;
+    min-height: 32px;
+    padding: 0;
+    background-color: $color-gray-light-6;
+    border-radius: 4px;
+    text-align: right;
+    border-width: 0;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    color: $color-gray-dark;
+
+    @media (min-width: $tablets) {
+        min-width: 104px;
+        padding: 7px 12px 7px 44px;
+    }
+
+    @media (min-width: $desktops-sm) {
+        display: none;
+    }
+
+    &__lay,
+    &__lay::before,
+    &__lay::after {
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        display: block;
+        background-color: $color-gray-dark;
+        border-radius: 2px;
+        transition-timing-function: ease-in-out;
+    }
+
+    &__lay {
+        top: calc(100% / 3 - 1px);
+        left: 10px;
+        transition: background-color 0.3s, transform 0.1s 0s, top 0.1s 0.1s;
+
+        @media (min-width: $tablets) {
+            left: 14px;
+        }
+    }
+
+    &__lay::before {
+        content: "";
+        top: 6px;
+        opacity: 1;
+        transition: background-color 0.3s, transform 0.1s 0s, opacity 0.1s 0.1s;
+    }
+
+    &__lay::after {
+        content: "";
+        top: 12px;
+        transition: background-color 0.3s, transform 0.1s 0s, top 0.1s 0.1s;
+    }
+
+    &--active &__lay {
+        top: calc(50% - 1.5px);
+        transform: rotate(-45deg);
+        transition: background-color 0.3s, transform 0.1s 0.2s, top 0.1s 0.1s;
+    }
+
+    &--active &__lay::before {
+        opacity: 0;
+        transform: rotate(45deg);
+        transition: background-color 0.3s, transform 0.1s 0.2s, opacity 0.1s 0.1s;
+    }
+
+    &--active &__lay::after {
+        top: 0;
+        transform: rotate(90deg);
+        transition: background-color 0.3s, transform 0.1s 0.2s, top 0.1s 0.1s;
+    }
+
+    &__text {
+        @media (min-width: $tablets) {
+            display: block;
+        }
+        @media (max-width: $phones-max) {
+            @include visually-hidden();
+        }
+
+    }
+}

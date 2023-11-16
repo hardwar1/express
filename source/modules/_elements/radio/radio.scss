@@ -1,0 +1,85 @@
+.radio {
+    position: relative;
+    display: inline-flex;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 28px;
+
+    &__input {
+        @include visually-hidden();
+    }
+
+    &__input:not(:disabled) ~ * {
+        cursor: pointer;
+    }
+
+    &__pseudoinput {
+        position: absolute;
+        left: 0;
+        top: 4px;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-color: $color-white;
+        border-radius: 50%;
+        border: 1px solid #c7c9da;
+        box-shadow: 0 0 0 2px rgba(100, 161, 235, 0);
+        background-position: center;
+        background-size: 11px 8px;
+        background-repeat: no-repeat;
+        transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+    }
+
+    &__input:indeterminate ~ &__pseudoinput::before,
+    &__input:checked ~ &__pseudoinput::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 12px;
+        background-color: $color-gray-dark;
+        transform: translate(-50%, -50%);
+    }
+
+    &__input:indeterminate ~ &__pseudoinput::before {
+        height: 0;
+        border-radius: 2px;
+    }
+
+    &__input:checked ~ &__pseudoinput::before {
+        height: 12px;
+        border-radius: 50%;
+    }
+
+    &__input:focus-visible:not(:disabled) ~ &__pseudoinput,
+    &__input:hover:not(:disabled) ~ &__pseudoinput {
+        @media (min-width: $desktops-sm) {
+            border-color: $color-gray-dark;
+            box-shadow: 0 0 0 2px rgba($color-gray-dark, 0.4);
+        }
+    }
+
+    &__input:disabled ~ &__pseudoinput,
+    &__input:checked:disabled ~ &__pseudoinput {
+        background-color: #ECECEC;
+        border-color: #D1D1E3;
+    }
+
+    &__input:checked:disabled ~ &__pseudoinput::before {
+        background-color: #CCCCD3;
+    }
+
+    &__input:indeterminate:disabled ~ &__pseudoinput::before {
+        background-color: rgba($color-gray-dark, 0.4);
+    }
+
+    &__text {
+        display: inline-block;
+        min-height: 28px;
+        padding-left: 36px;
+    }
+
+    &__input:disabled ~ &__text {
+        opacity: 0.4;
+    }
+}

@@ -1,0 +1,23 @@
+---
+layout: default
+title: Отзывы
+h1: Отзывы
+aside-list: 5
+news-block: true
+links-block: true
+---
+<div class="main-content">
+    <div class="main-content__headline">
+        {{> menu-btn-big menu-btn-big-parent-mod="main-content__menu-btn" text="Меню"}}
+
+        <h1>
+            Отзывы
+        </h1>
+    </div>
+    <div class="main-content__block">
+        {{> reviews-list
+        reviews-list-parent-mod="main-content__reviews-list"
+        reviews=reviews.reviews-page
+        }}
+    </div>
+</div>
