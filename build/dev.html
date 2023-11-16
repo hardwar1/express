@@ -46,10 +46,71 @@
 
 
     <link rel="stylesheet" href="./css/style.css">
+    <title>навигация по страницам</title>
+
+    <style>
+        body {
+            background-color: #282727;
+            color: white;
+            padding: 20px;
+        }
+
+        h1 {
+            color: white !important;
+            margin-bottom: 30px;
+        }
+
+        ol {
+            padding-left: 30px !important;
+            list-style: decimal-leading-zero !important;
+            font-size: 16px;
+            margin-bottom: 40px;
+        }
+
+        li {
+            margin-bottom: 15px;
+            padding-left: 8px !important;
+        }
+
+        li::after,
+        li::before {
+            content: unset !important;
+        }
+
+        a {
+            font-weight: 500;
+            font-size: 20px;
+            background-image: linear-gradient(to right, red, red 50%, white 50%);
+            background-size: 200% 100%;
+            background-position: -100%;
+            background-color: white;
+            display: inline-block;
+            position: relative;
+            color: white;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: background-position 0.3s;
+        }
+
+        a:hover {
+            background-position: 0;
+            background-image: linear-gradient(to right, red, red 50%, white 50%);
+            background-color: white;
+        }
+
+        p {
+            color: red;
+            font-size: 16px;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container content-block margins-l text-l">
+    <div class="container content-block">
+        <h1>
+            Навигация по страницам верстки
+        </h1>
+
         <ol>
             <li>
                 <a href="_empty-page.html">Страница без контента</a>
@@ -65,6 +126,10 @@
             </li>
         </ol>
 
+
+        <p>
+            для того чтобы вернуться на эту страницу кликнете по логотипу в шапке сайта
+        </p>
     </div>
 </body>
 

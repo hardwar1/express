@@ -1452,7 +1452,6 @@ window.addEventListener('load', () => {
 
                 difference = Math.abs(difference / 1);
 
-
                 if (dropCountryItems[startRowItem]) {
                     itemWidthArray[startRowItem + numberItem - 2] > itemWidthArray[startRowItem] ?
                         dropCountryItems[startRowItem].setAttribute('style', `width: calc((100% - ${rowSumm + difference}px + 28px) / 2);justify-content: flex-end;`) :
@@ -1675,7 +1674,6 @@ window.addEventListener('load', () => {
                 });
             });
         }
-
     }
 
     if (location.href.includes('#')) {
@@ -1693,6 +1691,4 @@ window.addEventListener('load', () => {
             });
         }
     }
-
-
 });
